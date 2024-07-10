@@ -10,6 +10,27 @@ body{
   text-align: center;
   color: white;
 }
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+/* modals for Login and Register */
 .overlay {
   position: absolute;
   top: 0;
@@ -40,14 +61,18 @@ body{
   width: 47%;
   
 }
-
+.form-items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .form-group .form-error {
   color: #d9534f;
   min-height: 20px;
 }
 .modal {
   width: 45rem;
-  position: absolute;
   max-height: 90vh;
   margin: auto;
   border-radius: 20px;
@@ -55,16 +80,16 @@ body{
   padding: 1rem;
   box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
   z-index: 30;
-  margin-top: 50px;
+  margin-top: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative; /* Add this to make the close button positioning relative to the modal */
 }
 @media (min-width: 930px) {
   .modal {
     width: 45rem;
-    left: calc(50% - 20rem);
     border-radius: 14px;
   }
 }
@@ -80,40 +105,40 @@ body{
   font: inherit;
   font-weight: bold;
 }
+
+.btn.close {
+  background-color: transparent;
+  padding: 5px 10px;
+  height: auto;
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  z-index: 1000;
+}
+
+.btn.close svg {
+  color: black;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* Footer */
+
 .footer-container {
   width: 100%;
   position: fixed;
   bottom: 0;
   background-color: #333;
-  left: 0; /* Ensures full width */
+  left: 0; 
 }
 
 .footer {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 20px 2rem; /* Adjust padding as needed */
+  padding: 20px 2rem; 
   text-align: center;
   color: #fff;
-}
-.create{
-  background-color: wheat;
-}
-main {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-section {
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: #333;
-}
-
-p {
-  color: #666;
 }

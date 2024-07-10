@@ -2,11 +2,18 @@ export default function Login({
     isLogedInCloseHandler
 }){
     return (
-        <div className="overlay">
+      <>
+      <div className="overlay">
         <div className="backdrop" onClick={isLogedInCloseHandler}></div>
         <div className="modal">
+          <div className="onTop">
+          <button className="btn close" onClick={isLogedInCloseHandler}>
+              &times;
+            </button>
+          </div>
           <form className="registerForm">
             <h2>Login</h2>
+            <div className="form-items">
             <div className="form-row">
               <div className="form-group">
                 <div>
@@ -23,6 +30,8 @@ export default function Login({
                 </div>
               </div>
             </div>
+            </div>
+            <div className="buttons">
             <button className="button" type="submit">
               Register
             </button>
@@ -33,8 +42,10 @@ export default function Login({
             >
               Cancel
             </button>
+            </div>
           </form>
         </div>
       </div>
+          </>
     )
 }
