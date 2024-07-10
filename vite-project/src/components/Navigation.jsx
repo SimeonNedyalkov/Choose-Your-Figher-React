@@ -1,5 +1,6 @@
 export default function Navigation({
-  isRegisteredClickHandler
+  isRegisteredClickHandler,
+  isLogedInClickHandler
 }){
     return (
         <>
@@ -19,7 +20,7 @@ export default function Navigation({
       <li className="nav-item">
         <a className="nav-link" href="#">Pricing</a>
       </li>
-      <li className="nav-item">
+      <li className="nav-item" onClick={isLogedInClickHandler}>
         <a className="nav-link" href="#">Login</a>
       </li>
       <li onClick={isRegisteredClickHandler} className="nav-item">
