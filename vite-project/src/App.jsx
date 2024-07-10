@@ -2,14 +2,21 @@ import { useState } from 'react'
 import './App.css'
 import Home from "../src/components/Home"
 import Navigation from "../src/components/Navigation";
+import Register from './components/Register';
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [isRegistered, setIsRegistered] = useState(false)
+  function isRegisteredClickHandler(){
+    setIsRegistered(true)
+}
+function isRegisteredCloseHandler(){
+  setIsRegistered(false)
+}
   return (
-    <>
-    <Navigation></Navigation>
+    <div>
+    <Navigation isRegisteredClickHandler={isRegisteredClickHandler}></Navigation>
     <Home></Home>
-    </>
+    {isRegistered && <Register isRegisteredCloseHandler={isRegisteredCloseHandler}/>}
+    </div>
   )
 }
 

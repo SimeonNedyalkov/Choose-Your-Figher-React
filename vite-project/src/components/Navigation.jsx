@@ -1,4 +1,6 @@
-export default function Navigation(){
+export default function Navigation({
+  isRegisteredClickHandler
+}){
     return (
         <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,6 +18,12 @@ export default function Navigation(){
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">Pricing</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="#">Login</a>
+      </li>
+      <li onClick={isRegisteredClickHandler} className="nav-item">
+        <a className="nav-link" href="#">Register</a>
       </li>
       <li className="nav-item dropdown">
         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
