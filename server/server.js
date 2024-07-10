@@ -1339,56 +1339,48 @@
     	}
     };
     var seedData = {
-    	recipes: {
+    	cats: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Easy Lasagna",
-    			img: "assets/lasagna.jpg",
-    			ingredients: [
-    				"1 tbsp Ingredient 1",
-    				"2 cups Ingredient 2",
-    				"500 g  Ingredient 3",
-    				"25 g Ingredient 4"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
+    			name: "Inkspire",
+    			img: "/assets/fighters-images/Octopus.jpg",
+    			type: "Octopus",
+                stats: {
+                    "attack": 80,
+                    "defense": 70,
+                    "speed": 90,
+                    "intelligence":85,
+                    "health": 100
+                },
     			_createdOn: 1613551279012
     		},
     		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Grilled Duck Fillet",
-    			img: "assets/roast.jpg",
-    			ingredients: [
-    				"500 g  Ingredient 1",
-    				"3 tbsp Ingredient 2",
-    				"2 cups Ingredient 3"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
+    			name: "Grizblaze",
+    			img: "/assets/cat-images/cat-5622217__480.jpg",
+                type: "Bear",
+                stats: {
+                    attack: 85,
+                    defense: 80,
+                    speed: 70,
+                    intelligence: 75,
+                    health: 120,
+                },
     			_createdOn: 1613551344360
     		},
     		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Roast Trout",
-    			img: "assets/fish.jpg",
-    			ingredients: [
-    				"4 cups Ingredient 1",
-    				"1 tbsp Ingredient 2",
-    				"1 tbsp Ingredient 3",
-    				"750 g  Ingredient 4",
-    				"25 g Ingredient 5"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
+    			name: "Stripefang",
+    			img: "/assets/cat-images/black-and-white-cat-px.jpg",
+    			type: "Tiger",
+    			stats: {
+                        attack: 90,
+                        defense: 75,
+                        speed: 80,
+                        intelligence: 80,
+                        health: 110
+                },
+                weapons: [],
     			_createdOn: 1613551388703
     		}
     	},
