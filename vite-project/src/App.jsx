@@ -3,18 +3,18 @@ import './App.css'
 import Navigation from "../src/components/Navigation";
 import Footer from './components/Footer';
 import Main from './components/Main';
-function App() {
+function App(props) {
   const [isRegistered, setIsRegistered] = useState(false)
   function isRegisteredClickHandler(){
     setIsRegistered(true)
 }
 function isRegisteredCloseHandler(){
   setIsRegistered(false)
-}
+  }
   return (
     <div>
     <Navigation isRegisteredClickHandler={isRegisteredClickHandler}></Navigation>
-    <Main/>
+    <Main isRegisteredCloseHandler={isRegisteredCloseHandler} isRegistered = {isRegistered}/>
     <Footer/>
     </div>
   )
