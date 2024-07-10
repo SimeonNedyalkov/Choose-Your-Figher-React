@@ -80,3 +80,21 @@ body{
   font: inherit;
   font-weight: bold;
 }
+.footer-container {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #333;
+}
+
+.footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.footer p {
+  margin: 5px 0;
+}

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import Home from "../src/components/Home"
 import Navigation from "../src/components/Navigation";
-import Register from './components/Register';
+import Footer from './components/Footer';
+import Main from './components/Main';
 function App() {
   const [isRegistered, setIsRegistered] = useState(false)
   function isRegisteredClickHandler(){
@@ -14,8 +14,8 @@ function isRegisteredCloseHandler(){
   return (
     <div>
     <Navigation isRegisteredClickHandler={isRegisteredClickHandler}></Navigation>
-    <Home></Home>
-    {isRegistered && <Register isRegisteredCloseHandler={isRegisteredCloseHandler}/>}
+    <Main/>
+    <Footer/>
     </div>
   )
 }
