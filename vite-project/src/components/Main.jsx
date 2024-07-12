@@ -1,14 +1,17 @@
 import Home from "./Home"
-import Register from "./Register"
-import Login from "./Login"
+import Register from "./userComponents/Register"
+import Login from "./userComponents/Login"
 import About from "./About"
+import Logout from "./userComponents/Logout"
 // import Fighter from "./Fighters"
 // import {getAllFighters} from '../sevices/data'
 export default function Main({
     isRegisteredCloseHandler,
     isRegistered,
     isLogedInCloseHandler,
-    isLogedIn
+    isLogedIn,
+    isLogout,
+    isLogoutCloseHandler
 }){
     
     return (
@@ -16,6 +19,7 @@ export default function Main({
         <Home></Home>
         {isRegistered && <Register isRegisteredCloseHandler={isRegisteredCloseHandler}/>}
         {isLogedIn && <Login isLogedInCloseHandler={isLogedInCloseHandler}/>}
+        {isLogout && <Logout isLogoutCloseHandler={isLogoutCloseHandler}/>}
         </>
     )
 }

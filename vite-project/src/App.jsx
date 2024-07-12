@@ -6,6 +6,7 @@ import Main from './components/Main';
 function App(props) {
   const [isRegistered, setIsRegistered] = useState(false)
   const [isLogedIn,setIsLogedIn] = useState(false)
+  const [isLogout,setIsLogout] = useState(false)
     function isRegisteredClickHandler(){
       setIsRegistered(true)
   }
@@ -19,10 +20,16 @@ function App(props) {
     function isLogedInClickHandler(){
         setIsLogedIn(true)
     }
+    function isLogoutCloseHandler(){
+      setIsLogout(false)
+    }
+    function isLogoutClickHandler(){
+      setIsLogout(true)
+    }
   return (
     <div>
-    <Navigation isRegisteredClickHandler={isRegisteredClickHandler} isLogedInClickHandler={isLogedInClickHandler}></Navigation>
-    <Main isRegisteredCloseHandler={isRegisteredCloseHandler} isRegistered = {isRegistered}  isLogedInCloseHandler={isLogedInCloseHandler} isLogedIn = {isLogedIn}/>
+    <Navigation isRegisteredClickHandler={isRegisteredClickHandler} isLogedInClickHandler={isLogedInClickHandler} isLogoutClickHandler={isLogoutClickHandler}></Navigation>
+    <Main isLogout={isLogout} isLogoutCloseHandler = {isLogoutCloseHandler} isRegisteredCloseHandler={isRegisteredCloseHandler} isRegistered = {isRegistered}  isLogedInCloseHandler={isLogedInCloseHandler} isLogedIn = {isLogedIn}/>
     <Footer/>
     </div>
   )

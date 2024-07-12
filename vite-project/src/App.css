@@ -124,6 +124,13 @@ p {
   flex-direction: row;
   gap: 1rem;
 }
+/* Logout buttons */
+.buttonsForLogout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
 
 /* Footer */
 

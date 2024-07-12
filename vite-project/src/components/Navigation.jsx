@@ -1,6 +1,7 @@
 export default function Navigation({
   isRegisteredClickHandler,
-  isLogedInClickHandler
+  isLogedInClickHandler,
+  isLogoutClickHandler
 }){
     return (
         <>
@@ -25,6 +26,9 @@ export default function Navigation({
       </li>
       <li onClick={isRegisteredClickHandler} className="nav-item">
         <a className="nav-link" href="#">Register</a>
+      </li>
+      <li onClick={isLogoutClickHandler} className="nav-item">
+        <a className="nav-link" href="#">Logout</a>
       </li>
       <li className="nav-item dropdown">
         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
