@@ -1,6 +1,6 @@
 # TO RUN APP IN TERMINAL
-cd vite-project
-npm install
+cd vite-project /n
+npm install \n
 npm run dev
 
 # TO RUN SERVER IN TERMINAL
