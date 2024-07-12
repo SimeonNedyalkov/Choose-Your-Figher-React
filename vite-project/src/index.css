@@ -1,68 +1,169 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  padding: 0;
   margin: 0;
+  background-color: black;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+/* Home */
+.homePage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:3rem
+}
+.title{
+    margin-top: 200px;
+}
+/* modals for Login and Register */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+.form-row {
+  width: 100%;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.form-group {
+  margin-right: 10px;
+  width: 47%;
+  
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.form-items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-group .form-error {
+  color: #d9534f;
+  min-height: 20px;
+}
+.modal {
+  width: 45rem;
+  max-height: 90vh;
+  margin: auto;
+  border-radius: 20px;
+  background-color: gray;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+  z-index: 30;
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative; /* Add this to make the close button positioning relative to the modal */
+}
+@media (min-width: 930px) {
+  .modal {
+    width: 45rem;
+    border-radius: 14px;
+  }
+}
+.button {
+  background: #2a87a5;
+  border: none;
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  font-weight: bold;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.btn.close {
+  background-color: transparent;
+  padding: 5px 10px;
+  height: auto;
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  z-index: 1000;
+}
+
+.btn.close svg {
+  color: black;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+/* Logout buttons */
+.buttonsForLogout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Footer */
+
+.footer-container {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #333;
+  left: 0; 
+}
+
+.footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 2rem; 
+  text-align: center;
+  color: #fff;
 }
