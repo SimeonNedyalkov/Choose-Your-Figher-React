@@ -1,6 +1,32 @@
+import { useState,useEffect } from "react"
 export default function Login({
     isLogedInCloseHandler
 }){
+    const [formData,setFormData] = useState({
+      _id:'',
+      username:"",
+      password:""
+    })
+    useEffect(()=>{
+      async ()=>{
+        const response = await fetch('http://localhost:3030/jsonstore/advanced/profiles')
+        const profile = await response.json()
+        console.log(profile)
+        setFormData(profile)
+      }
+    })
+    const formSubmitHandler = (e) =>{
+      e.preventDefault()
+      console.log('Form Submitted')
+    }
+    const changeHandler = (e) =>{
+      console.log(e.target.value)
+      setFormData(oldValues=>({
+        ...oldValues,
+        [e.target.name] : e.target.value
+        
+      }))
+    }
     return (
       <>
       <div className="overlay">
@@ -11,22 +37,22 @@ export default function Login({
               &times;
             </button>
           </div>
-          <form className="registerForm">
+          <form onSubmit={formSubmitHandler}>
             <h2>Login</h2>
             <div className="form-items">
             <div className="form-row">
               <div className="form-group">
                 <div>
-                  <label>Username:</label>
-                  <input type="text" name="username" required />
+                  <label htmlFor="username">Username:</label>
+                  <input type="text" name="username" onChange={changeHandler} value={formData.username} required />
                 </div>
               </div>
             </div>
             <div className="form-row">
               <div className="form-group">
                 <div>
-                  <label>Password:</label>
-                  <input type="password" name="password" required />
+                  <label htmlFor="password">Password:</label>
+                  <input type="password" onChange={changeHandler} value={formData.password} name="password" required />
                 </div>
               </div>
             </div>
@@ -38,6 +64,7 @@ export default function Login({
             <button
               className="button"
               type="button"
+              value={formData.username}
               onClick={isLogedInCloseHandler}
             >
               Cancel
