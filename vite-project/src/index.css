@@ -73,7 +73,12 @@ p {
   justify-content: space-between;
   margin-top: 15px;
 }
-
+.column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
 .form-group {
   margin-right: 10px;
   width: 47%;
@@ -155,8 +160,7 @@ p {
 .footer-container {
   width: 100%;
   position: fixed;
-  bottom: 0;
-  left: 0; 
+  bottom: 0; 
 }
 
 .footer {
@@ -165,4 +169,7 @@ p {
   padding: 20px 2rem; 
   text-align: center;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
