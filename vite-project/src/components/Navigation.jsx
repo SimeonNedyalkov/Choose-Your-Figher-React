@@ -2,10 +2,10 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'About', href: '#', current: false },
-  { name: 'Events', href: '#', current: false },
-  { name: 'Champions', href: '#', current: false },
+  { name: 'Dashboard', href: '/', current: true },
+  { name: 'About', href: '/about', current: false },
+  { name: 'Events', href: '/events', current: false },
+  { name: 'Champions', href: '/champions', current: false },
 ]
 
 function classNames(...classes) {
@@ -17,7 +17,7 @@ export default function Navigation({
   isLogedInClickHandler,
   isLogoutClickHandler
 }){
-    const [isLogedIn,setIsLogedIn] = useState(false)
+    const [isNotLogedIn,setIsLogedIn] = useState(false)
     
     const isUserLogedIn = () =>{
       setIsLogedIn(true)
@@ -39,7 +39,7 @@ export default function Navigation({
               <div className="flex flex-shrink-0 items-center">
                 <img
                   alt="Your Company"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  src="./images/18plus.png"
                   className="h-8 w-auto"
                 />
               </div>
@@ -72,7 +72,7 @@ export default function Navigation({
               </button>
   
               {/* Profile dropdown */}
-              {!isLogedIn && (
+              {isNotLogedIn && (
                 <Menu as="div" className="relative ml-3">
                 <div>
                   <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -100,14 +100,14 @@ export default function Navigation({
                     </a>
                   </MenuItem>
                   <MenuItem>
-                    <a href="#" onClick={isLogoutClickHandler}  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                    <a href="/logout" onClick={isLogoutClickHandler}  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                       Sign out
                     </a>
                   </MenuItem>
                 </MenuItems>
               </Menu>
               )}
-              {isLogedIn && (
+              {!isNotLogedIn && (
                 <Menu as="div" className="relative ml-3">
                 <div>
                   <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -115,7 +115,7 @@ export default function Navigation({
                     <span className="sr-only">Open user menu</span>
                     <img
                       alt=""
-                      src="../../images/neutral-user/single-neutral--user-neutral-single-human-person-512.webp"
+                      src="../../images/neutral-user/1206832.jpg"
                       className="h-8 w-8 rounded-full"
                     />
                   </MenuButton>
@@ -125,12 +125,12 @@ export default function Navigation({
                   className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                 >
                     <MenuItem>
-                    <a href="#" onClick={isLogedInClickHandler} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                    <a href="/login" onClick={isLogedInClickHandler} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                       Login
                     </a>
                   </MenuItem>
                   <MenuItem>
-                    <a href="#" onClick={isRegisteredClickHandler} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                    <a href="/register" onClick={isRegisteredClickHandler} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                       Register
                     </a>
                   </MenuItem>
