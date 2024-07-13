@@ -7,12 +7,12 @@ import Register from './components/userComponents/Register'
 import Login from './components/userComponents/Login'
 import Logout from './components/userComponents/Logout'
 import About from './components/About'
+import Error from './components/Error'
+import Champions from './components/Champions'
 // import Main from './components/Main';
 import {
   Routes,
   Route,
-  Link,
-  BrowserRouter,
   } from 'react-router-dom';
   
 function App(props) {
@@ -47,6 +47,8 @@ function App(props) {
       <Route path='/login' element={<Login isLogedInCloseHandler={isLogedInCloseHandler} isLogedIn={isLogedIn}/>}/>
       <Route path='/logout' element={<Logout isLogoutCloseHandler={isLogoutCloseHandler} isLogout={isLogout}/>}/>
       <Route path='/about' element={<About/>}/>
+      <Route path='/champions' element={<Champions/>}/>
+      <Route path='*' element={<Error/>}/>
     </Routes>
     <div className='flex-grow'>
     
