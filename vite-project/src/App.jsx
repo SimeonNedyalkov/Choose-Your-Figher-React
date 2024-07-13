@@ -27,7 +27,7 @@ function App(props) {
       setIsLogout(true)
     }
   return (
-    <div>
+    <div className='flex flex-col h-screen justify-between'>
     <Navigation isRegisteredClickHandler={isRegisteredClickHandler} isLogedInClickHandler={isLogedInClickHandler} isLogoutClickHandler={isLogoutClickHandler}></Navigation>
     <Main isLogout={isLogout} isLogoutCloseHandler = {isLogoutCloseHandler} isRegisteredCloseHandler={isRegisteredCloseHandler} isRegistered = {isRegistered}  isLogedInCloseHandler={isLogedInCloseHandler} isLogedIn = {isLogedIn}/>
     <Footer/>

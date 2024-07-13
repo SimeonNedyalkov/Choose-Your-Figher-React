@@ -15,11 +15,13 @@ export default function Main({
 }){
     
     return (
-        <>
+        
+        <div className="mb-auto h-10">
         <Home></Home>
         {isRegistered && <Register isRegisteredCloseHandler={isRegisteredCloseHandler}/>}
         {isLogedIn && <Login isLogedInCloseHandler={isLogedInCloseHandler}/>}
         {isLogout && <Logout isLogoutCloseHandler={isLogoutCloseHandler}/>}
-        </>
+        </div>
+        
     )
 }
