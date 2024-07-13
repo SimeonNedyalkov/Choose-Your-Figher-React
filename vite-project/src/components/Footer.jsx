@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     // <div className="footer-container relative isolate gap-x-6 overflow-hidden bg-gray-800 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
   <div>
-            <footer className="footer bg-gray-900 bg-gradient-to-r from-gray-700 to-gray-900">
+            <footer className="footer bottom-0 bg-gray-900 bg-gradient-to-r from-gray-700 to-gray-900">
                 <p className='text-white'>© 2024 Choose Your Fighter.<br/> All rights reserved.</p>
                 <div className='column'>
                 {/* <p className='text-white'>Developed by Simeon Nedylkov</p> */}

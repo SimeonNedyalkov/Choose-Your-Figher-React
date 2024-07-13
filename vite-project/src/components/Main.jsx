@@ -16,7 +16,7 @@ export default function Main({
     
     return (
         
-        <div className="mb-auto h-10">
+        <div>
         <Home></Home>
         {isRegistered && <Register isRegisteredCloseHandler={isRegisteredCloseHandler}/>}
         {isLogedIn && <Login isLogedInCloseHandler={isLogedInCloseHandler}/>}
