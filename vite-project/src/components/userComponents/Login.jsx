@@ -38,32 +38,32 @@ export default function Login({
                 &times;
               </button>
             </div>
-            <form onSubmit={formSubmitHandler}>
-              <h2>Login</h2>
+            <form  onSubmit={formSubmitHandler} className="space-y-6">
+              <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Login</h2>
               <div className="form-items">
               <div className="form-row">
                 <div className="form-group">
                   <div>
-                    <label htmlFor="username">Username:</label>
-                    <input type="text" name="username" onChange={changeHandler} value={formData.username} required />
+                    <label className="block pl-3 text-md font-medium leading-6 text-gray-900" htmlFor="username">Username:</label>
+                    <input className="rounded-md" type="text" name="username" onChange={changeHandler} value={formData.username} required />
                   </div>
                 </div>
               </div>
               <div className="form-row">
                 <div className="form-group">
                   <div>
-                    <label htmlFor="password">Password:</label>
-                    <input type="password" onChange={changeHandler} value={formData.password} name="password" required />
+                    <label className="block pl-3 text-md font-medium leading-6 text-gray-900" htmlFor="password">Password:</label>
+                    <input className="rounded-md" type="password" onChange={changeHandler} value={formData.password} name="password" required />
                   </div>
                 </div>
               </div>
               </div>
               <div className="buttons">
-              <button className="button" type="submit">
-                Register
+              <button className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" type="submit">
+                Login
               </button>
               <button
-                className="button"
+                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 type="button"
                 value={formData.username}
                 onClick={isLogedInCloseHandler}
@@ -76,6 +76,4 @@ export default function Login({
         </div>
             </>
       )
-    
-    
 }
