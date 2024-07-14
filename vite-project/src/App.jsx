@@ -40,24 +40,19 @@ function App(props) {
     }
   return (
     <div className="min-h-screen flex flex-col">
-    <Navigation isRegisteredClickHandler={isRegisteredClickHandler} isLogedInClickHandler={isLogedInClickHandler} isLogoutClickHandler={isLogoutClickHandler}></Navigation>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/register' element={<Register isRegisteredCloseHandler={isRegisteredCloseHandler} isRegistered={isRegistered}/>}/>
-      <Route path='/login' element={<Login isLogedInCloseHandler={isLogedInCloseHandler} isLogedIn={isLogedIn}/>}/>
-      <Route path='/logout' element={<Logout isLogoutCloseHandler={isLogoutCloseHandler} isLogout={isLogout}/>}/>
-      <Route path='/about' element={<About/>}/>
-      <Route path='/champions' element={<Champions/>}/>
-      <Route path='*' element={<Error/>}/>
-    </Routes>
-    <div className='flex-grow'>
-    
-    
-    
-    
-        
-    </div>
-    <Footer/>
+      <div className='flex-grow'>
+        <Navigation isRegisteredClickHandler={isRegisteredClickHandler} isLogedInClickHandler={isLogedInClickHandler} isLogoutClickHandler={isLogoutClickHandler}/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/register' element={<Register isRegisteredCloseHandler={isRegisteredCloseHandler} isRegistered={isRegistered}/>}/>
+          <Route path='/login' element={<Login isLogedInCloseHandler={isLogedInCloseHandler} isLogedIn={isLogedIn}/>}/>
+          <Route path='/logout' element={<Logout isLogoutCloseHandler={isLogoutCloseHandler} isLogout={isLogout}/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/champions' element={<Champions/>}/>
+          <Route path='*' element={<Error/>}/>
+        </Routes>
+      </div>
+      <Footer/>
     </div>
   )
 }

@@ -41,8 +41,11 @@ p {
   background-image: url('../images/home-image/5692516.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  width: 100vw;
+  height: calc(100vh + 144px);
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -182,7 +185,7 @@ p {
   background-image: url('../images/error/404-Error.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: calc(100vh + 144px);
   color: white;
 }
 .about-container {
