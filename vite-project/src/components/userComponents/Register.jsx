@@ -1,7 +1,6 @@
 import {useEffect,useState} from 'react'
 export default function Register({
     isRegisteredCloseHandler,
-    isRegistered
 }){
   const [formData,setFormData] = useState({
     _id:'',
@@ -28,7 +27,7 @@ export default function Register({
       
     }))
   }
-  if(isRegistered){
+  
     return(
       <>
 <div className="overlay">
@@ -77,6 +76,6 @@ export default function Register({
   </>
 
   )
-  }
+  
     
 }

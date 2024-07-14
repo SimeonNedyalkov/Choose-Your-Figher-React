@@ -9,44 +9,37 @@ import Logout from './components/userComponents/Logout'
 import About from './components/About'
 import Error from './components/Error'
 import Champions from './components/Champions'
-// import Main from './components/Main';
+import {useNavigate} from 'react-router-dom'
 import {
   Routes,
   Route,
   } from 'react-router-dom';
   
 function App(props) {
-  const [isRegistered, setIsRegistered] = useState(false)
-  const [isLogedIn,setIsLogedIn] = useState(false)
-  const [isLogout,setIsLogout] = useState(false)
-    function isRegisteredClickHandler(){
-      setIsRegistered(true)
-  }
+  
+  const navigation = useNavigate()
     function isRegisteredCloseHandler(){
-      setIsRegistered(false)
+      navigation('/')
       }
   
     function isLogedInCloseHandler(){
-        setIsLogedIn(false)
+        navigation('/')
     }
-    function isLogedInClickHandler(){
-        setIsLogedIn(true)
-    }
+    
     function isLogoutCloseHandler(){
-      setIsLogout(false)
+
+      navigation('/')
     }
-    function isLogoutClickHandler(){
-      setIsLogout(true)
-    }
+    
   return (
     <div className="min-h-screen flex flex-col">
       <div className='flex-grow'>
-        <Navigation isRegisteredClickHandler={isRegisteredClickHandler} isLogedInClickHandler={isLogedInClickHandler} isLogoutClickHandler={isLogoutClickHandler}/>
+        <Navigation/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/register' element={<Register isRegisteredCloseHandler={isRegisteredCloseHandler} isRegistered={isRegistered}/>}/>
-          <Route path='/login' element={<Login isLogedInCloseHandler={isLogedInCloseHandler} isLogedIn={isLogedIn}/>}/>
-          <Route path='/logout' element={<Logout isLogoutCloseHandler={isLogoutCloseHandler} isLogout={isLogout}/>}/>
+          <Route path='/register' element={<Register isRegisteredCloseHandler={isRegisteredCloseHandler}/>}/>
+          <Route path='/login' element={<Login isLogedInCloseHandler={isLogedInCloseHandler}/>}/>
+          <Route path='/logout' element={<Logout isLogoutCloseHandler={isLogoutCloseHandler}/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/champions' element={<Champions/>}/>
           <Route path='*' element={<Error/>}/>

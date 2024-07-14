@@ -1,8 +1,7 @@
 export default function Logout({
     isLogoutCloseHandler,
-    isLogout
 }){
-  if(isLogout){
+  
     return(
       <div className="overlay">
         <div className="backdrop" onClick={isLogoutCloseHandler}></div>
@@ -26,6 +25,6 @@ export default function Logout({
         </div>
       </div>
   )
-  }
+  
     
 }

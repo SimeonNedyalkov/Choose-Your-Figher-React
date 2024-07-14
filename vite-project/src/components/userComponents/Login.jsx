@@ -1,7 +1,6 @@
 import { useState,useEffect } from "react"
 export default function Login({
     isLogedInCloseHandler,
-    isLogedIn
 }){
     const [formData,setFormData] = useState({
       _id:'',
@@ -28,7 +27,7 @@ export default function Login({
         
       }))
     }
-    if(isLogedIn){
+    
       return (
         <>
         <div className="overlay">
@@ -77,6 +76,6 @@ export default function Login({
         </div>
             </>
       )
-    }
+    
     
 }
