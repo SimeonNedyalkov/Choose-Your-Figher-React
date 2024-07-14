@@ -28,7 +28,7 @@ export default function Login({
         
       }))
     }
-    if(!isLogedIn){
+    if(isLogedIn){
       return (
         <>
         <div className="overlay">

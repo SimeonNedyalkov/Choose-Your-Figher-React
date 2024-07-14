@@ -28,7 +28,7 @@ export default function Register({
       
     }))
   }
-  if(!isRegistered){
+  if(isRegistered){
     return(
       <>
 <div className="overlay">
