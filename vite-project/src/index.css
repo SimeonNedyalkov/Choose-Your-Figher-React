@@ -332,4 +332,47 @@ p {
   background: #6f48eb;
   color: white;
  }
- 
+ /* fighters */
+ .allFighters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.fighter-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fighter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fighter-image {
+  border-bottom: 1px solid #ddd;
+  height: 150px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.fighter-card h3 {
+  color: #333;
+  font-size: 1.2em;
+  margin: 10px 0 5px;
+}
+
+.fighter-card p {
+  color: #666;
+  font-size: 1em;
+  margin: 0 0 15px;
+}

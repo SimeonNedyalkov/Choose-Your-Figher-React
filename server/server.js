@@ -1343,7 +1343,7 @@
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
     			name: "Inkspire",
-    			img: "/assets/fighters-images/Octopus.jpg",
+    			img: "/images/fighters-images/Inkspire.jpg",
     			type: "Octopus",
                 stats: {
                     "attack": 80,
@@ -1357,7 +1357,7 @@
     		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
     			name: "Grizblaze",
-    			img: "/assets/cat-images/cat-5622217__480.jpg",
+    			img: "/images/fighters-images/Grizblaze.png",
                 type: "Bear",
                 stats: {
                     attack: 85,
@@ -1371,7 +1371,7 @@
     		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
     			name: "Stripefang",
-    			img: "/assets/cat-images/black-and-white-cat-px.jpg",
+    			img: "/images/fighters-images/Stripefang.png",
     			type: "Tiger",
     			stats: {
                         attack: 90,
