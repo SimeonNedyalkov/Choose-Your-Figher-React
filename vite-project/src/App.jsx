@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import './index.css'
 import Navigation from "../src/components/Navigation";
 import Footer from './components/Footer';
@@ -9,6 +9,7 @@ import Logout from './components/userComponents/Logout'
 import About from './components/About'
 import Error from './components/Error'
 import Champions from './components/Champions'
+import Events from './components/Events';
 import {useNavigate} from 'react-router-dom'
 import {
   Routes,
@@ -16,20 +17,34 @@ import {
   } from 'react-router-dom';
   
 function App(props) {
-  
-  const navigation = useNavigate()
-    function isRegisteredCloseHandler(){
-      navigation('/')
+  const [fighters,setFighters] = useState([])
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:3030/data/fighters');
+        const res = await response.json();
+        setFighters(res)
+        console.log(res);
+      } catch (error) {
+        console.log(error.message);
       }
-  
-    function isLogedInCloseHandler(){
-        navigation('/')
+    };
+    fetchData()
+  }, []);
+  const navigation = useNavigate()
+  function isRegisteredCloseHandler(){
+    navigation('/')
     }
-    
-    function isLogoutCloseHandler(){
 
+  function isLogedInCloseHandler(){
       navigation('/')
-    }
+  }
+  
+  function isLogoutCloseHandler(){
+    navigation('/')
+  }
+  
+  
     
   return (
     <div className="min-h-screen flex flex-col">
@@ -41,7 +56,8 @@ function App(props) {
           <Route path='/login' element={<Login isLogedInCloseHandler={isLogedInCloseHandler}/>}/>
           <Route path='/logout' element={<Logout isLogoutCloseHandler={isLogoutCloseHandler}/>}/>
           <Route path='/about' element={<About/>}/>
-          <Route path='/champions' element={<Champions/>}/>
+          <Route path='/events' element={<Events/>}/>
+          <Route path='/champions' element={<Champions fighters={fighters}/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>

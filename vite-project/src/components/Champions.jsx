@@ -1,11 +1,15 @@
 import React from 'react';
 
-export default function Champions({ fighter, onSelect }){
+export default function Champions({ fighters }) {
     return (
-        <div className="fighter-card" onClick={() => onSelect(fighter)}>
-            <img src={fighter.image} alt={fighter.name} className="fighter-image" />
-            <h3>{fighter.name}</h3>
-            <p>{fighter.description}</p>
+        <div className='allFighters'>
+            {fighters.map(fighter => (
+                <div key={fighter._id} className="fighter-card">
+                    <img src={fighter.img} alt={fighter.name} className="fighter-image" />
+                    <h3>{fighter.name}</h3>
+                    <p>{fighter.type}</p>
+                </div>
+            ))}
         </div>
     );
 }
