@@ -5,6 +5,7 @@ export default function ChampionsDetails() {
     const { id } = useParams();
     const navigation = useNavigate();
     const [fighter, setFighter] = useState({});
+    const [showFullDescription, setShowFullDescription] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -39,6 +40,10 @@ export default function ChampionsDetails() {
         }
     }
 
+    function toggleDescription() {
+        setShowFullDescription(!showFullDescription);
+    }
+
     let cardClassName = `detailsCard ${fighter.element?.toLowerCase()}`;
 
     return (
@@ -51,11 +56,22 @@ export default function ChampionsDetails() {
                         <p className='fighter-type'>Element: {fighter.element} {getElementEmoji(fighter.element)}</p>
                     </div>
                     <div className='imageAndStats'>
+                        <div className='fighter-description fighter-stats'>
+                                {fighter.description && (
+                                    <p className='text-white'>
+                                        {showFullDescription ? fighter.description : fighter.description.slice(0, 140)}
+                                    </p>
+                                )}
+                                {fighter.description && fighter.description.length > 140 && (
+                                    <button className='read-more-button' onClick={toggleDescription}>
+                                        {showFullDescription ? 'Read Less' : 'Read More'}
+                                    </button>
+                                )}
+                        </div>
                         <img src={fighter.img} alt={fighter.name} className="fighter-details-image" />
                         <div className='fighter-info'>
                             {fighter.stats && (
                                 <div className='fighter-stats'>
-                                    
                                     <table>
                                         <tbody>
                                             <tr>
@@ -84,6 +100,7 @@ export default function ChampionsDetails() {
                             )}
                         </div>
                     </div>
+                    
                     <button className='go-back-button' onClick={handleGoBack}>Go Back</button>
                 </div>
             </div>
