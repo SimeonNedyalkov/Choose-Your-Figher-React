@@ -15,6 +15,7 @@ import {
   Routes,
   Route,
   } from 'react-router-dom';
+import ChampionsDetails from './components/ChampionDetails';
   
 function App(props) {
   const [fighters,setFighters] = useState([])
@@ -58,6 +59,7 @@ function App(props) {
           <Route path='/about' element={<About/>}/>
           <Route path='/events' element={<Events/>}/>
           <Route path='/champions' element={<Champions fighters={fighters}/>}/>
+          <Route path='/champions/:id' element={<ChampionsDetails/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>

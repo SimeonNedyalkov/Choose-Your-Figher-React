@@ -340,6 +340,9 @@ p {
   justify-content: center;
   padding: 20px;
   background-color: #f5f5f5;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .fighter-card {
@@ -350,6 +353,7 @@ p {
   overflow: hidden;
   text-align: center;
   width: 200px;
+  height: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -360,7 +364,7 @@ p {
 
 .fighter-image {
   border-bottom: 1px solid #ddd;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
   width: 100%;
 }
@@ -375,4 +379,88 @@ p {
   color: #666;
   font-size: 1em;
   margin: 0 0 15px;
+}
+/* fighter details */
+.detailsCard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex-direction: column;
+}
+.fighter-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+.fighter-sep{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.fighter-details-image {
+  border-radius: 8px;
+  height: 400px;
+  object-fit: cover;
+  margin-right: 20px;
+  width: 400px;
+}
+
+.fighter-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.imageAndStats{
+  display: flex;
+  flex-direction: row;
+}
+.fighter-info h3 {
+  color: #333;
+  font-size: 2em;
+  margin: 0 0 10px;
+}
+.nameAndType h2{
+  font-size: 30px;
+}
+.fighter-type {
+  color: #666;
+  font-size: 1.2em;
+  margin: 0 0 20px;
+}
+
+.fighter-stats {
+  color: #555;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.go-back-button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+  background-color: #0056b3;
 }

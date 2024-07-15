@@ -1343,8 +1343,9 @@
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
     			name: "Inkspire",
-    			img: "/images/fighters-images/Inkspire.jpg",
+    			img: "/images/fighters-images/InkspireNoBackground.png",
     			type: "Octopus",
+                element:"Water",
                 stats: {
                     "attack": 80,
                     "defense": 70,
@@ -1353,12 +1354,27 @@
                     "health": 100
                 },
     			_createdOn: 1613551279012
-    		},
+    		},"b3a1f7a3-e24f-4d8b-9e1c-02e41ad5421b": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        name: "Tidebreaker",
+        img: "/images/fighters-images/TidebreakerNoBackground.png",
+        type: "Shark",
+        element:"Water",
+        stats: {
+            attack: 90,
+            defense: 60,
+            speed: 85,
+            intelligence: 70,
+            health: 110
+        },
+        "_createdOn": 1613551279012
+    },
     		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
     			name: "Grizblaze",
-    			img: "/images/fighters-images/Grizblaze.png",
+    			img: "/images/fighters-images/Grizblaze4NoBackground.png",
                 type: "Bear",
+                element:"Earth",
                 stats: {
                     attack: 85,
                     defense: 80,
@@ -1371,8 +1387,9 @@
     		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
     			name: "Stripefang",
-    			img: "/images/fighters-images/Stripefang.png",
+    			img: "/images/fighters-images/StripefangNoBackground.png",
     			type: "Tiger",
+                element:"Earth",
     			stats: {
                         attack: 90,
                         defense: 75,
