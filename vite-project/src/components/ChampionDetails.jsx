@@ -100,7 +100,6 @@ export default function ChampionsDetails() {
                             )}
                         </div>
                     </div>
-                    
                     <button className='go-back-button' onClick={handleGoBack}>Go Back</button>
                 </div>
             </div>

@@ -96,11 +96,14 @@ p {
   min-height: 20px;
 }
 .modal {
+  font-family: 'Merriweather  ', sans-serif;
   width: 45rem;
   max-height: 90vh;
   margin: auto;
   border-radius: 20px;
-  background-color: gray;
+  background-color: rgb(162, 161, 161);
+  background: linear-gradient(to bottom, #f3f4f6, #dcdcdc);
+  background: linear-gradient(to top, #7b7b7c, #dcdcdc);
   padding: 1rem;
   box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
   z-index: 30;
