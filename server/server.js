@@ -1368,7 +1368,21 @@
                     "health": 105
                 }
             ,_createdOn: 1613551279012
+        },"f4a2b6c7-d3e5-4e9f-8b9c-03f56ad5421d": {
+        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "name": "Fireflash",
+        "img": "/images/fighters-images/FireflashNoBackground.png",
+        "type": "Firefly",
+        "element": "Fire",
+        "stats": {
+            "attack": 70,
+            "defense": 50,
+            "speed": 95,
+            "intelligence": 80,
+            "health": 60
         },
+        "_createdOn": 1613551279012
+    },
             "b3a1f7a3-e24f-4d8b-9e1c-02e41ad5421b": {
         _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
         name: "Tidebreaker",

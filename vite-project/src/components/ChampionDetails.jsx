@@ -36,9 +36,12 @@ export default function ChampionsDetails(){
                 return ''; // Default case, can be customized based on your needs
         }
     }
+    let cardClassName = `detailsCard ${fighter.element?.toLowerCase()}`;
+    
+    
     return(
-        <div className='detailsCard'>
-            
+        
+        <div className={cardClassName}>
         <div className='fighter-details'>
         <div className='fighter-sep'>
             <div className='nameAndType'>
@@ -61,9 +64,10 @@ export default function ChampionsDetails(){
                 )}
                 </div>
                 </div>
+                <button className='go-back-button' onClick={handleGoBack}>Go Back</button>
             </div>
         </div>
-        <button className='go-back-button' onClick={handleGoBack}>Go Back</button>
+        
         </div>
         
     )
