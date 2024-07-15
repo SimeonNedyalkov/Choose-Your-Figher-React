@@ -1354,7 +1354,22 @@
                     "health": 100
                 },
     			_createdOn: 1613551279012
-    		},"b3a1f7a3-e24f-4d8b-9e1c-02e41ad5421b": {
+    		},"35c62d76-8152-4626-8712-eeb96381bea8":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Thunderclaw",
+                "img": "/images/fighters-images/ThunderclawNoBackground.png",
+                "type": "Eagle",
+                "element": "Wind",
+                "stats": {
+                    "attack": 90,
+                    "defense": 70,
+                    "speed": 100,
+                    "intelligence": 85,
+                    "health": 105
+                }
+            ,_createdOn: 1613551279012
+        },
+            "b3a1f7a3-e24f-4d8b-9e1c-02e41ad5421b": {
         _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
         name: "Tidebreaker",
         img: "/images/fighters-images/TidebreakerNoBackground.png",
