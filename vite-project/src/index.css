@@ -234,13 +234,83 @@ p {
 .about-section a:hover {
   text-decoration: underline;
 }
+/* Events */
+.event h1 {
+  position: relative;
+  font-size: 3rem;
+  color: #6f48eb; /* Bright color for the text */
+  text-align: center;
+}
+
+@keyframes bloodFall {
+  0% {
+    transform: translate(-50%, -200%);
+  }
+  100% {
+    transform: translate(-50%, 100%);
+  }
+}
+.eventDescription {
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px; /* Adjust max-width as per your design */
+  margin: auto; /* Center align */
+}
+
+.event-description h2 {
+  font-family: 'Roboto Slab', serif; /* Example of using a custom font family */
+  color: #fff; /* White text color */
+  text-align: center; /* Center align heading */
+  border-bottom: 2px solid #fff; /* White underline */
+  padding-bottom: 10px; /* Space below the heading */
+}
+.event-details {
+  margin-bottom: 20px;
+}
+.how-it-works {
+  margin-bottom: 20px;
+}
+.prizes {
+  margin-bottom: 20px;
+}
+.prizes h2 {
+  font-family: 'Poppins', Arial, sans-serif; /* Example of using a custom font */
+  color: #6f48eb; /* Brighter color for headings */
+  text-align: center;
+  border-bottom: 2px solid #6f48eb; /* Bright color underline */
+  padding-bottom: 10px;
+}
+
+.event-description h2,.event-details h2,.how-it-works h2{
+  font-family: 'Poppins', Arial, sans-serif; /* Example of using a custom font */
+  color: #6f48eb; /* Brighter color for headings */
+  text-align: center;
+  border-bottom: 2px solid #6f48eb; /* Bright color underline */
+  padding-bottom: 10px;
+}
+
+
 /* react calendar */
+.calendarImage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background-image: url('../images/calendar/1830342971579824543.jpg');
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh + 144px);
+  color: white;
+}
 .app {
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 50vh;
   text-align: center;
   gap: 10px;
 }
@@ -493,6 +563,7 @@ p {
 .go-back-button:hover {
   background-color: #0056b3;
 }
+/* elements */
 .detailsCard.water {
   display: flex;
   flex-direction: column;
