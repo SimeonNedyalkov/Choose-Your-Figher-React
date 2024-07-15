@@ -5,6 +5,7 @@ body{
   padding: 0;
   margin: 0;
   background-color: black;
+  font-family: "Roboto Condensed", sans-serif;
 }
 #root {
   margin: 0 auto;
@@ -203,6 +204,7 @@ p {
   height: calc(100vh + 144px);
 }
 .about-container {
+  
   display: flex;
   flex-direction: column;
   font-family: 'Arial', sans-serif;
@@ -216,6 +218,7 @@ p {
 }
 
 .about-section {
+  font-family:Georgia, 'Times New Roman', Times, serif;
   margin-bottom: 20px;
   padding: 20px;
   background-color: rgba(37, 36, 36, 0.0);
@@ -333,7 +336,7 @@ p {
 .react-calendar { 
   width: 400px;
   max-width: 100%;
-  background-color: #fff;
+  background-color: #d7d6d6;
   color: #222;
   border-radius: 8px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
@@ -341,7 +344,7 @@ p {
   line-height: 1.125em;
  }
  .react-calendar__navigation button {
-  color: #6f48eb;
+  color: #75699d;
   min-width: 44px;
   background: none;
   font-size: 16px;
