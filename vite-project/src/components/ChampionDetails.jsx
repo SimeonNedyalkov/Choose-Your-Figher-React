@@ -21,7 +21,21 @@ export default function ChampionsDetails(){
       function handleGoBack(){
         navigation('/champions')
       }
-      
+      function getElementEmoji(element) {
+        if (!element) return '';
+        switch (element.toLowerCase()) {
+            case 'water':
+                return '💧';
+            case 'fire':
+                return '🔥';
+            case 'earth':
+                return '🪨';
+            case 'wind':
+                return '🌪️';
+            default:
+                return ''; // Default case, can be customized based on your needs
+        }
+    }
     return(
         <div className='detailsCard'>
             
@@ -30,7 +44,7 @@ export default function ChampionsDetails(){
             <div className='nameAndType'>
                 <h2><strong>{fighter.name}</strong></h2>
                 <p className='fighter-type'>Type: {fighter.type}</p>
-                <p className='fighter-type'>Element: {fighter.element}</p>
+                <p className='fighter-type'>Element: {fighter.element}{getElementEmoji(fighter.element)}</p>
             </div>
             <div className='imageAndStats'>
             <img src={fighter.img} alt={fighter.name} className="fighter-details-image" />
