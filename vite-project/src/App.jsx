@@ -13,12 +13,14 @@ import Events from './components/Events';
 import ChampionsDetails from './components/ChampionDetails';
 import Weapons from './components/Weapons';
 import WeaponDetails from './components/WeaponDetails';
+import FighterDisplay from './components/FighterDisplay';
 
 import {useNavigate} from 'react-router-dom'
 import {
   Routes,
   Route,
   } from 'react-router-dom';
+
 
 
 function App(props) {
@@ -80,6 +82,7 @@ function App(props) {
           <Route path='/champions/:id' element={<ChampionsDetails/>}/>
           <Route path='/weapons' element={<Weapons weapons={weapons}/>}/>
           <Route path='/weapons/:id' element={<WeaponDetails/>}/>
+          <Route path='fighterDisplay' element={<FighterDisplay fighters={fighters} weapons={weapons}/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>

@@ -113,7 +113,7 @@ p {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: relative; /* Add this to make the close button positioning relative to the modal */
+  position: relative; 
 }
 @media (min-width: 930px) {
   .modal {
@@ -162,16 +162,8 @@ p {
 
 /* Footer */
 
-/* .footer-container {
-  width: 100%;
-  position: fixed;
-  bottom: 0; 
-} */
-
 .footer {
-  /* max-width: 1280px;
-  margin: 0 auto;
-  padding: 20px 2rem;  */
+  
   text-align: center;
   color: #fff;
   display: flex;
@@ -260,7 +252,7 @@ p {
 .event h1 {
   position: relative;
   font-size: 3rem;
-  color: #6f48eb; /* Bright color for the text */
+  color: #6f48eb; 
   text-align: center;
 }
 
@@ -273,19 +265,19 @@ p {
   }
 }
 .eventDescription {
-  background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+  background-color: rgba(0, 0, 0, 0.7); 
   padding: 20px;
   border-radius: 8px;
-  max-width: 600px; /* Adjust max-width as per your design */
-  margin: auto; /* Center align */
+  max-width: 600px; 
+  margin: auto; 
 }
 
 .event-description h2 {
-  font-family: 'Roboto Slab', serif; /* Example of using a custom font family */
-  color: #fff; /* White text color */
-  text-align: center; /* Center align heading */
-  border-bottom: 2px solid #fff; /* White underline */
-  padding-bottom: 10px; /* Space below the heading */
+  font-family: 'Roboto Slab', serif;
+  color: #fff; 
+  text-align: center; 
+  border-bottom: 2px solid #fff; 
+  padding-bottom: 10px; 
 }
 .event-details {
   margin-bottom: 20px;
@@ -297,18 +289,18 @@ p {
   margin-bottom: 20px;
 }
 .prizes h2 {
-  font-family: 'Poppins', Arial, sans-serif; /* Example of using a custom font */
-  color: #6f48eb; /* Brighter color for headings */
+  font-family: 'Poppins', Arial, sans-serif; 
+  color: #6f48eb; 
   text-align: center;
-  border-bottom: 2px solid #6f48eb; /* Bright color underline */
+  border-bottom: 2px solid #6f48eb; 
   padding-bottom: 10px;
 }
 
 .event-description h2,.event-details h2,.how-it-works h2{
-  font-family: 'Poppins', Arial, sans-serif; /* Example of using a custom font */
-  color: #6f48eb; /* Brighter color for headings */
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #6f48eb; 
   text-align: center;
-  border-bottom: 2px solid #6f48eb; /* Bright color underline */
+  border-bottom: 2px solid #6f48eb; 
   padding-bottom: 10px;
 }
 
@@ -363,9 +355,7 @@ p {
  abbr[title] {
   text-decoration: none;
  }
- /* .react-calendar__month-view__days__day--weekend {
-  color: #d10000;
- } */
+
  .react-calendar__tile:enabled:hover,
  .react-calendar__tile:enabled:focus {
   background: #f8f8fa;
@@ -540,8 +530,8 @@ p {
 }
 
 .fighter-stats {
-  background-color: #222; /* Dark background */
-  color: #fff; /* White text */
+  background-color: #222; 
+  color: #fff;
   padding: 20px;
   border-radius: 8px;
   font-size: 1em;
@@ -559,13 +549,13 @@ p {
 .fighter-stats td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #444; /* Lighter border */
+  border-bottom: 1px solid #444; 
 }
 .blueishStats{
   color: rgb(112, 196, 245)
 }
 .fighter-stats th {
-  background-color: #333; /* Darker background for header */
+  background-color: #333; 
 }
 
 .fighter-info {
@@ -715,4 +705,27 @@ p {
 .read-more-button:hover {
   background-color: rgb(49, 176, 213);
   color: #fff;
+}
+.fighter-display {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fighter-image {
+  width: 300px;
+}
+
+.weapon-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.fighter-details {
+  margin-top: 20px;
+  text-align: center;
 }
