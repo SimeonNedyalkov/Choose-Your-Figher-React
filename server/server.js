@@ -1483,10 +1483,10 @@
                 "element": "Earth",
                 "img": "/images/Weapons/earthbreakerNoBackground.png",
                 "stats":{
-                    "attackBoost": 15,
-                    "speedBoost": 3,
-                    "defenseBoost": 10,
-                    "intelligenceBoost": 2,
+                    "attack": 15,
+                    "speed": 3,
+                    "defense": 10,
+                    "intelligence": 2,
                 },
                 "description": "The Earthbreaker is a hammer imbued with the power of the earth. It grants the wielder immense attack strength and a significant boost to defense, making them a formidable force on the battlefield. While the hammer slightly enhances speed and intelligence, its true strength lies in its ability to deliver crushing blows and withstand heavy hits."
         }
