@@ -1471,10 +1471,10 @@
                 "element": "Wind",
                 "img": "/images/Weapons/windwakerNoBackground.png",
                 "stats":{
-                    "attackBoost": 10,
+                    "attackBoost": 5,
                     "speedBoost": 10,
                     "defenseBoost": 5,
-                    "intelligenceBoost": 5,
+                    "intelligenceBoost": 10,
                 },
                 "description": "The Windwaker is a scythe infused with the essence of the wind. It enhances the wielder's attack and speed, allowing for swift and deadly strikes that cut through the air. Additionally, the scythe provides a balanced boost to defense and intelligence, ensuring the wielder is powerful, quick, and smart in battle."
         },"6q5p4o3n-2m1l-0k9j-8h7g-6f5e4d3sad2b1": {
