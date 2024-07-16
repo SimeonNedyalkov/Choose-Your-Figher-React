@@ -1444,10 +1444,12 @@
                 "type": "Sword",
                 "element": "Water",
                 "img": "/images/Weapons/hydrobladeNoBackground.png",
+                "stats":{
                 "attackBoost": 15,
                 "defenseBoost": 5,
                 "speedBoost": 5,
                 "intelligenceBoost": 5,
+                },
                 "description": "The Hydroblade is a sword forged from the purest waters of the deep. It slices through opponents with the fluid grace of a wave, augmenting the wielder's attack power with the strength of the ocean. Its magical properties also provide a balanced boost to defense, speed, and intelligence, making the wielder more formidable in all aspects of combat."
             },
             "7p6o5n4m-3l2k-1j0i-h9g8-f7e6d5c4b3a2": {
@@ -1455,10 +1457,12 @@
                 "type": "Axe",
                 "element": "Fire",
                 "img": "/images/Weapons/lavaSplitterNoBackground.png",
-                "attackBoost": 10,
-                "speedBoost": 10,
-                "defenseBoost": 5,
-                "intelligenceBoost": 5,
+                "stats":{
+                    "attackBoost": 10,
+                    "speedBoost": 10,
+                    "defenseBoost": 5,
+                    "intelligenceBoost": 5,
+                },
                 "description": "The Lava Splitter is an axe imbued with the blazing essence of fire. It enhances the wielder's attack and speed, allowing for swift and devastating strikes that burn through the enemy. Additionally, the axe provides a balanced boost to defense and intelligence, ensuring the wielder is powerful, quick, and smart in battle."
             }
         },
