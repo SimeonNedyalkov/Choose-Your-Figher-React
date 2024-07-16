@@ -76,19 +76,19 @@ export default function WeaponDetails() {
                                         <tbody>
                                             <tr>
                                                 <td><strong>Attack:</strong></td>
-                                                <td className='blueishStats'>{weapon.stats.attackBoost}</td>
+                                                <td className='blueishStats'>{weapon.stats.attack}</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Speed:</strong></td>
-                                                <td className='blueishStats'>{weapon.stats.speedBoost}</td>
+                                                <td className='blueishStats'>{weapon.stats.speed}</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Defense:</strong></td>
-                                                <td className='blueishStats'>{weapon.stats.defenseBoost}</td>
+                                                <td className='blueishStats'>{weapon.stats.defense}</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Intelligence:</strong></td>
-                                                <td className='blueishStats'>{weapon.stats.intelligenceBoost}</td>
+                                                <td className='blueishStats'>{weapon.stats.intelligence}</td>
                                             </tr>
                                         </tbody>
                                     </table>
