@@ -4,6 +4,7 @@ import React from 'react';
 export default function About() {
   return (
     <div className='backgroundAbout'>
+    <div className='imageAbout'><img src="../images/aboutus/tidebreakerAboutUs.png" alt="" /></div>
     <main className="about-container">
       <section id="introduction" className="about-section">
         <h2>Introduction</h2>
