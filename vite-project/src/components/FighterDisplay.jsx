@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 
 const FighterDisplay = () => {
     const {fighterId,weaponId} = useParams();
     const [fighter, setFighter] = useState({});
     const [weapon, setWeapon] = useState({});
-
+    const navigation = useNavigate()
     useEffect(() => {
         const fetchFighterData = async () => {
             try {
@@ -32,7 +32,9 @@ const FighterDisplay = () => {
         fetchWeaponData();
     }, []);
 
-    
+    function goBack(){
+        navigation('/selectFighter')
+    }
     const calculateCombinedStats = () => {
         let combinedStats = {};
         if (fighter.stats && weapon.stats) {
@@ -51,23 +53,39 @@ const FighterDisplay = () => {
     };
     const combinedStats = calculateCombinedStats();
     return (
+        <div className='fighterDisplayImage'>
         <div className="fighter-display">
-            <img src={fighter.img} alt={fighter.name} className="fighter-image" />
-            <img src={weapon.img} alt={weapon.name} className="weapon-image" />
             <div className="fighter-details">
-                <h2>{fighter.name}</h2>
+                <div>
                 {combinedStats && (
                     <>
-                        <h3>Combined Stats</h3>
-                        <ul>
-                            {Object.entries(combinedStats).map(([stat, value]) => (
-                                <li key={stat}>{`${stat}: ${value}`}</li>
-                            ))}
-                        </ul>
+                        <div className='descAndImages'>
+                        <h3 className='transparent-box'><br/>{fighter.name} with {weapon.name}</h3>
+                        <div className='imagesOnly'>
+                            <img src={fighter.img} alt={fighter.name} className="fighter-image1" />
+                            <img src={weapon.img} alt={weapon.name} className="weapon-image" />
+                        </div>
+                        </div>
+                        <div className='fighter-stats'>
+                        <table>
+                            <tbody>
+                                {Object.entries(combinedStats).map(([stat, value]) => (
+                                    <tr key={stat}>
+                                        <td><strong>{stat}</strong></td>
+                                        <td className='blueishStats'>{value}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                     </>
                 )}
+                <button onClick={goBack} className='flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Go Back</button>
+                </div>
                 
             </div>
+            
+        </div>
         </div>
     );
 };

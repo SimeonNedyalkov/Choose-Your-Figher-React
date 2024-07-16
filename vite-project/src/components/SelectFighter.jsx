@@ -8,8 +8,6 @@ const SelectFighter = ({ fighters, weapons }) => {
 
     function handleSelect() {
         if (selectedFighterId && selectedWeaponId) {
-            console.log(`Selected Fighter id: ${selectedFighterId}`);
-            console.log(`Selected Weapon id: ${selectedWeaponId}`);
             // Assuming you want to navigate to a specific URL when both are selected
             navigation(`/fighterDisplay/${selectedFighterId}/${selectedWeaponId}`);
         } else {
@@ -18,17 +16,17 @@ const SelectFighter = ({ fighters, weapons }) => {
     }
 
     const selectFighter = (fighterId) => {
-        setSelectedFighterId(fighterId);
+        setSelectedFighterId(prevId => prevId === fighterId ? null : fighterId); // Toggle selection
     };
 
     const selectWeapon = (weaponId) => {
-        setSelectedWeaponId(weaponId);
+        setSelectedWeaponId(prevId => prevId === weaponId ? null : weaponId); // Toggle selection
     };
 
     return (
-        <div>
+        <div className='selectFighterImage'>
             <div className="select-fighter">
-                <h1>Select Your Fighter</h1>
+                <h1 className='selectYourFighter underline'>Select Your Fighter</h1>
                 <div className="fighters-list">
                     {fighters.map((fighter) => (
                         <div
@@ -37,13 +35,13 @@ const SelectFighter = ({ fighters, weapons }) => {
                             onClick={() => selectFighter(fighter._id)}
                         >
                             <img src={fighter.img} alt={fighter.name} />
-                            <h2>{fighter.name}</h2>
+                            <h2 className='text-yellow-300'>{fighter.name}</h2>
                         </div>
                     ))}
                 </div>
             </div>
             <div className="select-fighter">
-                <h1>Select Your Weapon</h1>
+                <h1 className='selectYourFighter underline'>Select Your Weapon</h1>
                 <div className="fighters-list">
                     {weapons.map((weapon) => (
                         <div
@@ -52,13 +50,13 @@ const SelectFighter = ({ fighters, weapons }) => {
                             onClick={() => selectWeapon(weapon._id)}
                         >
                             <img src={weapon.img} alt={weapon.name} />
-                            <h2>{weapon.name}</h2>
+                            <h2 className='text-yellow-300'>{weapon.name}</h2>
                         </div>
                     ))}
                 </div>
             </div>
             <div>
-                <button onClick={handleSelect}>Select Fighter and Weapon</button>
+                <button className='flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' onClick={handleSelect}>Continue</button>
             </div>
         </div>
     );

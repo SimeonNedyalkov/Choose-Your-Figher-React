@@ -1466,7 +1466,7 @@
                 "description": "The Lava Splitter is an axe imbued with the blazing essence of fire. It enhances the wielder's attack and speed, allowing for swift and devastating strikes that burn through the enemy. Additionally, the axe provides a balanced boost to defense and intelligence, ensuring the wielder is powerful, quick, and smart in battle."
             },
             "7p6o5n4m-3l2k-1j0i-h9g8-f7e6d5sad3a2": {
-                "name": "Windwaker",
+                "name": "Windwaker scythe",
                 "type": "Scythe",
                 "element": "Wind",
                 "img": "/images/Weapons/windwakerNoBackground.png",

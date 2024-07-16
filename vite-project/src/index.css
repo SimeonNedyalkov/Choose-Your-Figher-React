@@ -707,10 +707,47 @@ p {
   color: #fff;
 }
 /* select fighter */
+.selectFighterImage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background-image: url('../images/9DoWZmsH.png');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: calc(100vh + 144px);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.selectYourFighter{
+  
+    position: relative;
+    font-size: 3rem;
+    color: #6f48eb; 
+    text-align: center;
+  
+}
 .selected {
-  border: 2px solid blue; /* Example border styling for selected items */
-  padding: 5px;
+  border: 2px solid blue;
+  padding: 10px; /* Increased padding for better visual appearance */
   margin: 5px;
+  border-radius: 8px; /* Rounded corners for a softer look */
+  background-color: #f0f0f0; /* Light background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.selected:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.selected:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus outline */
 }
 .select-fighter {
   text-align: center;
@@ -740,6 +777,51 @@ p {
   font-size: 1.2em;
 }
 /* fighter display */
+.fighterDisplayImage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background-image: url('../images/fighterDisplay/wp5085421.webp');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: calc(100vh + 144px);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.descAndImages{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+.imagesOnly{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%; /* Each image takes up 50% of the container width */
+  height: auto; /* Maintain aspect ratio */
+}
+.transparent-box {
+  background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+  padding: 20px; /* Padding around the text */
+  border-radius: 8px; /* Rounded corners */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  text-align: center; /* Center text alignment */
+  width: fit-content; /* Fit the box to the content */
+  margin: auto; /* Center the box within its parent */
+}
+
+.transparent-box h3 {
+  color: white; /* White text color for contrast */
+  margin: 0; /* Remove default margin from h3 */
+}
 .fighter-display {
   position: relative;
   display: flex;
@@ -747,19 +829,22 @@ p {
   align-items: center;
 }
 
-.fighter-image {
+.fighter-image1 {
   width: 300px;
 }
 
 .weapon-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 100px;
-  transform: translate(-50%, -50%);
+  height: 100px;
 }
 
 .fighter-details {
   margin-top: 20px;
+  text-align: center;
+}
+.fighter-details h3{
+  position: relative;
+  font-size: 1.5rem;
+  color: #6f48eb; 
   text-align: center;
 }
