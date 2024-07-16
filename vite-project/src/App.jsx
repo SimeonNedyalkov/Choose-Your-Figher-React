@@ -10,17 +10,20 @@ import About from './components/About'
 import Error from './components/Error'
 import Champions from './components/Champions'
 import Events from './components/Events';
+import ChampionsDetails from './components/ChampionDetails';
+import Weapons from './components/Weapons';
+
 import {useNavigate} from 'react-router-dom'
 import {
   Routes,
   Route,
   } from 'react-router-dom';
-import ChampionsDetails from './components/ChampionDetails';
-  
+
 function App(props) {
   const [fighters,setFighters] = useState([])
+  const [weapons,setWeapons] = useState([])
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchFighterData = async () => {
       try {
         const response = await fetch('http://localhost:3030/data/fighters');
         const res = await response.json();
@@ -30,8 +33,21 @@ function App(props) {
         console.log(error.message);
       }
     };
-    fetchData()
+    fetchFighterData()
   }, []);
+  useEffect(()=>{
+    const fetchWeaponData = async () => {
+      try {
+        const response = await fetch('http://localhost:3030/data/weapons')
+        const res = await response.json()
+        setWeapons(res)
+        console.log(res)
+      } catch (error) {
+        console.log(error.message)
+      }
+    }
+    fetchWeaponData()
+  },[])
   const navigation = useNavigate()
   function isRegisteredCloseHandler(){
     navigation('/')
@@ -60,6 +76,8 @@ function App(props) {
           <Route path='/events' element={<Events/>}/>
           <Route path='/champions' element={<Champions fighters={fighters}/>}/>
           <Route path='/champions/:id' element={<ChampionsDetails/>}/>
+          <Route path='/weapons' element={<Weapons weapons={weapons}/>}/>
+          <Route path='/weapons/:id' element={<Weapons/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>

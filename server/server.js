@@ -1438,15 +1438,29 @@
             "_createdOn": 1613551388703
         }
     },
-    	comments: {
-    		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			content: "Great recipe!",
-    			recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
-    			_createdOn: 1614260681375,
-    			_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    		}
-    	},
+    	"weapons": {
+            "1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6": {
+                "name": "Hydroblade",
+                "type": "Sword",
+                "element": "Water",
+                "img": "/images/Weapons/hydroblade.webp",
+                "attackBoost": 15,
+                "defenseBoost": 5,
+                "speedBoost": 5,
+                "intelligenceBoost": 5,
+                "description": "The Hydroblade is a sword forged from the purest waters of the deep. It slices through opponents with the fluid grace of a wave, augmenting the wielder's attack power with the strength of the ocean. Its magical properties also provide a balanced boost to defense, speed, and intelligence, making the wielder more formidable in all aspects of combat."
+            },
+            "7p6o5n4m-3l2k-1j0i-h9g8-f7e6d5c4b3a2": {
+                "name": "Stormclaw Talons",
+                "type": "Claws",
+                "element": "Wind",
+                "attackBoost": 10,
+                "speedBoost": 10,
+                "defenseBoost": 5,
+                "intelligenceBoost": 5,
+                "description": "The Stormclaw Talons are razor-sharp claws imbued with the fury of the storm. They enhance the wielder's attack and speed, allowing for swift and deadly strikes that mimic the ferocity of a thunderstorm. Additionally, the talons provide a balanced boost to defense and intelligence, ensuring the wielder is quick, strong, and smart in battle."
+            }
+        },
     	records: {
     		i01: {
     			name: "John1",
