@@ -1443,7 +1443,7 @@
                 "name": "Hydroblade",
                 "type": "Sword",
                 "element": "Water",
-                "img": "/images/Weapons/hydrobladeNoBackground.png",
+                "img": "/images/Weapons/hydroblade1NoBackground.png",
                 "stats":{
                 "attackBoost": 15,
                 "defenseBoost": 5,
@@ -1464,7 +1464,32 @@
                     "intelligenceBoost": 5,
                 },
                 "description": "The Lava Splitter is an axe imbued with the blazing essence of fire. It enhances the wielder's attack and speed, allowing for swift and devastating strikes that burn through the enemy. Additionally, the axe provides a balanced boost to defense and intelligence, ensuring the wielder is powerful, quick, and smart in battle."
-            }
+            },
+            "7p6o5n4m-3l2k-1j0i-h9g8-f7e6d5sad3a2": {
+                "name": "Windwaker",
+                "type": "Scythe",
+                "element": "Wind",
+                "img": "/images/Weapons/windwakerNoBackground.png",
+                "stats":{
+                    "attackBoost": 10,
+                    "speedBoost": 10,
+                    "defenseBoost": 5,
+                    "intelligenceBoost": 5,
+                },
+                "description": "The Windwaker is a scythe infused with the essence of the wind. It enhances the wielder's attack and speed, allowing for swift and deadly strikes that cut through the air. Additionally, the scythe provides a balanced boost to defense and intelligence, ensuring the wielder is powerful, quick, and smart in battle."
+        },"6q5p4o3n-2m1l-0k9j-8h7g-6f5e4d3sad2b1": {
+                "name": "Earthbreaker",
+                "type": "Hammer",
+                "element": "Earth",
+                "img": "/images/Weapons/earthbreakerNoBackground.png",
+                "stats":{
+                    "attackBoost": 15,
+                    "speedBoost": 3,
+                    "defenseBoost": 10,
+                    "intelligenceBoost": 2,
+                },
+                "description": "The Earthbreaker is a hammer imbued with the power of the earth. It grants the wielder immense attack strength and a significant boost to defense, making them a formidable force on the battlefield. While the hammer slightly enhances speed and intelligence, its true strength lies in its ability to deliver crushing blows and withstand heavy hits."
+        }
         },
     	records: {
     		i01: {
