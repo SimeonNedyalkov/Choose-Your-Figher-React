@@ -81,7 +81,7 @@ function App(props) {
           <Route path='/weapons' element={<Weapons weapons={weapons}/>}/>
           <Route path='/weapons/:id' element={<WeaponDetails/>}/>
           <Route path='/selectFighter' element={<SelectFighter fighters={fighters} weapons={weapons}/>}/>
-          <Route path='/fighterDisplay/:id' element={<FighterDisplay fighters={fighters} weapons={weapons}/>}/>
+          <Route path='/fighterDisplay/:fighterId/:weaponId' element={<FighterDisplay fighters={fighters} weapons={weapons}/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>

@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 const FighterDisplay = () => {
-    const params = useParams();
+    const {fighterId,weaponId} = useParams();
     const [fighter, setFighter] = useState({});
     const [weapon, setWeapon] = useState({});
 
     useEffect(() => {
         const fetchFighterData = async () => {
             try {
-                const response = await fetch(`http://localhost:3030/data/fighters/${params.id}`);
+                const response = await fetch(`http://localhost:3030/data/fighters/${fighterId}`);
                 const res = await response.json();
                 setFighter(res);
             } catch (error) {
@@ -17,12 +17,12 @@ const FighterDisplay = () => {
             }
         };
         fetchFighterData();
-    }, [params.id]); // Include params.id in dependencies to fetch data when it changes
+    }, []); // Include params.id in dependencies to fetch data when it changes
 
     useEffect(() => {
         const fetchWeaponData = async () => {
             try {
-                const response = await fetch(`http://localhost:3030/data/weapons/1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6`);
+                const response = await fetch(`http://localhost:3030/data/weapons/${weaponId}`);
                 const res = await response.json();
                 setWeapon(res);
             } catch (error) {

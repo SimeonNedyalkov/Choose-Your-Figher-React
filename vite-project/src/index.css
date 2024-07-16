@@ -707,6 +707,11 @@ p {
   color: #fff;
 }
 /* select fighter */
+.selected {
+  border: 2px solid blue; /* Example border styling for selected items */
+  padding: 5px;
+  margin: 5px;
+}
 .select-fighter {
   text-align: center;
 }
