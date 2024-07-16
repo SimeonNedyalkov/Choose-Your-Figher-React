@@ -706,6 +706,35 @@ p {
   background-color: rgb(49, 176, 213);
   color: #fff;
 }
+/* select fighter */
+.select-fighter {
+  text-align: center;
+}
+
+.fighters-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fighter-item {
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.fighter-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.fighter-item h2 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+/* fighter display */
 .fighter-display {
   position: relative;
   display: flex;

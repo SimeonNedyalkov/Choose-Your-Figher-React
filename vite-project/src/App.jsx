@@ -14,14 +14,12 @@ import ChampionsDetails from './components/ChampionDetails';
 import Weapons from './components/Weapons';
 import WeaponDetails from './components/WeaponDetails';
 import FighterDisplay from './components/FighterDisplay';
-
+import SelectFighter from './components/SelectFighter';
 import {useNavigate} from 'react-router-dom'
 import {
   Routes,
   Route,
   } from 'react-router-dom';
-
-
 
 function App(props) {
   const [fighters,setFighters] = useState([])
@@ -82,7 +80,8 @@ function App(props) {
           <Route path='/champions/:id' element={<ChampionsDetails/>}/>
           <Route path='/weapons' element={<Weapons weapons={weapons}/>}/>
           <Route path='/weapons/:id' element={<WeaponDetails/>}/>
-          <Route path='fighterDisplay' element={<FighterDisplay fighters={fighters} weapons={weapons}/>}/>
+          <Route path='/selectFighter' element={<SelectFighter fighters={fighters} weapons={weapons}/>}/>
+          <Route path='/fighterDisplay/:id' element={<FighterDisplay fighters={fighters} weapons={weapons}/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>

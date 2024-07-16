@@ -1445,10 +1445,10 @@
                 "element": "Water",
                 "img": "/images/Weapons/hydroblade1NoBackground.png",
                 "stats":{
-                "attackBoost": 15,
-                "defenseBoost": 5,
-                "speedBoost": 5,
-                "intelligenceBoost": 5,
+                "attack": 15,
+                "defense": 5,
+                "speed": 5,
+                "intelligence": 5,
                 },
                 "description": "The Hydroblade is a sword forged from the purest waters of the deep. It slices through opponents with the fluid grace of a wave, augmenting the wielder's attack power with the strength of the ocean. Its magical properties also provide a balanced boost to defense, speed, and intelligence, making the wielder more formidable in all aspects of combat."
             },
@@ -1458,10 +1458,10 @@
                 "element": "Fire",
                 "img": "/images/Weapons/lavaSplitterNoBackground.png",
                 "stats":{
-                    "attackBoost": 10,
-                    "speedBoost": 10,
-                    "defenseBoost": 5,
-                    "intelligenceBoost": 5,
+                    "attack": 10,
+                    "speed": 10,
+                    "defense": 5,
+                    "intelligence": 5,
                 },
                 "description": "The Lava Splitter is an axe imbued with the blazing essence of fire. It enhances the wielder's attack and speed, allowing for swift and devastating strikes that burn through the enemy. Additionally, the axe provides a balanced boost to defense and intelligence, ensuring the wielder is powerful, quick, and smart in battle."
             },
@@ -1471,10 +1471,10 @@
                 "element": "Wind",
                 "img": "/images/Weapons/windwakerNoBackground.png",
                 "stats":{
-                    "attackBoost": 5,
-                    "speedBoost": 10,
-                    "defenseBoost": 5,
-                    "intelligenceBoost": 10,
+                    "attack": 5,
+                    "speed": 10,
+                    "defense": 5,
+                    "intelligence": 10,
                 },
                 "description": "The Windwaker is a scythe infused with the essence of the wind. It enhances the wielder's attack and speed, allowing for swift and deadly strikes that cut through the air. Additionally, the scythe provides a balanced boost to defense and intelligence, ensuring the wielder is powerful, quick, and smart in battle."
         },"6q5p4o3n-2m1l-0k9j-8h7g-6f5e4d3sad2b1": {

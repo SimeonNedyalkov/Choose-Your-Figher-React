@@ -8,7 +8,7 @@ const navigation = [
   { name: 'Events', href: '/events', current: false },
   { name: 'Champions', href: '/champions', current: false },
   { name:'Weapons', href:'/weapons',current:false},
-  { name:'Fighter Display',href:'/fighterDisplay',current:false}
+  {name:'Select Fighter',href:'/selectFighter',current:false},
 ]
 
 function classNames(...classes) {
