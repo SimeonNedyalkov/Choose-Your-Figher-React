@@ -47,9 +47,42 @@ p {
   color: white;
   margin: 0;
   padding: 0;
+  /* animation: fadeIn 1.5s;
+  animation-fill-mode: forwards; */
+}
+/* @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+} */
+.title, .picktext, .buttonContainer {
+  z-index: 2;
 }
 
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+}
 
+.startButton {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.startButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
 /* modals for Login and Register */
 .overlay {
   position: absolute;
