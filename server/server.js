@@ -1513,7 +1513,7 @@
             "stats": {
                 "defense": 15,
                 "health": 10,
-                "attack": 10,
+                "intelligence": 10,
                 "speed": 10
             },
             "description": "The Inferno Plate is forged in the heart of a volcano, imbued with the essence of fire. This armor provides robust defense while also enhancing the wearer’s attack capabilities. Its fiery aura boosts speed and health, ensuring the wearer can strike quickly and sustain themselves in the heat of battle. The armor’s design channels the ferocious energy of flames, making it ideal for fire element fighters who thrive in intense combat."
@@ -1535,11 +1535,11 @@
             "name":"Stone Bulwark",
             "element": "Earth",
             "type": "Armor",
-            "img": "/images/Armors/stoneBulwarkNoBackground.png",
+            "img": "/images/Armors/stoneBulwark3NoBackground.png",
             "stats": {
                 "defense": 25,
                 "health": 20,
-                "attack": 5,
+                "speed": 5,
                 "intelligence": 5
             },
             "description": "The Stone Bulwark is an armor set hewn from the hardest rocks and minerals of the earth. It provides exceptional defense and health, making the wearer a bastion of resilience in battle. The armor’s solid construction ensures that the wearer can withstand even the heaviest blows, while its enchanted properties offer a slight boost to attack and intelligence. The Stone Bulwark’s design embodies the unyielding strength of the earth, perfect for earth element fighters who excel in enduring and outlasting their opponents."
