@@ -20,10 +20,13 @@ import {
   Routes,
   Route,
   } from 'react-router-dom';
+import Armors from './components/Armors';
+import ArmorDetails from './components/ArmorDetails';
 
 function App(props) {
   const [fighters,setFighters] = useState([])
   const [weapons,setWeapons] = useState([])
+  const [armors,setArmors] = useState([])
   useEffect(() => {
     const fetchFighterData = async () => {
       try {
@@ -50,6 +53,19 @@ function App(props) {
     }
     fetchWeaponData()
   },[])
+  useEffect(() => {
+    const fetchArmorsData = async () => {
+      try {
+        const response = await fetch('http://localhost:3030/data/armors');
+        const res = await response.json();
+        setArmors(res)
+        console.log(res);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    fetchArmorsData()
+  }, []);
   const navigation = useNavigate()
   function isRegisteredCloseHandler(){
     navigation('/')
@@ -80,6 +96,8 @@ function App(props) {
           <Route path='/champions/:id' element={<ChampionsDetails/>}/>
           <Route path='/weapons' element={<Weapons weapons={weapons}/>}/>
           <Route path='/weapons/:id' element={<WeaponDetails/>}/>
+          <Route path='/armors' element={<Armors armors={armors}/>}/>
+          <Route path='/armors/:id' element={<ArmorDetails/>}/>
           <Route path='/selectFighter' element={<SelectFighter fighters={fighters} weapons={weapons}/>}/>
           <Route path='/fighterDisplay/:fighterId/:weaponId' element={<FighterDisplay fighters={fighters} weapons={weapons}/>}/>
           <Route path='*' element={<Error/>}/>

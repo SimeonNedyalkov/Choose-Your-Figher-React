@@ -8,6 +8,7 @@ const navigation = [
   { name: 'Events', href: '/events', current: false },
   { name: 'Champions', href: '/champions', current: false },
   { name:'Weapons', href:'/weapons',current:false},
+  { name:'Armors', href:'/armors',current:false},
   {name:'Select Fighter',href:'/selectFighter',current:false},
 ]
 

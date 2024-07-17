@@ -1491,58 +1491,60 @@
                 "description": "The Earthbreaker is a hammer imbued with the power of the earth. It grants the wielder immense attack strength and a significant boost to defense, making them a formidable force on the battlefield. While the hammer slightly enhances speed and intelligence, its true strength lies in its ability to deliver crushing blows and withstand heavy hits."
         }
         },
-    	records: {
-    		i01: {
-    			name: "John1",
-    			val: 1,
-    			_createdOn: 1613551388703
-    		},
-    		i02: {
-    			name: "John2",
-    			val: 1,
-    			_createdOn: 1613551388713
-    		},
-    		i03: {
-    			name: "John3",
-    			val: 2,
-    			_createdOn: 1613551388723
-    		},
-    		i04: {
-    			name: "John4",
-    			val: 2,
-    			_createdOn: 1613551388733
-    		},
-    		i05: {
-    			name: "John5",
-    			val: 2,
-    			_createdOn: 1613551388743
-    		},
-    		i06: {
-    			name: "John6",
-    			val: 3,
-    			_createdOn: 1613551388753
-    		},
-    		i07: {
-    			name: "John7",
-    			val: 3,
-    			_createdOn: 1613551388763
-    		},
-    		i08: {
-    			name: "John8",
-    			val: 2,
-    			_createdOn: 1613551388773
-    		},
-    		i09: {
-    			name: "John9",
-    			val: 3,
-    			_createdOn: 1613551388783
-    		},
-    		i10: {
-    			name: "John10",
-    			val: 1,
-    			_createdOn: 1613551388793
-    		}
-    	},
+    	"armors": {
+        "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6": {
+            "name":"Tidal Guard",
+            "element": "Water",
+            "type": "Armor",
+            "img": "/images/Armors/tidalGuardNoBackground.png",
+            "stats": {
+                "defense": 20,
+                "health": 15,
+                "speed": 5,
+                "intelligence": 10
+            },
+            "description": "The Tidal Guard is an armor set crafted from the enchanted shells and scales of sea creatures. It offers exceptional protection and resilience, with the power to withstand powerful attacks. The armor’s magical properties grant the wearer increased health and intelligence, allowing for swift decision-making and strategic maneuvers in battle. The sleek design ensures mobility and speed, making it perfect for water element fighters."
+        },
+        "b7e6d5c4-b3a2-1l0k-9j8h-7g6f5e4d3c2b1": {
+            "name":"Inferno Plate",
+            "element": "Fire",
+            "type": "Armor",
+            "img": "/images/Armors/infernoPlateNoBackground.png",
+            "stats": {
+                "defense": 15,
+                "health": 10,
+                "attack": 10,
+                "speed": 10
+            },
+            "description": "The Inferno Plate is forged in the heart of a volcano, imbued with the essence of fire. This armor provides robust defense while also enhancing the wearer’s attack capabilities. Its fiery aura boosts speed and health, ensuring the wearer can strike quickly and sustain themselves in the heat of battle. The armor’s design channels the ferocious energy of flames, making it ideal for fire element fighters who thrive in intense combat."
+        },
+        "c5d4e3f2-g1h0-i9j8-7k6l-5m4n3o2p1q0r": {
+            "name":"Gale Mantle",
+            "element": "Wind",
+            "type": "Armor",
+            "img": "/images/Armors/galeMantleNoBackground.png",
+            "stats": {
+                "defense": 10,
+                "speed": 20,
+                "intelligence": 15,
+                "health": 5
+            },
+            "description": "The Gale Mantle is a lightweight armor set woven from the finest silks and imbued with the power of the wind. It offers unparalleled speed and agility, allowing the wearer to move with the swiftness of a gust. The armor’s enchantments enhance intelligence, providing clarity and foresight in the heat of battle. The Gale Mantle’s design ensures maximum mobility and minimal weight, making it perfect for wind element fighters who rely on speed and precision."
+        },
+        "d3c2b1a0-h9i8-7g6f-5e4d-3c2b1a0k9j8h": {
+            "name":"Stone Bulwark",
+            "element": "Earth",
+            "type": "Armor",
+            "img": "/images/Armors/stoneBulwarkNoBackground.png",
+            "stats": {
+                "defense": 25,
+                "health": 20,
+                "attack": 5,
+                "intelligence": 5
+            },
+            "description": "The Stone Bulwark is an armor set hewn from the hardest rocks and minerals of the earth. It provides exceptional defense and health, making the wearer a bastion of resilience in battle. The armor’s solid construction ensures that the wearer can withstand even the heaviest blows, while its enchanted properties offer a slight boost to attack and intelligence. The Stone Bulwark’s design embodies the unyielding strength of the earth, perfect for earth element fighters who excel in enduring and outlasting their opponents."
+        }
+    },
     	catches: {
     		"07f260f4-466c-4607-9a33-f7273b24f1b4": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
