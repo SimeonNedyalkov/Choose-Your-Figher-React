@@ -514,6 +514,7 @@ p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 .fighter-info h3 {
   color: #333;

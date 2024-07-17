@@ -75,16 +75,16 @@ export default function ArmorDetails() {
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <td><strong>Attack:</strong></td>
-                                                <td className='blueishStats'>{armor.stats.attack}</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Speed:</strong></td>
-                                                <td className='blueishStats'>{armor.stats.speed}</td>
+                                                <td><strong>Health:</strong></td>
+                                                <td className='blueishStats'>{armor.stats.health}</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Defense:</strong></td>
                                                 <td className='blueishStats'>{armor.stats.defense}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Speed:</strong></td>
+                                                <td className='blueishStats'>{armor.stats.speed}</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Intelligence:</strong></td>
