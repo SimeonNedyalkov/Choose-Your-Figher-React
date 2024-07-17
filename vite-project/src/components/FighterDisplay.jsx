@@ -81,25 +81,31 @@ const FighterDisplay = () => {
                 {combinedStats && (
                     <>
                         <div className='descAndImages'>
-                        <h3 className='transparent-box'><br/>{fighter.name} equipped with {weapon.name} and {armor.name}</h3>
+                        {/* <h3 className='transparent-box'><br/>{fighter.name} equipped with {weapon.name} and {armor.name}</h3> */}
                         <div className="transparent-box m-2">
-                        <div class="champion-menu">
-                        <div class="champion-info">
-                            <h2>{fighter.name}</h2>
-                            <img src={fighter.img} alt={fighter.name} class="fighter-image2" />
-                        </div>
-                        <div class="equipment">
-                            <h3>Equipment</h3>
-                            <div class="item">
-                                <img src={weapon.img} alt={weapon.name} class="item-image2" />
-                                <span class="item-name">{weapon.name}</span>
+                        <div className="champion-menu">
+                            <div className="champion-info">
+                                <h2>{fighter.name}</h2>
+                                <div className="champion-image-wrapper">
+                                    <img src={fighter.img} alt={fighter.name} className="fighter-image2" />
+                                </div>
                             </div>
-                            <div class="item">
-                                <img src={armor.img} alt={armor.name} class="item-image2" />
-                                <span class="item-name">{armor.name}</span>
+                            <div className="equipment">
+                                <h3 className='text-white mb-4'>Equipment</h3>
+                                <div className="item">
+                                    <div className="item-image-wrapper">
+                                        <img src={weapon.img} alt={weapon.name} className="item-image2" />
+                                    </div>
+                                    <span className="item-name">{weapon.name}</span>
+                                </div>
+                                <div className="item">
+                                    <div className="item-image-wrapper">
+                                        <img src={armor.img} alt={armor.name} className="item-image2" />
+                                    </div>
+                                    <span className="item-name">{armor.name}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
                         </div>
                         </div>
                         <div className='fighter-stats'>
