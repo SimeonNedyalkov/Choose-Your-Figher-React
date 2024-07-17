@@ -8,11 +8,11 @@ import Login from './components/userComponents/Login'
 import Logout from './components/userComponents/Logout'
 import About from './components/About'
 import Error from './components/Error'
-import Champions from './components/Champions'
+import Champions from './components/champions/Champions'
 import Events from './components/Events';
-import ChampionsDetails from './components/ChampionDetails';
-import Weapons from './components/Weapons';
-import WeaponDetails from './components/WeaponDetails';
+import ChampionsDetails from './components/champions/ChampionDetails';
+import Weapons from './components/weapons/Weapons';
+import WeaponDetails from './components/weapons/WeaponDetails';
 import FighterDisplay from './components/FighterDisplay';
 import SelectFighter from './components/SelectFighter';
 import {useNavigate} from 'react-router-dom'
@@ -20,8 +20,8 @@ import {
   Routes,
   Route,
   } from 'react-router-dom';
-import Armors from './components/Armors';
-import ArmorDetails from './components/ArmorDetails';
+import Armors from './components/armors/Armors';
+import ArmorDetails from './components/armors/ArmorDetails';
 
 function App(props) {
   const [fighters,setFighters] = useState([])
@@ -98,8 +98,8 @@ function App(props) {
           <Route path='/weapons/:id' element={<WeaponDetails/>}/>
           <Route path='/armors' element={<Armors armors={armors}/>}/>
           <Route path='/armors/:id' element={<ArmorDetails/>}/>
-          <Route path='/selectFighter' element={<SelectFighter fighters={fighters} weapons={weapons}/>}/>
-          <Route path='/fighterDisplay/:fighterId/:weaponId' element={<FighterDisplay fighters={fighters} weapons={weapons}/>}/>
+          <Route path='/selectFighter' element={<SelectFighter fighters={fighters} weapons={weapons} armors={armors}/>}/>
+          <Route path='/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay fighters={fighters} weapons={weapons}/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>

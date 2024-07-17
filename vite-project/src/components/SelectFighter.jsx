@@ -1,26 +1,30 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const SelectFighter = ({ fighters, weapons }) => {
+const SelectFighter = ({ fighters, weapons,armors }) => {
     const navigation = useNavigate();
     const [selectedFighterId, setSelectedFighterId] = useState(null);
     const [selectedWeaponId, setSelectedWeaponId] = useState(null);
+    const [selectedArmorId, setSelectedArmorId] = useState(null);
 
     function handleSelect() {
-        if (selectedFighterId && selectedWeaponId) {
+        if (selectedFighterId && selectedWeaponId && selectedArmorId) {
             // Assuming you want to navigate to a specific URL when both are selected
-            navigation(`/fighterDisplay/${selectedFighterId}/${selectedWeaponId}`);
+            navigation(`/fighterDisplay/${selectedFighterId}/${selectedWeaponId}/${selectedArmorId}`);
         } else {
-            console.log('Please select both a fighter and a weapon.');
+            console.log('Please select a fighter, a weapon and an armor.');
         }
     }
 
     const selectFighter = (fighterId) => {
-        setSelectedFighterId(prevId => prevId === fighterId ? null : fighterId); // Toggle selection
+        setSelectedFighterId(prevId => prevId === fighterId ? null : fighterId);
     };
 
     const selectWeapon = (weaponId) => {
-        setSelectedWeaponId(prevId => prevId === weaponId ? null : weaponId); // Toggle selection
+        setSelectedWeaponId(prevId => prevId === weaponId ? null : weaponId); 
+    };
+    const selectArmor = (armorId) => {
+        setSelectedArmorId(prevId => prevId === armorId ? null : armorId); 
     };
 
     return (
@@ -51,6 +55,21 @@ const SelectFighter = ({ fighters, weapons }) => {
                         >
                             <img src={weapon.img} alt={weapon.name} />
                             <h2 className='text-yellow-300'>{weapon.name}</h2>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="select-fighter">
+                <h1 className='selectYourFighter underline'>Select Your Armor</h1>
+                <div className="fighters-list">
+                    {armors.map((armor) => (
+                        <div
+                            key={armor._id}
+                            className={`fighter-item ${selectedArmorId === armor._id ? 'selected' : ''}`}
+                            onClick={() => selectArmor(armor._id)}
+                        >
+                            <img src={armor.img} alt={armor.name} />
+                            <h2 className='text-yellow-300'>{armor.name}</h2>
                         </div>
                     ))}
                 </div>

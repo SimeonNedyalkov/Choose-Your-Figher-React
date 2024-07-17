@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useParams,useNavigate } from 'react-router-dom';
 
 const FighterDisplay = () => {
-    const {fighterId,weaponId} = useParams();
+    const {fighterId,weaponId,armorId} = useParams();
     const [fighter, setFighter] = useState({});
     const [weapon, setWeapon] = useState({});
+    const [armor, setArmor] = useState({});
     const navigation = useNavigate()
     useEffect(() => {
         const fetchFighterData = async () => {
@@ -17,7 +18,7 @@ const FighterDisplay = () => {
             }
         };
         fetchFighterData();
-    }, []); // Include params.id in dependencies to fetch data when it changes
+    }, []);
 
     useEffect(() => {
         const fetchWeaponData = async () => {
@@ -31,17 +32,37 @@ const FighterDisplay = () => {
         };
         fetchWeaponData();
     }, []);
+    useEffect(() => {
+        const fetchArmorData = async () => {
+            try {
+                const response = await fetch(`http://localhost:3030/data/armors/${armorId}`);
+                const res = await response.json();
+                setArmor(res);
+            } catch (error) {
+                console.log(error.message);
+            }
+        };
+        fetchArmorData();
+    }, []);
 
     function goBack(){
         navigation('/selectFighter')
     }
+
     const calculateCombinedStats = () => {
         let combinedStats = {};
-        if (fighter.stats && weapon.stats) {
+        if (fighter.stats && weapon.stats && armor.stats) {
             Object.entries(fighter.stats).forEach(([stat, value]) => {
                 combinedStats[stat] = value;
             });
             Object.entries(weapon.stats).forEach(([stat, value]) => {
+                if (combinedStats[stat]) {
+                    combinedStats[stat] += value;
+                } else {
+                    combinedStats[stat] = value;
+                }
+            });
+            Object.entries(armor.stats).forEach(([stat, value]) => {
                 if (combinedStats[stat]) {
                     combinedStats[stat] += value;
                 } else {
@@ -60,10 +81,11 @@ const FighterDisplay = () => {
                 {combinedStats && (
                     <>
                         <div className='descAndImages'>
-                        <h3 className='transparent-box'><br/>{fighter.name} with {weapon.name}</h3>
+                        <h3 className='transparent-box'><br/>{fighter.name} with {weapon.name} and {armor.name}</h3>
                         <div className='imagesOnly'>
                             <img src={fighter.img} alt={fighter.name} className="fighter-image1" />
                             <img src={weapon.img} alt={weapon.name} className="weapon-image" />
+                            <img src={armor.img} alt={armor.name} className="weapon-image" />
                         </div>
                         </div>
                         <div className='fighter-stats'>

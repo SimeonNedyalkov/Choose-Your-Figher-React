@@ -718,7 +718,7 @@ p {
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: calc(100vh + 144px);
+  height: calc(130vh + 144px);
   color: white;
   margin: 0;
   padding: 0;
