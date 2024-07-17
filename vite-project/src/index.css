@@ -799,13 +799,59 @@ p {
   align-items: center;
   justify-content: center
 }
-.imagesOnly{
+.champion-menu {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+}
+
+.champion-info {
+  flex: 1;
+  text-align: center;
+}
+
+.champion-info h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.fighter-image2 {
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.equipment {
+  flex: 1;
+  padding: 20px;
+}
+
+.equipment h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.item {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 50%; /* Each image takes up 50% of the container width */
-  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+.item-image2 {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.item-name {
+  font-size: 16px;
+  color: #444;
 }
 .transparent-box {
   background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
@@ -828,15 +874,6 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.fighter-image1 {
-  width: 300px;
-}
-
-.weapon-image {
-  width: 100px;
-  height: 100px;
 }
 
 .fighter-details {

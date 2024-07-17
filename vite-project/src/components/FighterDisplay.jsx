@@ -81,11 +81,25 @@ const FighterDisplay = () => {
                 {combinedStats && (
                     <>
                         <div className='descAndImages'>
-                        <h3 className='transparent-box'><br/>{fighter.name} with {weapon.name} and {armor.name}</h3>
-                        <div className='imagesOnly'>
-                            <img src={fighter.img} alt={fighter.name} className="fighter-image1" />
-                            <img src={weapon.img} alt={weapon.name} className="weapon-image" />
-                            <img src={armor.img} alt={armor.name} className="weapon-image" />
+                        <h3 className='transparent-box'><br/>{fighter.name} equipped with {weapon.name} and {armor.name}</h3>
+                        <div className="transparent-box m-2">
+                        <div class="champion-menu">
+                        <div class="champion-info">
+                            <h2>{fighter.name}</h2>
+                            <img src={fighter.img} alt={fighter.name} class="fighter-image2" />
+                        </div>
+                        <div class="equipment">
+                            <h3>Equipment</h3>
+                            <div class="item">
+                                <img src={weapon.img} alt={weapon.name} class="item-image2" />
+                                <span class="item-name">{weapon.name}</span>
+                            </div>
+                            <div class="item">
+                                <img src={armor.img} alt={armor.name} class="item-image2" />
+                                <span class="item-name">{armor.name}</span>
+                            </div>
+                        </div>
+                    </div>
                         </div>
                         </div>
                         <div className='fighter-stats'>
