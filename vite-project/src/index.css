@@ -47,13 +47,15 @@ p {
   color: white;
   margin: 0;
   padding: 0;
-  /* animation: fadeIn 1.5s;
-  animation-fill-mode: forwards; */
 }
-/* @keyframes fadeIn {
+.animation{
+  animation: fadeIn 1.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
-} */
+}
 .title, .picktext, .buttonContainer {
   z-index: 2;
 }
