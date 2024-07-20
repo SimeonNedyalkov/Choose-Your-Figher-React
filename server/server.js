@@ -1443,7 +1443,7 @@
                 "name": "Hydroblade",
                 "type": "Sword",
                 "element": "Water",
-                "img": "/images/Weapons/hydroblade1NoBackground.png",
+                "img": "/images/Weapons/hydrobladeNoBackground.png",
                 "stats":{
                 "attack": 15,
                 "defense": 5,
