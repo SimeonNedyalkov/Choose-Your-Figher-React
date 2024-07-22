@@ -1,4 +1,3 @@
-
 const BASE_URL = 'http://localhost:3030/data/weapons'
 
 async function getAllWeapons(){
