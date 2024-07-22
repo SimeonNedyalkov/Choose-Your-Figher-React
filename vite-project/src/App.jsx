@@ -18,8 +18,10 @@ import SelectFighter from './components/SelectFighter';
 import Armors from './components/armors/Armors';
 import ArmorDetails from './components/armors/ArmorDetails';
 
+// services
 import fighterData from './sevices/fighterData';
 import weaponData from './sevices/weaponData';
+import armorData from './sevices/armorData';
 
 import {useNavigate} from 'react-router-dom'
 import {
@@ -60,8 +62,7 @@ function App(props) {
   useEffect(() => {
     const fetchArmorsData = async () => {
       try {
-        const response = await fetch('http://localhost:3030/data/armors');
-        const res = await response.json();
+        const res = await armorData.getAllArmors()
         setArmors(res)
         console.log(res);
       } catch (error) {
@@ -83,8 +84,6 @@ function App(props) {
     navigation('/')
   }
   
-  
-    
   return (
     <div className="min-h-screen flex flex-col">
       <div className='flex-grow'>
