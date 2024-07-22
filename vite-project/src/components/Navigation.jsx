@@ -3,7 +3,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
 import {Link} from 'react-router-dom'
 const navigation = [
-  { name: 'Dashboard', href: '/', current: true },
+  { name: 'Dashboard', href: '/', current: false },
   { name: 'About', href: '/about', current: false },
   { name: 'Events', href: '/events', current: false },
   { name: 'Champions', href: '/champions', current: false },
@@ -17,8 +17,19 @@ function classNames(...classes) {
 }
 
 export default function Navigation(){
+    const [newNavigation, setNewNavigation] = useState(navigation);
     const [isNotLogedIn,setIsLogedIn] = useState(false)
     
+    const handleNavClick = (clickedItem) => {
+      setNewNavigation((prevNavigation) =>
+        prevNavigation.map((item) =>
+          item.name === clickedItem.name
+            ? { ...item, current: true }
+            : { ...item, current: false }
+        )
+      );
+    };
+
     const isUserLogedIn = () =>{
       setIsLogedIn(true)
     }
@@ -45,7 +56,7 @@ export default function Navigation(){
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
-                  {navigation.map((item) => (
+                  {newNavigation.map((item) => (
                     <Link
                       key={item.name}
                       to={item.href}
@@ -54,6 +65,7 @@ export default function Navigation(){
                         item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                         'rounded-md px-3 py-2 text-sm font-medium',
                       )}
+                      onClick={() => handleNavClick(item)}
                     >
                       {item.name}
                     </Link>

@@ -6,7 +6,7 @@ export default function Home() {
         },
         to:{
             opacity:1
-        }
+        },
     })
     return (
         
