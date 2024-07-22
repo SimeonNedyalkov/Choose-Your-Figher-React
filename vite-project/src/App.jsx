@@ -3,7 +3,6 @@ import useFetch from './hooks/useFetch';
 import data from './sevices/data';
 import { useState,useEffect } from 'react'
 
-import './index.css'
 import Navigation from "../src/components/Navigation";
 import Footer from './components/Footer';
 import Home from './components/Home'
@@ -22,10 +21,8 @@ import SelectFighter from './components/SelectFighter';
 import Armors from './components/armors/Armors';
 import ArmorDetails from './components/armors/ArmorDetails';
 
-// services
-import fighterData from './sevices/fighterData';
-import weaponData from './sevices/weaponData';
-import armorData from './sevices/armorData';
+// css
+import './styles/base.css'
 
 import {useNavigate} from 'react-router-dom'
 import {

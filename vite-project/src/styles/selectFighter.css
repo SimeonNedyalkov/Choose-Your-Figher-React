@@ -1,0 +1,200 @@
+/* select fighter */
+.selectFighterImage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../images/9DoWZmsH.png');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: calc(130vh + 144px);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  .selectYourFighter{
+    
+      position: relative;
+      font-size: 3rem;
+      color: #6f48eb; 
+      text-align: center;
+    
+  }
+  .selected {
+    border: 2px solid blue;
+    padding: 10px; /* Increased padding for better visual appearance */
+    margin: 5px;
+    border-radius: 8px; /* Rounded corners for a softer look */
+    background-color: #f0f0f0; /* Light background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .selected:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .selected:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+  }
+  .select-fighter {
+    text-align: center;
+  }
+  
+  .fighters-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .fighter-item {
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .fighter-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .fighter-item h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+  /* fighter display */
+  .fighterDisplayImage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../images/fighterDisplay/wp5085421.webp');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: calc(100vh + 144px);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  .descAndImages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+  /* from here */
+  .champion-menu {
+    background-color: #2c2c2c;
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .champion-info {
+    flex: 1;
+    text-align: center;
+    color: #ccc;
+  }
+  
+  .champion-info h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .champion-image-wrapper {
+    background-color: #4c4c4c;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-block;
+  }
+  
+  .fighter-image2 {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+  
+  .equipment {
+    flex: 1;
+    padding: 20px;
+    padding-top: 0;
+    color: #ccc;
+  }
+  
+  .equipment h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .item-image-wrapper {
+    margin-bottom: 5px;
+  }
+  
+  .item-image2 {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .item-name {
+    font-size: 16px;
+    color: #ccc;
+  }
+  /* till here */
+  .transparent-box {
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+    padding: 20px; /* Padding around the text */
+    border-radius: 8px; /* Rounded corners */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    text-align: center; /* Center text alignment */
+    width: fit-content; /* Fit the box to the content */
+    margin: auto; /* Center the box within its parent */
+  }
+  
+  .transparent-box h3 {
+    color: white; /* White text color for contrast */
+    margin: 0; /* Remove default margin from h3 */
+  }
+  .fighter-display {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .fighter-details {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .fighter-details h3{
+    position: relative;
+    font-size: 1.5rem;
+    color: #6f48eb; 
+    text-align: center;
+  }

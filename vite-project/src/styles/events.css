@@ -1,0 +1,55 @@
+.event h1 {
+  position: relative;
+  font-size: 3rem;
+  color: #6f48eb; 
+  text-align: center;
+}
+
+@keyframes bloodFall {
+  0% {
+    transform: translate(-50%, -200%);
+  }
+  100% {
+    transform: translate(-50%, 100%);
+  }
+}
+.eventDescription {
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px; 
+  margin: auto; 
+}
+
+.event-description h2 {
+  font-family: 'Roboto Slab', serif;
+  color: #fff; 
+  text-align: center; 
+  border-bottom: 2px solid #fff; 
+  padding-bottom: 10px; 
+}
+.event-details {
+  margin-bottom: 20px;
+}
+.how-it-works {
+  margin-bottom: 20px;
+}
+.prizes {
+  margin-bottom: 20px;
+}
+.prizes h2 {
+  font-family: 'Poppins', Arial, sans-serif; 
+  color: #6f48eb; 
+  text-align: center;
+  border-bottom: 2px solid #6f48eb; 
+  padding-bottom: 10px;
+}
+
+.event-description h2,.event-details h2,.how-it-works h2{
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #6f48eb; 
+  text-align: center;
+  border-bottom: 2px solid #6f48eb; 
+  padding-bottom: 10px;
+}
+

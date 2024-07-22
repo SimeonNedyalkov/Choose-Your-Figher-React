@@ -1,0 +1,12 @@
+.errorImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../images/error/404-Error.jpg');
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh + 144px);
+    color: white;
+  }

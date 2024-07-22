@@ -1,0 +1,50 @@
+.homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../images/home-image/5692516.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: calc(100vh + 144px);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .animation {
+    animation: fadeIn 1.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  .title, .picktext, .buttonContainer {
+    z-index: 2;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .startButton {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .startButton:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .startButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  }
