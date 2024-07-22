@@ -9,7 +9,6 @@ const SelectFighter = ({ fighters, weapons,armors }) => {
 
     function handleSelect() {
         if (selectedFighterId && selectedWeaponId && selectedArmorId) {
-            // Assuming you want to navigate to a specific URL when both are selected
             navigation(`/fighterDisplay/${selectedFighterId}/${selectedWeaponId}/${selectedArmorId}`);
         } else {
             console.log('Please select a fighter, a weapon and an armor.');

@@ -1,49 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { useParams,useNavigate } from 'react-router-dom';
 
+// services
+import fighterData from '../sevices/fighterData';
+import weaponData from '../sevices/weaponData';
+import armorData from '../sevices/armorData';
+
 const FighterDisplay = () => {
     const {fighterId,weaponId,armorId} = useParams();
+
     const [fighter, setFighter] = useState({});
     const [weapon, setWeapon] = useState({});
     const [armor, setArmor] = useState({});
     const navigation = useNavigate()
-    useEffect(() => {
-        const fetchFighterData = async () => {
-            try {
-                const response = await fetch(`http://localhost:3030/data/fighters/${fighterId}`);
-                const res = await response.json();
-                setFighter(res);
-            } catch (error) {
-                console.log(error.message);
-            }
-        };
-        fetchFighterData();
-    }, []);
 
-    useEffect(() => {
-        const fetchWeaponData = async () => {
+     useEffect(() => {
+        const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:3030/data/weapons/${weaponId}`);
-                const res = await response.json();
-                setWeapon(res);
+                const [fighterRes, weaponRes, armorRes] = await Promise.all([
+                    fighterData.getOneFighter(fighterId),
+                    weaponData.getOneWeapon(weaponId),
+                    armorData.getOneArmor(armorId)
+                ]);
+                setFighter(fighterRes);
+                setWeapon(weaponRes);
+                setArmor(armorRes);
             } catch (error) {
                 console.log(error.message);
             }
         };
-        fetchWeaponData();
-    }, []);
-    useEffect(() => {
-        const fetchArmorData = async () => {
-            try {
-                const response = await fetch(`http://localhost:3030/data/armors/${armorId}`);
-                const res = await response.json();
-                setArmor(res);
-            } catch (error) {
-                console.log(error.message);
-            }
-        };
-        fetchArmorData();
-    }, []);
+        fetchData();
+    }, [fighterId, weaponId, armorId]);
 
     function goBack(){
         navigation('/selectFighter')
