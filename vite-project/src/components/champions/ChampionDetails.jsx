@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import useFetch from '../../hooks/useFetch';
+import getElementEmoji from '../../customFunctions/elements';
 
 export default function ChampionsDetails() {
     const { id } = useParams();
@@ -13,21 +14,7 @@ export default function ChampionsDetails() {
         navigation('/champions');
     }
 
-    function getElementEmoji(element) {
-        if (!element) return '';
-        switch (element.toLowerCase()) {
-            case 'water':
-                return '💧';
-            case 'fire':
-                return '🔥';
-            case 'earth':
-                return '🪨';
-            case 'wind':
-                return '🌪️';
-            default:
-                return ''; // Default case, can be customized based on your needs
-        }
-    }
+    getElementEmoji(fighter.element)
 
     function toggleDescription() {
         setShowFullDescription(!showFullDescription);
