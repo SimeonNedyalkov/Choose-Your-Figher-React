@@ -1,24 +1,13 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import useFetch from '../../hooks/useFetch';
 
 export default function ArmorDetails() {
     const { id } = useParams();
     const navigation = useNavigate();
-    const [armor, setArmor] = useState({});
     const [showFullDescription, setShowFullDescription] = useState(false);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(`http://localhost:3030/data/armors/${id}`);
-                const res = await response.json();
-                setArmor(res);
-            } catch (error) {
-                console.log(error.message);
-            }
-        };
-        fetchData();
-    }, [id]);
+    
+    const armor = useFetch(`http://localhost:3030/data/armors/${id}`,[])
 
     function handleGoBack() {
         navigation('/armors');

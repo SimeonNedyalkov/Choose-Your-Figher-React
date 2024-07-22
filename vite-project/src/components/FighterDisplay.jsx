@@ -1,36 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import useFetch from '../hooks/useFetch';
 import { useParams,useNavigate } from 'react-router-dom';
 
 // services
-import fighterData from '../sevices/fighterData';
-import weaponData from '../sevices/weaponData';
-import armorData from '../sevices/armorData';
+
 
 const FighterDisplay = () => {
     const {fighterId,weaponId,armorId} = useParams();
-
-    const [fighter, setFighter] = useState({});
-    const [weapon, setWeapon] = useState({});
-    const [armor, setArmor] = useState({});
     const navigation = useNavigate()
 
-     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const [fighterRes, weaponRes, armorRes] = await Promise.all([
-                    fighterData.getOneFighter(fighterId),
-                    weaponData.getOneWeapon(weaponId),
-                    armorData.getOneArmor(armorId)
-                ]);
-                setFighter(fighterRes);
-                setWeapon(weaponRes);
-                setArmor(armorRes);
-            } catch (error) {
-                console.log(error.message);
-            }
-        };
-        fetchData();
-    }, [fighterId, weaponId, armorId]);
+    const fighter = useFetch(`http://localhost:3030/data/fighters/${fighterId}`,[])
+    const armor = useFetch(`http://localhost:3030/data/armors/${armorId}`,[])
+    const weapon = useFetch(`http://localhost:3030/data/weapons/${weaponId}`,[])
 
     function goBack(){
         navigation('/selectFighter')
@@ -59,7 +39,9 @@ const FighterDisplay = () => {
         }
         return combinedStats;
     };
+
     const combinedStats = calculateCombinedStats();
+
     return (
         <div className='fighterDisplayImage'>
         <div className="fighter-display">

@@ -1,12 +1,12 @@
 export default function Logout({
-    isLogoutCloseHandler,
+    goBackHome,
 }){
   
     return(
       <div className="overlay">
-        <div className="backdrop" onClick={isLogoutCloseHandler}></div>
+        <div className="backdrop" onClick={goBackHome}></div>
         <div className="modal">
-            <button className="btn close" onClick={isLogoutCloseHandler}>
+            <button className="btn close" onClick={goBackHome}>
                     &times;
             </button>
           <div className="confirm-container">
@@ -17,7 +17,7 @@ export default function Logout({
               <div id="form-actions">
                 <div className="buttonsForLogout">
                 <button id="action-save" className="btn" type="submit">Logout</button>
-                <button id="action-cancel" onClick={isLogoutCloseHandler} className="btn" type="button">Cancel</button>
+                <button id="action-cancel" onClick={goBackHome} className="btn" type="button">Cancel</button>
                 </div>
               </div>
             </div>

@@ -1,4 +1,8 @@
+// hooks
+import useFetch from './hooks/useFetch';
+import data from './sevices/data';
 import { useState,useEffect } from 'react'
+
 import './index.css'
 import Navigation from "../src/components/Navigation";
 import Footer from './components/Footer';
@@ -30,59 +34,18 @@ import {
   } from 'react-router-dom';
 
 
+
+
 function App(props) {
-  const [fighters,setFighters] = useState([])
-  const [weapons,setWeapons] = useState([])
-  const [armors,setArmors] = useState([])
-
-  useEffect(() => {
-    const fetchFighterData = async () => {
-      try {
-        const res = await fighterData.getAllFighters()
-        setFighters(res)
-        console.log(res);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-    fetchFighterData()
-  }, []);
-  useEffect(()=>{
-    const fetchWeaponData = async () => {
-      try {
-        const res = await weaponData.getAllWeapons()
-        setWeapons(res)
-        console.log(res)
-      } catch (error) {
-        console.log(error.message)
-      }
-    }
-    fetchWeaponData()
-  },[])
-  useEffect(() => {
-    const fetchArmorsData = async () => {
-      try {
-        const res = await armorData.getAllArmors()
-        setArmors(res)
-        console.log(res);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-    fetchArmorsData()
-  }, []);
   const navigation = useNavigate()
-  function isRegisteredCloseHandler(){
+
+  const fighters = useFetch('http://localhost:3030/data/fighters',[])
+  const weapons = useFetch('http://localhost:3030/data/weapons',[])
+  const armors = useFetch('http://localhost:3030/data/armors',[])
+
+  function goBackHome(){
     navigation('/')
     }
-
-  function isLogedInCloseHandler(){
-      navigation('/')
-  }
-  
-  function isLogoutCloseHandler(){
-    navigation('/')
-  }
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -90,9 +53,9 @@ function App(props) {
         <Navigation/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/register' element={<Register isRegisteredCloseHandler={isRegisteredCloseHandler}/>}/>
-          <Route path='/login' element={<Login isLogedInCloseHandler={isLogedInCloseHandler}/>}/>
-          <Route path='/logout' element={<Logout isLogoutCloseHandler={isLogoutCloseHandler}/>}/>
+          <Route path='/register' element={<Register goBackHome={goBackHome}/>}/>
+          <Route path='/login' element={<Login goBackHome={goBackHome}/>}/>
+          <Route path='/logout' element={<Logout goBackHome={goBackHome}/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/events' element={<Events/>}/>
           <Route path='/champions' element={<Champions fighters={fighters}/>}/>

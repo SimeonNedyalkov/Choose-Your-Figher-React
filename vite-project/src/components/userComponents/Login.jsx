@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 export default function Login({
-    isLogedInCloseHandler,
+  goBackHome,
 }){
     const [formData,setFormData] = useState({
       _id:'',
@@ -31,10 +31,10 @@ export default function Login({
       return (
         <>
         <div className="overlay">
-          <div className="backdrop" onClick={isLogedInCloseHandler}></div>
+          <div className="backdrop" onClick={goBackHome}></div>
           <div className="modal">
             <div className="onTop">
-            <button className="btn close" onClick={isLogedInCloseHandler}>
+            <button className="btn close" onClick={goBackHome}>
                 &times;
               </button>
             </div>
@@ -66,7 +66,7 @@ export default function Login({
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 type="button"
                 value={formData.username}
-                onClick={isLogedInCloseHandler}
+                onClick={goBackHome}
               >
                 Cancel
               </button>

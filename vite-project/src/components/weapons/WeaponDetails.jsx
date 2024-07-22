@@ -1,24 +1,13 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import useFetch from '../../hooks/useFetch';
 
 export default function WeaponDetails() {
     const { id } = useParams();
     const navigation = useNavigate();
-    const [weapon, setWeapons] = useState({});
     const [showFullDescription, setShowFullDescription] = useState(false);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(`http://localhost:3030/data/weapons/${id}`);
-                const res = await response.json();
-                setWeapons(res);
-            } catch (error) {
-                console.log(error.message);
-            }
-        };
-        fetchData();
-    }, [id]);
+    
+    const weapon = useFetch(`http://localhost:3030/data/weapons/${id}`,[])
 
     function handleGoBack() {
         navigation('/weapons');

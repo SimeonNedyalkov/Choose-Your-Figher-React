@@ -1,24 +1,13 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import useFetch from '../../hooks/useFetch';
 
 export default function ChampionsDetails() {
     const { id } = useParams();
-    const navigation = useNavigate();
-    const [fighter, setFighter] = useState({});
     const [showFullDescription, setShowFullDescription] = useState(false);
+    const navigation = useNavigate();
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(`http://localhost:3030/data/fighters/${id}`);
-                const res = await response.json();
-                setFighter(res);
-            } catch (error) {
-                console.log(error.message);
-            }
-        };
-        fetchData();
-    }, [id]);
+    const fighter = useFetch(`http://localhost:3030/data/fighters/${id}`,[])
 
     function handleGoBack() {
         navigation('/champions');
