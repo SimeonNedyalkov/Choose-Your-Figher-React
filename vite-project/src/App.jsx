@@ -15,23 +15,28 @@ import Weapons from './components/weapons/Weapons';
 import WeaponDetails from './components/weapons/WeaponDetails';
 import FighterDisplay from './components/FighterDisplay';
 import SelectFighter from './components/SelectFighter';
+import Armors from './components/armors/Armors';
+import ArmorDetails from './components/armors/ArmorDetails';
+
+import fighterData from './sevices/fighterData';
+import weaponData from './sevices/weaponData';
+
 import {useNavigate} from 'react-router-dom'
 import {
   Routes,
   Route,
   } from 'react-router-dom';
-import Armors from './components/armors/Armors';
-import ArmorDetails from './components/armors/ArmorDetails';
+
 
 function App(props) {
   const [fighters,setFighters] = useState([])
   const [weapons,setWeapons] = useState([])
   const [armors,setArmors] = useState([])
+
   useEffect(() => {
     const fetchFighterData = async () => {
       try {
-        const response = await fetch('http://localhost:3030/data/fighters');
-        const res = await response.json();
+        const res = await fighterData.getAllFighters()
         setFighters(res)
         console.log(res);
       } catch (error) {
@@ -43,8 +48,7 @@ function App(props) {
   useEffect(()=>{
     const fetchWeaponData = async () => {
       try {
-        const response = await fetch('http://localhost:3030/data/weapons')
-        const res = await response.json()
+        const res = await weaponData.getAllWeapons()
         setWeapons(res)
         console.log(res)
       } catch (error) {
