@@ -1,3 +1,4 @@
+import rng from '../customFunctions/rng';
 import useFetch from '../hooks/useFetch';
 import { useParams,useNavigate } from 'react-router-dom';
 
@@ -39,9 +40,7 @@ const FighterDisplay = () => {
         }
         return combinedStats;
     };
-
-    const combinedStats = calculateCombinedStats();
-
+    const combinedStats = calculateCombinedStats()
     return (
         <div className='fighterDisplayImage'>
         <div className="fighter-display">
