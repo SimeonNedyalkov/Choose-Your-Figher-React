@@ -25,6 +25,7 @@ import './styles/base.css'
 
 // routes
 import {Routes,Route,} from 'react-router-dom';
+import CreateChampion from './components/champions/CreateChampion';
 
 function App(props) {
   const navigation = useNavigate()
@@ -50,6 +51,7 @@ function App(props) {
           <Route path='/events' element={<Events/>}/>
           <Route path='/champions' element={<Champions fighters={fighters}/>}/>
           <Route path='/champions/:id' element={<ChampionsDetails/>}/>
+          <Route path='/createChampion' element={<CreateChampion/>}/>
           <Route path='/weapons' element={<Weapons weapons={weapons}/>}/>
           <Route path='/weapons/:id' element={<WeaponDetails/>}/>
           <Route path='/armors' element={<Armors armors={armors}/>}/>

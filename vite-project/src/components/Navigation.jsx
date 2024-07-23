@@ -6,6 +6,7 @@ const navigation = [
   { name: 'Dashboard', href: '/', current: false },
   { name: 'About', href: '/about', current: false },
   { name: 'Events', href: '/events', current: false },
+  { name:'Create Champion', href:'/createChampion',current:false},
   { name: 'Champions', href: '/champions', current: false },
   { name:'Weapons', href:'/weapons',current:false},
   { name:'Armors', href:'/armors',current:false},
