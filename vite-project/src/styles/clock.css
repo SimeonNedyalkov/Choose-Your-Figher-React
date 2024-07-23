@@ -1,0 +1,47 @@
+.clock-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 20px; /* Increased gap for more spacing */
+  position: absolute;
+  top: 30px;
+  right: 10px;
+}
+
+.time-box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label-box {
+  background: linear-gradient(145deg, #047596, #368D96, #39903F); /* Metallic gradient for labels */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Press Start 2P', cursive; /* Game-like font */
+  font-size: 16px;
+  text-align: center;
+  width: 150px; /* Increased width for better readability */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Shadow for 3D effect */
+  margin-bottom: 8px; /* Spacing between label and time */
+  opacity: 0.9;
+}
+
+.time-box {
+  background: linear-gradient(145deg, #061B04, #368D96, #39903F); /* Metallic gradient for time boxes */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Press Start 2P', cursive; /* Game-like font */
+  font-size: 32px; /* Larger font size for impact */
+  text-align: center;
+  width: 150px; /* Increased width for better readability */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Shadow for 3D effect */
+  transition: transform 0.2s; /* Animation for interaction */
+  opacity: 0.9;
+}
+
+.time-box:hover {
+  transform: scale(1.1); /* Slightly enlarges the box on hover */
+}
