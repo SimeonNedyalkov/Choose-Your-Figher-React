@@ -1401,7 +1401,7 @@
                 "intelligence": 70,
                 "health": 110
             },
-            "description": "Tidebreaker, the mighty Shark of the seas, commands the waters with strength and resilience. With jaws that can crush stone and scales that shimmer like ocean waves, Tidebreaker strikes fear into those who dare challenge it. Its deep intelligence allows it to navigate even the most treacherous waters, making it a master of its element.",
+            "description": "Tidebreaker, the mighty Shark of the seas, rules the waters with formidable strength and resilience. With jaws that can crush stone and scales that shimmer like ocean waves, it instills fear in challengers. Its keen intelligence lets it navigate treacherous waters, mastering its element with ease.",
             "_createdOn": 1613551279012
         },
         "8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
@@ -1417,7 +1417,7 @@
                 "intelligence": 75,
                 "health": 120
             },
-            "description": "Grizblaze, the steadfast Bear of Earth, roams the rugged landscapes with power and endurance. Its massive frame and thick fur provide formidable defense, while its strength can uproot trees with ease. Grizblaze's intelligence and determination make it a stalwart companion in any battle, embodying the resilience and might of the earth itself.",
+            "description": "Grizblaze, the steadfast Bear of Earth, traverses rugged landscapes with power and endurance. Its massive frame and thick fur offer strong defense, and its strength can easily uproot trees. With intelligence and determination, Grizblaze embodies the earth’s resilience and might in any battle.",
             "_createdOn": 1613551344360
         },
         "985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
@@ -1433,7 +1433,7 @@
                 "intelligence": 80,
                 "health": 110
             },
-            "description": "Stripefang, the fierce Tiger of Earth, prowls the jungles with grace and lethal precision. Its striped coat blends seamlessly with the shadows, allowing it to ambush enemies before they even sense danger. Stripefang's speed and agility are matched only by its intelligence, making it a predator that strikes fear into the hearts of all who cross its path.",
+            "description": "Stripefang, the fierce Tiger of Earth, prowls the jungle with lethal precision. Its striped coat blends with the shadows, enabling stealthy ambushes. Combining speed, agility, and intelligence, Stripefang strikes fear into anyone who crosses its path.",
             "weapons": [],
             "_createdOn": 1613551388703
         }
@@ -1450,7 +1450,7 @@
                 "speed": 5,
                 "intelligence": 5,
                 },
-                "description": "The Hydroblade is a sword forged from the purest waters of the deep. It slices through opponents with the fluid grace of a wave, augmenting the wielder's attack power with the strength of the ocean. Its magical properties also provide a balanced boost to defense, speed, and intelligence, making the wielder more formidable in all aspects of combat."
+                "description": "The Hydroblade, forged from pure deep-sea waters, slices through foes with wave-like grace. It enhances the wielder’s attack power with oceanic strength and offers balanced boosts to defense, speed, and intelligence, making them formidable in combat."
             },
             "7p6o5n4m-3l2k-1j0i-h9g8-f7e6d5c4b3a2": {
                 "name": "Lava Splitter",

@@ -1,7 +1,6 @@
 // hooks
 import useFetch from './hooks/useFetch';
-import data from './sevices/data';
-import { useState,useEffect } from 'react'
+import {useNavigate} from 'react-router-dom'
 
 import Navigation from "../src/components/Navigation";
 import Footer from './components/Footer';
@@ -24,14 +23,8 @@ import ArmorDetails from './components/armors/ArmorDetails';
 // css
 import './styles/base.css'
 
-import {useNavigate} from 'react-router-dom'
-import {
-  Routes,
-  Route,
-  } from 'react-router-dom';
-
-
-
+// routes
+import {Routes,Route,} from 'react-router-dom';
 
 function App(props) {
   const navigation = useNavigate()
