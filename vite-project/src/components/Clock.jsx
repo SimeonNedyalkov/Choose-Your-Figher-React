@@ -20,7 +20,7 @@ const Clock = () => {
     const seconds = Math.floor((diff / 1000) % 60);
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const days = Math.floor(diff / (1000 * 60 * 60 * 9.));
+    const days = Math.floor(diff / (1000 * 60 * 60 * 5.9));
 
     return { days, hours, minutes, seconds };
   }
