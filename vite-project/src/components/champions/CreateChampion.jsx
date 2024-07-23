@@ -2,7 +2,7 @@ import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 
 export default function CreateChampion() {
   return (
-    <form className='bg-white flex justify-center flex-col'>
+    <form className='bgImageCreate bg-white flex justify-center flex-col'>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Profile</h2>
@@ -83,9 +83,9 @@ export default function CreateChampion() {
               </div>
             </div>
             <div className="sm:col-span-7 border-b border-gray-900/10 pb-12 flex justify-center flex-col">
-                <h2 className="text-base font-semibold leading-7 text-gray-900">Note</h2>
-                    <p className="mt-1 text-sm leading-6 text-gray-600">
-                        The combination of points should be equal to 300.
+                <h2 className="text-2xl font-semibold leading-7 text-gray-900 underline decoration-red-400">Note</h2>
+                    <p className="mt-1 text-lg leading-6 text-gray-600">
+                        The combination of points should be equal to 300!
                     </p>
 
                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -202,7 +202,7 @@ export default function CreateChampion() {
         </div>
       </div>
 
-      <div className="mt-6 flex items-center justify-end gap-x-6">
+      <div className=" mt-6 flex items-center justify-end gap-x-6 m-6">
         <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
           Cancel
         </button>

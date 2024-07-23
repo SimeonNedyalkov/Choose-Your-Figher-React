@@ -3,6 +3,7 @@ export default function Logout({
 }){
   
     return(
+      <div className="loginAndRegisterBackground">
       <div className="overlay">
         <div className="backdrop" onClick={goBackHome}></div>
         <div className="modal">
@@ -23,6 +24,7 @@ export default function Logout({
             </div>
           </div>
         </div>
+      </div>
       </div>
   )
   

@@ -12,6 +12,7 @@ export default function Register({
   
     return(
       <>
+      <div className="loginAndRegisterBackground">
 <div className="overlay">
 <div className="backdrop" onClick={goBackHome}></div>
 <div className="modal">
@@ -64,9 +65,8 @@ export default function Register({
   </form>
 </div>
 </div>
+</div>
   </>
 
-  )
-  
-    
+  )  
 }

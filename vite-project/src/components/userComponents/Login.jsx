@@ -10,6 +10,7 @@ export default function Login({
     
       return (
         <>
+        <div className="loginAndRegisterBackground">
         <div className="overlay">
           <div className="backdrop" onClick={goBackHome}></div>
           <div className="modal">
@@ -53,6 +54,7 @@ export default function Login({
               </div>
             </form>
           </div>
+        </div>
         </div>
             </>
       )
