@@ -19,6 +19,9 @@
   min-height: 50vh;
   text-align: center;
   gap: 10px;
+  position: absolute;
+  top: 70px;
+  right: 40px;
 }
 .react-calendar { 
   width: 400px;
