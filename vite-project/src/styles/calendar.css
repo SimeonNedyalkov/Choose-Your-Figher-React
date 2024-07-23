@@ -33,9 +33,11 @@
 }
 
 .react-calendar { 
-  width: 400px;
-  max-width: 100%;
-  background-color: #d7d6d6;
+  width: 630px;
+  height: 150px;
+  max-width: 85%;
+  /* change here */
+  background: linear-gradient(145deg, #047596, #368D96, #39903F);
   color: #222;
   border-radius: 8px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -45,7 +47,7 @@
 }
 
 .react-calendar__navigation button {
-  color: #047596; /* Primary color for navigation buttons */
+  color: black; /* Primary color for navigation buttons */
   min-width: 44px;
   background: none;
   font-size: 16px;

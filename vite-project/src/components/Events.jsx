@@ -98,11 +98,11 @@ export default function Events() {
                 <div className='calendar-container'>
                     <Calendar onChange={setDate} value={date} />
                 </div>
-                <p className='text-center'>
+                {/* <p className='text-center'>
                     <strong className='from-orange-50'>
                         <span className='bold from-orange-50'>Date Today:</span> {date.toDateString()}
                     </strong>
-                </p>
+                </p> */}
             </div>
         </div>
     );
