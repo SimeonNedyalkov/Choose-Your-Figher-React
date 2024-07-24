@@ -1,0 +1,456 @@
+.modal2{-webkit-text-size-adjust: 100%;
+font-family: sans-serif;
+line-height: 1.3;
+font-size: 11px;
+--skin003-color: #ffb142;
+--skin004-color: #ffdc5e;
+--skin005-color: #ffb142;
+color: #eee;
+box-sizing: border-box;
+text-align: center;
+transition: font-size .1s;
+z-index: 50;
+
+background-size: contain;
+min-height: 31.8rem!important;
+width: 39.125rem!important;
+display: block;
+background-image: url("https://cdn-gpd.x-plarium.com/browser/content/lps/forms/088/substrate_top.png");
+background-position: center top;
+background-repeat: no-repeat;
+inset: 9vw auto auto 50%;
+transform: translate(-48%, 0px);
+position: absolute;
+height: auto;
+padding: 3.9rem 7.3rem 2rem;
+top: 70px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+  
+  .backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+  }
+  
+    .form{
+        -webkit-text-size-adjust: 100%;
+        line-height: 1.3;
+        font-size: 11px;
+        --skin003-color: #ffb142;
+        --skin004-color: #ffdc5e;
+        --skin005-color: #ffb142;
+        text-align: center;
+        color: #bbae8c;
+        font-family: Palatino Linotype,Book Antiqua,Palatino,serif;
+        box-sizing: border-box;
+    }
+  
+  
+  @media (min-width: 930px) {
+    .modal2 {
+      width: 45rem;
+      border-radius: 14px;
+    }
+  }
+/*   
+  .button {
+    background: #2a87a5;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: inherit;
+    font-weight: bold;
+  }
+  
+  .btn.close {
+    background-color: transparent;
+    padding: 5px 10px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+  }
+  
+  .btn.close svg {
+    color: black;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  } */
+  .loginAndRegisterBackground{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../images/create-champion/1cle5eja15b21.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  /* form */
+  .downPart{    -webkit-text-size-adjust: 100%;
+    font-family: sans-serif;
+    line-height: 1.3;
+    font-size: 11px;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    color: #eee;
+    text-align: center;
+    box-sizing: border-box;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: auto;
+    z-index: -5;
+    background-size: contain;
+    bottom: -1.4rem;
+    height: 14rem!important;
+    width: 100%!important;
+    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/088/substrate_bottom.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.dialogue{
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.3;
+    font-size: 11px;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    text-align: center;
+    color: #bbae8c;
+    font-family: Palatino Linotype,Book Antiqua,Palatino,serif;
+    box-sizing: border-box;
+}
+.spanClass{
+    -webkit-text-size-adjust: 100%;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    font-family: Palatino Linotype,Book Antiqua,Palatino,serif;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #eee;
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 .5rem;
+    text-align: center;
+    text-shadow: 0 2px 2px #000;
+}
+.inputClass{
+    -webkit-text-size-adjust: 100%;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    box-sizing: border-box;
+    line-height: normal;
+    background: 0 0;
+    border: 0;
+    color: #fff;
+    display: block;
+    font-family: inherit;
+    font-size: 1.2em!important;
+    font-weight: 700;
+    height: 2.88rem;
+    margin: 0 auto;
+    padding: 0 2rem 0 3rem;
+    width: 20.13rem;
+    position: relative;
+    z-index: 100;
+}
+.inputImage{
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.3;
+    font-size: 11px;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    text-align: center;
+    font-family: Palatino Linotype,Book Antiqua,Palatino,serif;
+    color: #fff;
+    box-sizing: border-box;
+    background-position: 50%!important;
+    background-size: contain;
+    bottom: 0!important;
+    height: 1.5rem!important;
+    left: 1.7rem!important;
+    top: auto!important;
+    width: 1.5rem!important;
+    z-index: 2!important;
+    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/ic_username.png');
+    background-repeat: no-repeat;
+    right: auto;
+    transform: translate(75%, -50%);
+    position: absolute;
+}
+.idk{
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.3;
+    font-size: 11px;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    text-align: center;
+    font-family: Palatino Linotype,Book Antiqua,Palatino,serif;
+    color: #fff;
+    box-sizing: border-box;
+    animation: Pa-fCp 2s infinite;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: bottom!important;
+    background-size: 20.13rem 2.9rem;
+    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/field-empty.png');
+    background-repeat: no-repeat;
+}
+.wrapperDiv{
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.3;
+    font-size: 11px;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    text-align: center;
+    font-family: Palatino Linotype,Book Antiqua,Palatino,serif;
+    box-sizing: border-box;
+    background-position: bottom!important;
+    background-size: 20.13rem 2.88rem;
+    color: #fff;
+    margin: 0 auto .94rem;
+    position: relative;
+    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/field.svg');
+    background-repeat: no-repeat;
+}
+.separator{
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.3;
+    font-size: 11px;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    text-align: center;
+    color: #bbae8c;
+    font-family: Palatino Linotype,Book Antiqua,Palatino,serif;
+    box-sizing: border-box;
+    background-size: contain;
+    height: .5rem!important;
+    margin: 0 auto .5rem;
+    width: 20.125rem!important;
+    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/ic_decor.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.inputClass:focus {
+    outline: none; /* Removes the default outline */
+    box-shadow: none
+  }
+.stats{
+    -webkit-text-size-adjust: 100%;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    box-sizing: border-box;
+    line-height: normal;
+    background: 0 0;
+    border: 0;
+    color: #fff;
+    display: block;
+    font-family: inherit;
+    font-size: 1.2em!important;
+    font-weight: 700;
+    height: 1.88rem;
+    margin: 0 auto;
+    padding: 1rem 2rem 0 2rem;
+    width: 10.13rem;
+    position: relative;
+    z-index: 100;
+}
+.stats:focus {
+    outline: none; /* Removes the default outline */
+    box-shadow: none;
+  }
+.wrapperDiv1{
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.3;
+    font-size: 11px;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    text-align: center;
+    font-family: Palatino Linotype,Book Antiqua,Palatino,serif;
+    box-sizing: border-box;
+    background-position: bottom!important;
+    background-size: 10.13rem 1.88rem;
+    color: #fff;
+    margin: 0 auto .94rem;
+    position: relative;
+    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/field.svg');
+    background-repeat: no-repeat;
+}
+.idk1{
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.3;
+    font-size: 11px;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    text-align: center;
+    font-family: Palatino Linotype,Book Antiqua,Palatino,serif;
+    color: #fff;
+    box-sizing: border-box;
+    animation: Pa-fCp 2s infinite;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: bottom!important;
+    background-size: 10.13rem 1.9rem;
+    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/field-empty.png');
+    background-repeat: no-repeat;
+}
+.statsDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.btnBackgroundImage{
+    -webkit-text-size-adjust: 100%;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    font-size: 100%;
+    line-height: normal;
+    cursor: pointer;
+    font-family: inherit;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size: contain;
+    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/btn_hover.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.btnBackground{
+    -webkit-text-size-adjust: 100%;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    font-size: 100%;
+    line-height: normal;
+    cursor: pointer;
+    font-family: inherit;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    animation: PGGru4 2s infinite;
+    background-size: contain;
+    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/btn_hover.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.btnSubmit{
+    -webkit-text-size-adjust: 100%;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    box-sizing: border-box;
+    font-size: 100%;
+    line-height: normal;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    position: relative;
+    background-size: contain;
+    height: 4.5rem;
+    margin: 0 auto .69rem;
+    padding: 0 1rem;
+    width: 20.125rem;
+    will-change: visibility,opacity;
+    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/btn_default.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.btnText{
+    -webkit-text-size-adjust: 100%;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    font-size: 100%;
+    cursor: pointer;
+    font-family: inherit;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    line-height: 1;
+    padding: 0;
+}
+.btnSpan{
+    -webkit-text-size-adjust: 100%;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    cursor: pointer;
+    line-height: 1;
+    box-sizing: border-box;
+    color: #340e00;
+    font-family: Philosopher;
+    font-weight: 700;
+    text-shadow: 0 1px 0 hsla(49,31%,63%,.5);
+    text-transform: uppercase;
+    font-size: 1.85rem;
+}
+.option :hover {
+    background-color: black;
+    color: white
+  }
+  .options{
+    background-color: rgb(113 63 18);
+  }

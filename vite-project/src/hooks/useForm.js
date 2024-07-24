@@ -23,7 +23,8 @@ export default function useForm(initialValues){
 
       const submitHandler = (e) =>{
         e.preventDefault()
-        console.log('Form Submitted')
+        const formData = Object.entries(e.target)
+        console.log(formData)
       }
 
     return {
