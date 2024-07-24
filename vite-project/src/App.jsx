@@ -55,7 +55,7 @@ function App(props) {
           <Route path='/events' element={<Events/>}/>
           <Route path='/armory/champions' element={<Champions fighters={fighters}/>}/>
           <Route path='/armory/champions/:id' element={<ChampionsDetails/>}/>
-          <Route path='/armory/createChampion' element={<CreateChampion/>}/>
+          <Route path='createChampion' element={<CreateChampion/>}/>
           <Route path='/armory/weapons' element={<Weapons weapons={weapons}/>}/>
           <Route path='/armory/weapons/:id' element={<WeaponDetails/>}/>
           <Route path='/armory/armors' element={<Armors armors={armors}/>}/>

@@ -1,7 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const navigation = [
   { name: 'Dashboard', href: '/', current: false },
@@ -57,9 +57,9 @@ export default function Navigation() {
                 {newNavigation.map((item) => {
                   if (item.name === 'Armory') {
                     return (
-                      <Menu as="div" className="relative" key={item.name} onClick={handleNavClick}>
+                      <Menu as="div" className="relative" key={item.name}>
                         <div>
-                          <MenuButton className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                          <MenuButton onClick={() => handleNavClick(item)} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                             Armory
                           </MenuButton>
                         </div>
@@ -67,24 +67,24 @@ export default function Navigation() {
                           className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none"
                         >
                           <MenuItem>
-                            <Link to="/armory/champions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <NavLink onClick={() => handleNavClick(item)} style={({isActive})=>isActive?{color:'white',background:'#1f2937'}:{}} to="/armory/champions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Champions
-                            </Link>
+                            </NavLink>
                           </MenuItem>
                           <MenuItem>
-                            <Link to="/armory/armors" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <NavLink onClick={() => handleNavClick(item)} style={({isActive})=>isActive?{color:'white',background:'#1f2937'}:{}} to="/armory/armors" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Armors
-                            </Link>
+                            </NavLink>
                           </MenuItem>
                           <MenuItem>
-                            <Link to="/armory/weapons" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <NavLink onClick={() => handleNavClick(item)} style={({isActive})=>isActive?{color:'white',background:'#1f2937'}:{}} to="/armory/weapons" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Weapons
-                            </Link>
+                            </NavLink>
                           </MenuItem>
                           <MenuItem>
-                            <Link to="/armory/checkFighter" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <NavLink to="/armory/checkFighter" style={({isActive})=>isActive?{color:'white',background:'#1f2937'}:{}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Check Fighter
-                            </Link>
+                            </NavLink>
                           </MenuItem>
                         </MenuItems>
                       </Menu>
