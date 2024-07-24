@@ -1,27 +1,17 @@
 import { useSpring, animated } from 'react-spring';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+
 import rng from '../customFunctions/rng';
-import darkSoulsTheme from '../../audio/ds3maintheme.mp3';
+import useAudio from '../hooks/useAudio';
 
-export default function Home() {
-    const [isPlaying, setIsPlaying] = useState(false);
+
+export default function Home() { 
     const [currentQuote, setCurrentQuote] = useState(null);
-    const audioRef = useRef(new Audio(darkSoulsTheme));
-
+    const {isPlaying,toggleAudio} = useAudio()
     useEffect(() => {
         // Set the quote once when the component mounts
         setCurrentQuote(rng.generateRandomFighterOrItem(quotes));
     }, []);
-
-    const toggleAudio = () => {
-        if (isPlaying) {
-            audioRef.current.pause();
-        } else {
-            audioRef.current.play();
-        }
-        setIsPlaying(!isPlaying);
-    };
-
     const fade = useSpring({
         from: { opacity: 0 },
         to: { opacity: 1 },
@@ -41,7 +31,7 @@ export default function Home() {
         { author: 'Lao Tzu', quote: 'The best fighter is never angry.' },
         { author: 'Heraclitus', quote: 'War is the father of all things.' }
     ];
-
+    
     return (
         <>
             <div className="homePage" tabIndex={0}>
@@ -58,7 +48,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className={isPlaying ? 'audioButton soundOn' : 'audioButton'}>
+            <div className={isPlaying ? 'audioButton soundOn' : 'audioButton soundOff'}>
                 <button onClick={toggleAudio} className="soundToggle"></button>
             </div>
         </>
