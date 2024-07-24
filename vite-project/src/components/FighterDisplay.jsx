@@ -10,7 +10,7 @@ const FighterDisplay = () => {
     const weapon = useFetch(`http://localhost:3030/data/weapons/${weaponId}`,[])
 
     function goBack(){
-        navigation('/selectFighter')
+        navigation('/armory/checkFighter')
     }
 
     const calculateCombinedStats = () => {

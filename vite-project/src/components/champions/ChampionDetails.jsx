@@ -11,7 +11,7 @@ export default function ChampionsDetails() {
     const fighter = useFetch(`http://localhost:3030/data/fighters/${id}`,[])
 
     function handleGoBack() {
-        navigation('/champions');
+        navigation('/armory/champions');
     }
 
     getElementEmoji(fighter.element)

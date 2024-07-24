@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const SelectFighter = ({ fighters, weapons,armors }) => {
+const CheckFighter = ({ fighters, weapons,armors }) => {
     const navigation = useNavigate();
     const [selectedFighterId, setSelectedFighterId] = useState(null);
     const [selectedWeaponId, setSelectedWeaponId] = useState(null);
@@ -9,7 +9,7 @@ const SelectFighter = ({ fighters, weapons,armors }) => {
 
     function handleSelect() {
         if (selectedFighterId && selectedWeaponId && selectedArmorId) {
-            navigation(`/fighterDisplay/${selectedFighterId}/${selectedWeaponId}/${selectedArmorId}`);
+            navigation(`/armory/fighterDisplay/${selectedFighterId}/${selectedWeaponId}/${selectedArmorId}`);
         } else {
             console.log('Please select a fighter, a weapon and an armor.');
         }
@@ -80,4 +80,4 @@ const SelectFighter = ({ fighters, weapons,armors }) => {
     );
 };
 
-export default SelectFighter;
+export default CheckFighter;

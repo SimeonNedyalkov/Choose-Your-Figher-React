@@ -11,7 +11,7 @@ export default function WeaponDetails() {
     const weapon = useFetch(`http://localhost:3030/data/weapons/${id}`,[])
 
     function handleGoBack() {
-        navigation('/weapons');
+        navigation('/armory/weapons');
     }
 
     getElementEmoji(weapon.element)

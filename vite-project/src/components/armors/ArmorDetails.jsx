@@ -11,7 +11,7 @@ export default function ArmorDetails() {
     const armor = useFetch(`http://localhost:3030/data/armors/${id}`,[])
 
     function handleGoBack() {
-        navigation('/armors');
+        navigation('/armory/armors');
     }
 
     getElementEmoji(armor.element)

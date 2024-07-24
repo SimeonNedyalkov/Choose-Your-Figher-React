@@ -17,7 +17,7 @@ import ChampionsDetails from './components/champions/ChampionDetails';
 import Weapons from './components/weapons/Weapons';
 import WeaponDetails from './components/weapons/WeaponDetails';
 import FighterDisplay from './components/FighterDisplay';
-import SelectFighter from './components/SelectFighter';
+import CheckFighter from './components/CheckFighter';
 import Armors from './components/armors/Armors';
 import ArmorDetails from './components/armors/ArmorDetails';
 
@@ -53,15 +53,15 @@ function App(props) {
           <Route path='/logout' element={<Logout goBackHome={goBackHome}/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/events' element={<Events/>}/>
-          <Route path='/champions' element={<Champions fighters={fighters}/>}/>
-          <Route path='/champions/:id' element={<ChampionsDetails/>}/>
-          <Route path='/createChampion' element={<CreateChampion/>}/>
-          <Route path='/weapons' element={<Weapons weapons={weapons}/>}/>
-          <Route path='/weapons/:id' element={<WeaponDetails/>}/>
-          <Route path='/armors' element={<Armors armors={armors}/>}/>
-          <Route path='/armors/:id' element={<ArmorDetails/>}/>
-          <Route path='/selectFighter' element={<SelectFighter fighters={fighters} weapons={weapons} armors={armors}/>}/>
-          <Route path='/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay fighters={fighters} weapons={weapons}/>}/>
+          <Route path='/armory/champions' element={<Champions fighters={fighters}/>}/>
+          <Route path='/armory/champions/:id' element={<ChampionsDetails/>}/>
+          <Route path='/armory/createChampion' element={<CreateChampion/>}/>
+          <Route path='/armory/weapons' element={<Weapons weapons={weapons}/>}/>
+          <Route path='/armory/weapons/:id' element={<WeaponDetails/>}/>
+          <Route path='/armory/armors' element={<Armors armors={armors}/>}/>
+          <Route path='/armory/armors/:id' element={<ArmorDetails/>}/>
+          <Route path='/armory/checkFighter' element={<CheckFighter fighters={fighters} weapons={weapons} armors={armors}/>}/>
+          <Route path='/armory/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay fighters={fighters} weapons={weapons}/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>

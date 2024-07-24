@@ -10,7 +10,7 @@ export default function Armors({ armors }) {
                     <img src={`../../${armor.img}`} alt={armor.name} className="fighter-image" />
                     <h3>{armor.name}</h3>
                     <p>{armor.type}</p>
-                    <Link to={`/armors/${armor._id}`} className="hover:no-underline flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ">View details</Link>
+                    <Link to={`/armory/armors/${armor._id}`} className="hover:no-underline flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ">View details</Link>
                 </div>
             ))}
         </div>
