@@ -21,15 +21,15 @@
   text-align: center;
   gap: 10px;
   position: absolute;
-  bottom: 0;
+  bottom: 80px;
   right: 40px;
 }
 
 #root > div > div.flex-grow > div > div.app > p > strong {
-  background-image: linear-gradient(to right, #3dba86, #28c4a2); /* Example gradient */
-  -webkit-background-clip: text; /* Required for text gradient in WebKit browsers */
-  color: transparent; /* Make the text color transparent to show the gradient */
-  padding: 5px; /* Optional: Add some padding to make the gradient more visible */
+  background-image: linear-gradient(to right, #3dba86, #28c4a2);
+  -webkit-background-clip: text; 
+  color: transparent; 
+  padding: 5px; 
 }
 
 .react-calendar { 
@@ -47,7 +47,7 @@
 }
 
 .react-calendar__navigation button {
-  color: black; /* Primary color for navigation buttons */
+  color: black; 
   min-width: 44px;
   background: none;
   font-size: 16px;
@@ -70,12 +70,12 @@ abbr[title] {
 .react-calendar__tile:enabled:hover,
 .react-calendar__tile:enabled:focus {
   background: #f8f8fa;
-  color: #368D96; /* Secondary color for hover state */
+  color: #368D96; 
   border-radius: 6px;
 }
 
 .react-calendar__tile--now {
-  background: #368D96; /* Current date color */
+  background: #368D96;
   border-radius: 6px;
   font-weight: bold;
   color: white;
@@ -83,7 +83,7 @@ abbr[title] {
 
 .react-calendar__tile--now:enabled:hover,
 .react-calendar__tile--now:enabled:focus {
-  background: #368D96; /* Hover state for current date */
+  background: #368D96;
   border-radius: 6px;
   font-weight: bold;
   color: white;
@@ -95,7 +95,7 @@ abbr[title] {
 }
 
 .react-calendar__tile--active {
-  background: #39903F; /* Active date color */
+  background: #39903F; 
   border-radius: 6px;
   font-weight: bold;
   color: white;
@@ -103,7 +103,7 @@ abbr[title] {
 
 .react-calendar__tile--active:enabled:hover,
 .react-calendar__tile--active:enabled:focus {
-  background: #39903F; /* Hover state for active date */
+  background: #39903F; 
   color: white;
 }
 
@@ -113,7 +113,7 @@ abbr[title] {
 
 .react-calendar__tile--range {
   background: #f8f8fa;
-  color: #047596; /* Range selection color */
+  color: #047596; 
   border-radius: 0;
 }
 
@@ -122,7 +122,7 @@ abbr[title] {
   border-bottom-right-radius: 0;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
-  background: #39903F; /* Range start color */
+  background: #39903F; 
   color: white;
 }
 
@@ -131,6 +131,6 @@ abbr[title] {
   border-bottom-left-radius: 0;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  background: #39903F; /* Range end color */
+  background: #39903F; 
   color: white;
 }

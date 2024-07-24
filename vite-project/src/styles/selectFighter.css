@@ -24,22 +24,22 @@
   }
   .selected {
     border: 2px solid blue;
-    padding: 10px; /* Increased padding for better visual appearance */
+    padding: 10px; 
     margin: 5px;
-    border-radius: 8px; /* Rounded corners for a softer look */
-    background-color: #f0f0f0; /* Light background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 8px; 
+    background-color: #f0f0f0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
   }
   
   .selected:hover {
-    transform: translateY(-2px); /* Slight lift on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .selected:focus {
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
   }
   .select-fighter {
     text-align: center;
@@ -166,20 +166,20 @@
   }
   /* till here */
   .transparent-box {
-    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
-    padding: 20px; /* Padding around the text */
-    border-radius: 8px; /* Rounded corners */
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
-    text-align: center; /* Center text alignment */
-    width: fit-content; /* Fit the box to the content */
-    margin: auto; /* Center the box within its parent */
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px; 
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    width: fit-content; 
+    margin: auto; 
   }
   
   .transparent-box h3 {
-    color: white; /* White text color for contrast */
-    margin: 0; /* Remove default margin from h3 */
+    color: white; 
+    margin: 0; 
   }
   .fighter-display {
     position: relative;

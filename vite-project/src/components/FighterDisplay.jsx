@@ -1,9 +1,5 @@
-import rng from '../customFunctions/rng';
 import useFetch from '../hooks/useFetch';
 import { useParams,useNavigate } from 'react-router-dom';
-
-// services
-
 
 const FighterDisplay = () => {
     const {fighterId,weaponId,armorId} = useParams();
@@ -49,7 +45,6 @@ const FighterDisplay = () => {
                 {combinedStats && (
                     <>
                         <div className='descAndImages'>
-                        {/* <h3 className='transparent-box'><br/>{fighter.name} equipped with {weapon.name} and {armor.name}</h3> */}
                         <div className="transparent-box m-2">
                         <div className="champion-menu">
                             <div className="champion-info">

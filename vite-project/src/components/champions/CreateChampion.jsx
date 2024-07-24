@@ -2,6 +2,7 @@ import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 
 export default function CreateChampion() {
   return (
+    
     <form className='bgImageCreate bg-white flex justify-center flex-col'>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
@@ -15,9 +16,6 @@ export default function CreateChampion() {
         </div>
 
         <div className="border-b border-gray-900/10 pb-12">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
-
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-3">
               <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">
@@ -168,18 +166,10 @@ export default function CreateChampion() {
         </div>
 
         <div className="border-b border-gray-900/10 pb-12">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">Notifications</h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600">
-            We'll always let you know about important changes, but you pick what else you want to hear about.
-          </p>
-
           <div className="mt-10 space-y-10">
             <fieldset>
-              <legend className="text-sm font-semibold leading-6 text-gray-900">By Email</legend>
+              <legend className="text-sm font-semibold leading-6 text-gray-900">Fighter Image</legend>
               <div className="col-span-full">
-              <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
-                Cover photo
-              </label>
               <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
                 <div className="text-center">
                   <PhotoIcon aria-hidden="true" className="mx-auto h-12 w-12 text-gray-300" />
@@ -214,5 +204,6 @@ export default function CreateChampion() {
         </button>
       </div>
     </form>
+    
   )
 }
