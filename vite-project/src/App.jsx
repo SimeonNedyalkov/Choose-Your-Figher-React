@@ -1,6 +1,7 @@
 // hooks
 import useFetch from './hooks/useFetch';
 import {useNavigate} from 'react-router-dom'
+import UserContext from './contexts/UserContext';
 
 import Navigation from "../src/components/Navigation";
 import Footer from './components/Footer';
@@ -34,11 +35,14 @@ function App(props) {
   const weapons = useFetch('http://localhost:3030/data/weapons',[])
   const armors = useFetch('http://localhost:3030/data/armors',[])
 
+
+  
   function goBackHome(){
     navigation('/')
     }
   
   return (
+    <UserContext.Provider value={{user:'Pesho'}}>
     <div className="min-h-screen flex flex-col">
       <div className='flex-grow'>
         <Navigation/>
@@ -63,6 +67,7 @@ function App(props) {
       </div>
       <Footer/>
     </div>
+    </UserContext.Provider>
   )
 }
 

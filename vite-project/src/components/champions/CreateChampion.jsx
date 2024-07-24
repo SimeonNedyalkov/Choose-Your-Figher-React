@@ -2,7 +2,7 @@ import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 
 export default function CreateChampion() {
   return (
-    
+
     <form className='bgImageCreate bg-white flex justify-center flex-col'>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
@@ -204,6 +204,6 @@ export default function CreateChampion() {
         </button>
       </div>
     </form>
-    
+
   )
 }
