@@ -8,54 +8,53 @@ export default function Login({
       password:""
     })
     
-      return (
-        <>
-        <div className="loginAndRegisterBackground">
-        <div className="overlay">
-          <div className="backdrop" onClick={goBackHome}></div>
-          <div className="modal">
-            <div className="onTop">
-            <button className="btn close" onClick={goBackHome}>
-                &times;
-              </button>
+    return (
+      <>
+          <div className="loginAndRegisterBackground">
+          <div className="overlay">
+            <div className="backdrop" onClick={goBackHome}></div>
+            <div className="modal2">
+              <div className="onTop">
+              <button className="btn close" onClick={goBackHome}>
+                  &times;
+                </button>
+              </div>
+              <div className='dialogue p-2'>
+                  Welcome warrior
+              </div>
+              <div className='separator'></div>
+              <form onSubmit={submitHandler} className="form">
+                  
+                  <div className='wrapperDiv'>
+                  <div className='idk'></div>
+                    <label>
+                      <span className="spanClass" htmlFor="username">Username:</span>
+                      <div className='inputImage'></div>
+                      <input className="inputClass" type="text" name="username" onChange={changeHandler} value={values.username} required />
+                    </label>
+                  </div>
+                  <div className='wrapperDiv'>
+                  <div className='idk'></div>
+                    <label>
+                      <span className="spanClass" htmlFor="password">Password:</span>
+                      <div className='inputImage'></div>
+                      <input className="inputClass" type="password" name="password" onChange={changeHandler} value={values.password} required />
+                    </label>
+                  </div>
+                <div className='downPart'>
+                </div>
+                <button type='submit' className='btnSubmit mt-5'>
+                  <div className='btnBackground'></div>
+                  <div className='btnBackgroundImage'></div>
+                  <div className='btnText'>
+                      <span className='btnSpan'>Login</span>
+                  </div>
+                </button>
+              </form>
+              
             </div>
-            <form  onSubmit={submitHandler} className="space-y-6">
-              <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">Login</h2>
-              <div className="form-items">
-              <div className="form-row">
-                <div className="form-group">
-                  <div>
-                    <label className="block pl-3 text-md font-medium leading-6 text-white" htmlFor="username">Username:</label>
-                    <input className="rounded-md text-black" type="text" name="username" onChange={changeHandler} value={values.username} required />
-                  </div>
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <div>
-                    <label className="block pl-3 text-md font-medium leading-6 text-white" htmlFor="password">Password:</label>
-                    <input className="rounded-md text-black" type="password" onChange={changeHandler} value={values.password} name="password" required />
-                  </div>
-                </div>
-              </div>
-              </div>
-              <div className="buttons">
-              <button className="flex w-full justify-center rounded-md bg-emerald-950 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" type="submit">
-                Login
-              </button>
-              <button
-                className="flex w-full justify-center rounded-md bg-emerald-950 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                type="button"
-                value={values.username}
-                onClick={goBackHome}
-              >
-                Cancel
-              </button>
-              </div>
-            </form>
           </div>
-        </div>
-        </div>
-            </>
-      )
+          </div>
+              </>
+    )
 }

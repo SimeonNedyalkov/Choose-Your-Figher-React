@@ -6,8 +6,14 @@ export default function CreateChampion({
 }) {
   const {values,changeHandler,submitHandler} = useForm({
     _id:'',
-    username:"",
-    password:""
+    name:"",
+    type:"",
+    attack:'',
+    defense:'',
+    speed:'',
+    intelligence:'',
+    health:'',
+    element:'',
   })
   return (
     <>
@@ -99,6 +105,8 @@ export default function CreateChampion({
                   name="element"
                   autoComplete="element"
                   className="stats pt-0 red-600"
+                  onChange={changeHandler}
+                  value={values.element}
                 >
                   <option className='options' value="fire">Fire</option>
                   <option className='options' value="earth">Earth</option>
