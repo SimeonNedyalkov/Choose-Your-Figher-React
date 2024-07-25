@@ -10,12 +10,11 @@ box-sizing: border-box;
 text-align: center;
 transition: font-size .1s;
 z-index: 50;
-
 background-size: contain;
 min-height: 31.8rem!important;
 width: 39.125rem!important;
 display: block;
-background-image: url("https://cdn-gpd.x-plarium.com/browser/content/lps/forms/088/substrate_top.png");
+background-image: url("../../images/create-champion/substrate_top.png");
 background-position: center top;
 background-repeat: no-repeat;
 inset: 9vw auto auto 50%;
@@ -64,39 +63,6 @@ top: 70px;
       border-radius: 14px;
     }
   }
-/*   
-  .button {
-    background: #2a87a5;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font: inherit;
-    font-weight: bold;
-  }
-  
-  .btn.close {
-    background-color: transparent;
-    padding: 5px 10px;
-    height: auto;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-  }
-  
-  .btn.close svg {
-    color: black;
-  }
-  
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-  } */
   .loginAndRegisterBackground{
     display: flex;
     flex-direction: column;
@@ -134,7 +100,7 @@ top: 70px;
     bottom: -1.4rem;
     height: 14rem!important;
     width: 100%!important;
-    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/088/substrate_bottom.png');
+    background-image: url('../../images/create-champion/substrate_bottom.png');
     background-position: center top;
     background-repeat: no-repeat;
 }
@@ -208,7 +174,7 @@ top: 70px;
     top: auto!important;
     width: 1.5rem!important;
     z-index: 2!important;
-    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/ic_username.png');
+    background-image: url('../../images/create-champion/ic_username.png');
     background-repeat: no-repeat;
     right: auto;
     transform: translate(75%, -50%);
@@ -233,7 +199,7 @@ top: 70px;
     top: 0;
     background-position: bottom!important;
     background-size: 20.13rem 2.9rem;
-    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/field-empty.png');
+    background-image: url('../../images/create-champion/field-empty.png');
     background-repeat: no-repeat;
 }
 .wrapperDiv{
@@ -251,7 +217,7 @@ top: 70px;
     color: #fff;
     margin: 0 auto .94rem;
     position: relative;
-    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/field.svg');
+    background-image: url('../../images/create-champion/field.svg');
     background-repeat: no-repeat;
 }
 .separator{
@@ -269,7 +235,7 @@ top: 70px;
     height: .5rem!important;
     margin: 0 auto .5rem;
     width: 20.125rem!important;
-    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/ic_decor.svg');
+    background-image: url('../../images/create-champion/ic_decor.svg');
     background-position: center top;
     background-repeat: no-repeat;
 }
@@ -317,7 +283,7 @@ top: 70px;
     color: #fff;
     margin: 0 auto .94rem;
     position: relative;
-    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/field.svg');
+    background-image: url('../../images/create-champion/field.svg');
     background-repeat: no-repeat;
 }
 .idk1{
@@ -339,7 +305,7 @@ top: 70px;
     top: 0;
     background-position: bottom!important;
     background-size: 10.13rem 1.9rem;
-    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/field-empty.png');
+    background-image: url('../../images/create-champion/field-empty.png');
     background-repeat: no-repeat;
 }
 .statsDiv{
@@ -365,7 +331,7 @@ top: 70px;
     right: 0;
     top: 0;
     background-size: contain;
-    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/btn_hover.svg');
+    background-image: url('../../images/create-champion/btn_hover.svg');
     background-position: center top;
     background-repeat: no-repeat;
 }
@@ -387,7 +353,7 @@ top: 70px;
     top: 0;
     animation: PGGru4 2s infinite;
     background-size: contain;
-    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/btn_hover.svg');
+    background-image: url('../../images/create-champion/btn_hover.svg');
     background-position: center top;
     background-repeat: no-repeat;
 }
@@ -410,7 +376,7 @@ top: 70px;
     padding: 0 1rem;
     width: 20.125rem;
     will-change: visibility,opacity;
-    background-image: url('https://cdn-gpd.x-plarium.com/browser/content/lps/forms/087/btn_default.svg');
+    background-image: url('../../images/create-champion/btn_default.svg');
     background-position: center top;
     background-repeat: no-repeat;
 }

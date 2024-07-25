@@ -65,7 +65,7 @@
   box-sizing: border-box;
   height: 51px;
   width: 51px;
-  background: url('https://cdn-gpd.x-plarium.com/browser/content/lps/audio_buttons/new/001/btn_pause.png');
+  background: url('../../images/home-image/btn_pause.png');
   top: auto;
   right: 40px;
   bottom: 40px;
@@ -85,7 +85,7 @@
   box-sizing: border-box;
   height: 51px;
   width: 51px;
-  background: url('https://cdn-gpd.x-plarium.com/browser/content/lps/audio_buttons/new/001/btn_play.png');
+  background: url('../../images/home-image/btn_play.png');
   top: auto;
   right: 40px;
   bottom: 40px;
