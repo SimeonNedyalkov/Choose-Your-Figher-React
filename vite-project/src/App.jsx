@@ -30,11 +30,22 @@ import CreateChampion from './components/champions/CreateChampion';
 
 function App(props) {
   const navigation = useNavigate()
+  const [authState,setAuthstate] = useState({})
 
   const fighters = useFetch('http://localhost:3030/data/fighters',[])
   const weapons = useFetch('http://localhost:3030/data/weapons',[])
   const armors = useFetch('http://localhost:3030/data/armors',[])
-
+  const changeAuthState = (state) =>{
+    // Fix this, bc its bullshit, by implementing persistant auth state
+    localStorage.setItem('accessToken',state.accessToken)
+    setAuthstate(state)
+  }
+  const contextData = {
+    email:authState.email,
+    accessToken:authState.accessToken,
+    isAuthenticated:!!authState.email,
+    changeAuthState
+  }
 
   
   function goBackHome(){
@@ -42,7 +53,7 @@ function App(props) {
     }
   
   return (
-    <UserContext.Provider value={{user:'Pesho'}}>
+    <UserContext.Provider value={contextData}>
     <div className="min-h-screen flex flex-col">
       <div className='flex-grow'>
         <Navigation/>
