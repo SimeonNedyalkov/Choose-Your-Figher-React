@@ -1,7 +1,8 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import UserContext from '../contexts/UserContext';
 
 const navigation = [
   { name: 'Dashboard', href: '/', current: false },
@@ -19,7 +20,7 @@ function classNames(...classes) {
 
 export default function Navigation() {
   const [newNavigation, setNewNavigation] = useState(navigation);
-  const [isNotLogedIn, setIsLogedIn] = useState(false);
+  const {isAuthenticated} = useContext(UserContext)
 
   const handleNavClick = (clickedItem) => {
     setNewNavigation((prevNavigation) =>
@@ -119,7 +120,7 @@ export default function Navigation() {
             </button>
 
             {/* Profile dropdown */}
-            {isNotLogedIn && (
+            {isAuthenticated ? (
               <Menu as="div" className="relative ml-3">
                 <div>
                   <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -153,8 +154,7 @@ export default function Navigation() {
                   </MenuItem>
                 </MenuItems>
               </Menu>
-            )}
-            {!isNotLogedIn && (
+            ):(
               <Menu as="div" className="relative ml-3">
                 <div>
                   <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
