@@ -1,20 +1,40 @@
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+import {useNavigate} from 'react-router-dom'
 import useForm from '../../hooks/useForm'
+import fighterData from '../../sevices/fighterAPI'
 
 export default function CreateChampion({
   goBackHome
 }) {
-  const {values,changeHandler,submitHandler} = useForm({
-    _id:'',
-    name:"",
-    type:"",
-    attack:'',
-    defense:'',
-    speed:'',
-    intelligence:'',
-    health:'',
-    element:'',
-  })
+  const navigation = useNavigate()
+    const initialValues = {
+        name:'',
+        type:'',
+        img:'',
+        attack:'',
+        defense:'',
+        speed:'',
+        intelligence:'',
+        health:'',
+        element:''
+    }
+    
+    async function createHandler(values){
+        try {
+            const  {_id : fighterId} = await fighterData.createFighter(values)
+            navigation(`/armory/champions/${fighterId}`)
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+    const {values,changeHandler,submitHandler} = useForm(initialValues,createHandler)
+    
+  
+  const fileChangeHandler = (event) => {
+    const file = event.target.files[0];
+    changeHandler({ target: { name: 'image', value: file } });
+  }
+
   return (
     <>
         <div className="loginAndRegisterBackground">
@@ -32,20 +52,31 @@ export default function CreateChampion({
             <div className='separator'></div>
             <form onSubmit={submitHandler} className="form">
                 
-                <div className='wrapperDiv'>
-                <div className='idk'></div>
+            <div className='statsDiv'>
+                <div className='wrapperDiv1'>
+                <div className='idk1'></div>
                   <label>
                     <span className="spanClass" htmlFor="name">Name:</span>
-                    <div className='inputImage'></div>
-                    <input className="inputClass" type="text" name="name" onChange={changeHandler} value={values.name} required />
+                    
+                    <input className="stats" type="text" name="name" onChange={changeHandler} value={values.name} required />
                   </label>
                 </div>
+                <div className='wrapperDiv1'>
+                <div className='idk1'></div>
+                  <label>
+                    <span className="spanClass" htmlFor="type">Type:</span>
+                    
+                    <input className="stats" type="text" name="type" onChange={changeHandler} value={values.type} required />
+                  </label>
+                </div>
+                </div>
+                
                 <div className='wrapperDiv'>
                 <div className='idk'></div>
                   <label>
-                    <span className="spanClass" htmlFor="type">Type:</span>
+                    <span className="spanClass " htmlFor="image">Image:</span>
                     <div className='inputImage'></div>
-                    <input className="inputClass" type="text" name="type" onChange={changeHandler} value={values.type} required />
+                    <input className="inputClass pt-3" type="file" name="image" onChange={fileChangeHandler} accept="image/*" required />
                   </label>
                 </div>
                 
@@ -98,7 +129,7 @@ export default function CreateChampion({
                 <div className='wrapperDiv1'>
                 <div className='idk1'></div>
                   <label>
-                    <span className="spanClass" htmlFor="health">Elements:</span>
+                    <span className="spanClass" htmlFor="element">Element:</span>
                     </label>
                 <select
                   id="champion-element"
