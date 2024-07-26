@@ -1,14 +1,34 @@
+import { useState } from "react"
 import useForm from "../../hooks/useForm"
+import { useRegister } from "../../hooks/useAuth"
+import {useNavigate} from 'react-router-dom'
 
 export default function Register({
     goBackHome,
 }){
-  const {values,changeHandler,submitHandler} = useForm({
-    _id:'',
-    email:"",
-    username:"",
-    password:""
-  })
+
+    const [error,setError] = useState('')
+    const register = useRegister()
+    const navigate = useNavigate()
+    const registerHandler = async ({email,password,rePass})=>{
+        if(password !== rePass){
+            setError('Password missmatch!')
+            return
+        }
+        try {
+            const resp = await register(email,password)
+            console.log(resp)
+            navigate('/')
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+    const {values,changeHandler,submitHandler} = useForm({
+        email:'',
+        username:'',
+        password:'',
+        rePass:''
+    },registerHandler)
   
   return (
     <>
@@ -48,6 +68,14 @@ export default function Register({
                     <span className="spanClass" htmlFor="password">Password:</span>
                     <div className='inputImage'></div>
                     <input className="inputClass" type="password" name="password" onChange={changeHandler} value={values.password} required />
+                  </label>
+                </div>
+                <div className='wrapperDiv'>
+                <div className='idk'></div>
+                  <label>
+                    <span className="spanClass" htmlFor="rePass">Repeat Password:</span>
+                    <div className='inputImage'></div>
+                    <input className="inputClass" type="password" name="rePass" onChange={changeHandler} value={values.rePass} required />
                   </label>
                 </div>
               <div className='downPart'>

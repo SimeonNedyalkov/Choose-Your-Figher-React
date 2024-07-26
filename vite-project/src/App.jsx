@@ -35,6 +35,7 @@ function App(props) {
   const fighters = useFetch('http://localhost:3030/data/fighters',[])
   const weapons = useFetch('http://localhost:3030/data/weapons',[])
   const armors = useFetch('http://localhost:3030/data/armors',[])
+  
   const changeAuthState = (state) =>{
     // Fix this, bc its bullshit, by implementing persistant auth state
     localStorage.setItem('accessToken',state.accessToken)
