@@ -1,6 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import UserContext from '../contexts/UserContext';
 
@@ -9,9 +9,7 @@ const navigation = [
   { name: 'About', href: '/about', current: false },
   { name: 'Events', href: '/events', current: false },
   { name: 'Armory', href: '#', current: false },
-  { name: 'Create Champion', href: '/createChampion', current: false },
-  // { name: 'Champions', href: '/champions', current: false },
-  // { name: 'Select Fighter', href: '/selectFighter', current: false },
+  // { name: 'Create Champion', href: '/createChampion', current: false },
 ];
 
 function classNames(...classes) {
@@ -31,6 +29,17 @@ export default function Navigation() {
       )
     );
   };
+
+  useEffect(()=>{
+    if(isAuthenticated){
+      setNewNavigation((prevNavigation)=>[
+        ...prevNavigation,
+        { name: 'Create Champion', href: '/createChampion', current: false }
+      ])
+    }else{
+      setNewNavigation(navigation)
+    }
+  },[isAuthenticated])
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
