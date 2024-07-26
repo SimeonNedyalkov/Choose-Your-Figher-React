@@ -7,13 +7,13 @@ export default function Login({
     const login = useLogin()
     const navigation = useNavigate()
     const {values,submitHandler,changeHandler} = useForm(
-        {email:'',password:''},
+        {email:'',username:'',password:''},
         async ({email,password})=>{
             try {
                 await login(email,password)
                 navigation('/')
             } catch (error) {
-                
+              console.log(error.message)
             }}
     )
     
@@ -37,9 +37,9 @@ export default function Login({
                   <div className='wrapperDiv'>
                   <div className='idk'></div>
                     <label>
-                      <span className="spanClass" htmlFor="username">Username:</span>
+                      <span className="spanClass" htmlFor="email">Email:</span>
                       <div className='inputImage'></div>
-                      <input className="inputClass" type="text" name="username" onChange={changeHandler} value={values.username} required />
+                      <input className="inputClass" type="text" name="email" onChange={changeHandler} value={values.email} required />
                     </label>
                   </div>
                   <div className='wrapperDiv'>

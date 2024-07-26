@@ -1,7 +1,8 @@
 import { useState } from "react"
+import {useNavigate} from 'react-router-dom'
+
 import useForm from "../../hooks/useForm"
 import { useRegister } from "../../hooks/useAuth"
-import {useNavigate} from 'react-router-dom'
 
 export default function Register({
     goBackHome,
@@ -10,14 +11,15 @@ export default function Register({
     const [error,setError] = useState('')
     const register = useRegister()
     const navigate = useNavigate()
-    const registerHandler = async ({email,password,rePass})=>{
+
+    const registerHandler = async ({email,username,password,rePass})=>{
         if(password !== rePass){
             setError('Password missmatch!')
             return
         }
         try {
-            const resp = await register(email,password)
-            console.log(resp)
+          console.log(`Email: ${email},Password: ${password},Username: ${username}`)
+            await register(email,username,password)
             navigate('/')
         } catch (error) {
             console.log(error.message)
