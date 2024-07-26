@@ -1,12 +1,21 @@
+import { useLogin } from "../../hooks/useAuth"
 import useForm from "../../hooks/useForm"
+import {useNavigate} from 'react-router-dom'
 export default function Login({
   goBackHome,
 }){
-    const {values,changeHandler,submitHandler} = useForm({
-      _id:'',
-      username:"",
-      password:""
-    })
+    const login = useLogin()
+    const navigation = useNavigate()
+    const {values,submitHandler,changeHandler} = useForm(
+        {email:'',password:''},
+        async ({email,password})=>{
+            try {
+                await login(email,password)
+                navigation('/')
+            } catch (error) {
+                
+            }}
+    )
     
     return (
       <>
