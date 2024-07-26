@@ -1,7 +1,7 @@
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import {useNavigate} from 'react-router-dom'
 import useForm from '../../hooks/useForm'
 import fighterData from '../../sevices/fighterAPI'
+import {optionsState} from 'react'
 
 export default function CreateChampion({
   goBackHome
@@ -16,7 +16,7 @@ export default function CreateChampion({
         speed:'',
         intelligence:'',
         health:'',
-        element:''
+        element:'fire'
     }
     
     async function createHandler(values){
@@ -32,7 +32,7 @@ export default function CreateChampion({
   
   const fileChangeHandler = (event) => {
     const file = event.target.files[0];
-    changeHandler({ target: { name: 'image', value: file } });
+    changeHandler({ target: { name: 'img', value: file } });
   }
 
   return (
@@ -74,9 +74,9 @@ export default function CreateChampion({
                 <div className='wrapperDiv'>
                 <div className='idk'></div>
                   <label>
-                    <span className="spanClass " htmlFor="image">Image:</span>
+                    <span className="spanClass " htmlFor="img">Image:</span>
                     <div className='inputImage'></div>
-                    <input className="inputClass pt-3" type="file" name="image" onChange={fileChangeHandler} accept="image/*" required />
+                    <input className="inputClass pt-3" type="file" name="img" onChange={fileChangeHandler} accept="image/*" required />
                   </label>
                 </div>
                 
@@ -137,7 +137,7 @@ export default function CreateChampion({
                   autoComplete="element"
                   className="stats pt-0 red-600"
                   onChange={changeHandler}
-                  value={values.element}
+                  value={optionsState}
                 >
                   <option className='options' value="fire">Fire</option>
                   <option className='options' value="earth">Earth</option>
