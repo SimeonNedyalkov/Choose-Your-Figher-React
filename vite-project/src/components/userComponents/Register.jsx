@@ -25,10 +25,6 @@ export default function Register({
             console.log(error.message)
         }
     }
-    const fileChangeHandler = (event) => {
-      const file = event.target.files[0];
-      changeHandler({ target: { name: 'image', value: file } });
-    }
     const {values,changeHandler,submitHandler} = useForm({
         email:'',
         username:'',
@@ -66,14 +62,6 @@ export default function Register({
                     <span className="spanClass" htmlFor="username">Username:</span>
                     <div className='inputImage'></div>
                     <input className="inputClass" type="text" name="username" onChange={changeHandler} value={values.username} required />
-                  </label>
-                </div>
-                <div className='wrapperDiv'>
-                <div className='idk'></div>
-                  <label>
-                    <span className="spanClass" htmlFor="image">Image:</span>
-                    <div className='inputImage'></div>
-                    <input className="inputClass" type="file" name="image" onChange={fileChangeHandler} accept="image/*" required />
                   </label>
                 </div>
                 <div className='wrapperDiv'>
