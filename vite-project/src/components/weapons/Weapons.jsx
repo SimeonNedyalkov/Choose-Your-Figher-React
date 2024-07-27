@@ -1,7 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import useFetch from '../../hooks/useFetch';
 
-export default function Weapons({ weapons }) {
+
+export default function Weapons() {
+    const weapons = useFetch('http://localhost:3030/data/weapons',[])
     return (
         <div className='backgroundImageChampions'>
         <div className='allFighters'>

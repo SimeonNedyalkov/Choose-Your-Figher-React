@@ -36,10 +36,6 @@ import MyProfile from './components/userComponents/MyProfile';
 function App(props) {
   const navigation = useNavigate()
   const [authState,setAuthstate] = useState({})
-
-  const fighters = useFetch('http://localhost:3030/data/fighters',[])
-  const weapons = useFetch('http://localhost:3030/data/weapons',[])
-  const armors = useFetch('http://localhost:3030/data/armors',[])
   
   const changeAuthState = (state) =>{
     // Fix this, bc its bullshit, by implementing persistant auth state
@@ -71,15 +67,15 @@ function App(props) {
           <Route path='/my-profile' element={<MyProfile goBackHome={goBackHome}/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/events' element={<Events/>}/>
-          <Route path='/armory/champions' element={<Champions fighters={fighters}/>}/>
+          <Route path='/armory/champions' element={<Champions/>}/>
           <Route path='/armory/champions/:id' element={<ChampionsDetails/>}/>
           <Route path='createChampion' element={<CreateChampion goBackHome={goBackHome}/>}/>
-          <Route path='/armory/weapons' element={<Weapons weapons={weapons}/>}/>
+          <Route path='/armory/weapons' element={<Weapons/>}/>
           <Route path='/armory/weapons/:id' element={<WeaponDetails/>}/>
-          <Route path='/armory/armors' element={<Armors armors={armors}/>}/>
+          <Route path='/armory/armors' element={<Armors/>}/>
           <Route path='/armory/armors/:id' element={<ArmorDetails/>}/>
-          <Route path='/armory/checkFighter' element={<CheckFighter fighters={fighters} weapons={weapons} armors={armors}/>}/>
-          <Route path='/armory/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay fighters={fighters} weapons={weapons}/>}/>
+          <Route path='/armory/checkFighter' element={<CheckFighter/>}/>
+          <Route path='/armory/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>

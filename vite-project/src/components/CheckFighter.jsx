@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import useFetch from '../hooks/useFetch';
 
-const CheckFighter = ({ fighters, weapons,armors }) => {
+const CheckFighter = () => {
     const navigation = useNavigate();
     const [selectedFighterId, setSelectedFighterId] = useState(null);
     const [selectedWeaponId, setSelectedWeaponId] = useState(null);
     const [selectedArmorId, setSelectedArmorId] = useState(null);
+    const fighters = useFetch('http://localhost:3030/data/fighters',[])
+    const weapons = useFetch('http://localhost:3030/data/weapons',[])
+    const armors = useFetch('http://localhost:3030/data/armors',[])
 
     function handleSelect() {
         if (selectedFighterId && selectedWeaponId && selectedArmorId) {
