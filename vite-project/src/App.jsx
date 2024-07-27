@@ -1,7 +1,6 @@
 // hooks
 import useFetch from './hooks/useFetch';
 import {useNavigate} from 'react-router-dom'
-import React, { Suspense, lazy } from 'react';
 
 import UserContext from './contexts/UserContext';
 
@@ -32,6 +31,7 @@ import './styles/base.css'
 import {Routes,Route,} from 'react-router-dom';
 import CreateChampion from './components/champions/CreateChampion';
 import { useState } from 'react';
+import MyProfile from './components/userComponents/MyProfile';
 
 function App(props) {
   const navigation = useNavigate()
@@ -68,6 +68,7 @@ function App(props) {
           <Route path='/register' element={<Register goBackHome={goBackHome}/>}/>
           <Route path='/login' element={<Login goBackHome={goBackHome}/>}/>
           <Route path='/logout' element={<Logout goBackHome={goBackHome}/>}/>
+          <Route path='/my-profile' element={<MyProfile goBackHome={goBackHome}/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/events' element={<Events/>}/>
           <Route path='/armory/champions' element={<Champions fighters={fighters}/>}/>
