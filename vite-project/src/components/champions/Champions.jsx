@@ -1,7 +1,7 @@
-import React from 'react';
 import {Link} from 'react-router-dom'
 
 export default function Champions({ fighters }) {
+
     return (
         <div className='backgroundImageChampions'>
         <div className='allFighters'>

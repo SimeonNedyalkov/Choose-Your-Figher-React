@@ -3,12 +3,25 @@ import { useState } from "react";
 export default function useForm(initialValue,submitCallBack){
     const [values,setValues] = useState(initialValue)
 
-    const changeHandler = (e) =>{
-        setValues(state=>({
-            ...state,
-            [e.target.name] : e.target.value
-        }))
-    }
+    const changeHandler = (event) => {
+        const { name, value } = event.target;
+        setValues((prevValues) => {
+          const keys = name.split('.');
+          if (keys.length > 1) {
+            return {
+              ...prevValues,
+              [keys[0]]: {
+                ...prevValues[keys[0]],
+                [keys[1]]: value,
+              },
+            };
+          }
+          return {
+            ...prevValues,
+            [name]: value,
+          };
+        });
+      };
     
     const submitHandler = (e) =>{
         e.preventDefault()

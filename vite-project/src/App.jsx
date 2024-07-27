@@ -1,6 +1,8 @@
 // hooks
 import useFetch from './hooks/useFetch';
 import {useNavigate} from 'react-router-dom'
+import React, { Suspense, lazy } from 'react';
+
 import UserContext from './contexts/UserContext';
 
 import Navigation from "../src/components/Navigation";
@@ -20,6 +22,8 @@ import FighterDisplay from './components/FighterDisplay';
 import CheckFighter from './components/CheckFighter';
 import Armors from './components/armors/Armors';
 import ArmorDetails from './components/armors/ArmorDetails';
+
+import WarriorsLoading from './loaders/WarriorsLoading'
 
 // css
 import './styles/base.css'

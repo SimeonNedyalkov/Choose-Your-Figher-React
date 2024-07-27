@@ -1,0 +1,48 @@
+.warriors-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .warrior {
+    position: relative;
+    margin: 20px;
+    animation: fight 1.5s infinite alternate;
+  }
+  
+  .shield, .sword, .body {
+    background-color: #555;
+    position: absolute;
+  }
+  
+  .shield {
+    width: 20px;
+    height: 30px;
+    left: -15px;
+  }
+  
+  .sword {
+    width: 5px;
+    height: 40px;
+    right: -10px;
+  }
+  
+  .body {
+    width: 20px;
+    height: 50px;
+    left: 5px;
+  }
+  
+  .loading-text {
+    font-size: 24px;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  @keyframes fight {
+    0% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-10px) rotate(-10deg); }
+    100% { transform: translateY(0) rotate(10deg); }
+  }
