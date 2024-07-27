@@ -52,7 +52,7 @@ export default function CreateChampion({goBackHome}) {
               Create your warrior
             </div>
             <div className="separator"></div>
-            <form autocomplete="off" onSubmit={submitHandler} className="form">
+            <form onSubmit={submitHandler} className="form">
               <div className="statsDiv">
                 <div className="wrapperDiv1">
                   <div className="idk1"></div>
