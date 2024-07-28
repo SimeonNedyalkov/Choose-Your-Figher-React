@@ -1,13 +1,10 @@
 import getElementEmoji from "../../customFunctions/elements";
 import useFetch from "../../hooks/useFetch";
-import {useNavigate,Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 export default function Arena() {
     const fighters = useFetch('http://localhost:3030/data/fighters', []);
-    const navigation = useNavigate()
-    function buttonHandler(fighterId){
-        navigation(`/battleGround/${fighterId}`)
-    }
+    
     return (
         <div className="arenaBackground">
             <div className="chooseFighter">
