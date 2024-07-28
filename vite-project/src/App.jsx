@@ -32,6 +32,7 @@ import {Routes,Route,} from 'react-router-dom';
 import CreateChampion from './components/champions/CreateChampion';
 import { useState } from 'react';
 import MyProfile from './components/userComponents/MyProfile';
+import Arena from './components/Arena/Arena';
 
 function App(props) {
   const navigation = useNavigate()
@@ -76,6 +77,7 @@ function App(props) {
           <Route path='/armory/armors/:id' element={<ArmorDetails/>}/>
           <Route path='/armory/checkFighter' element={<CheckFighter/>}/>
           <Route path='/armory/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay/>}/>
+          <Route path='/arena' element={<Arena/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>

@@ -1,13 +1,13 @@
-.arenaBackground{
+.arenaBackground {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    background-image: url('../images/home-image/5692516.jpg');
+    background-image: url('../../images/arena/magic-forest-with-round-stone-altar-night_107791-12862upscaled.jpg');
     background-size: cover;
     background-position: center;
-    width: 100vw;
+    width: 99vw;
     height: calc(100vh + 144px);
     color: white;
     margin: 0;

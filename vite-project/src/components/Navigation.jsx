@@ -34,7 +34,8 @@ export default function Navigation() {
     if(isAuthenticated){
       setNewNavigation((prevNavigation)=>[
         ...prevNavigation,
-        { name: 'Create Champion', href: '/createChampion', current: false }
+        { name: 'Create Champion', href: '/createChampion', current: false },
+        { name: 'Arena', href: '/arena', current: false }
       ])
     }else{
       setNewNavigation(navigation)
