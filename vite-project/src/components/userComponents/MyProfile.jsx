@@ -5,6 +5,7 @@ import useFetch from '../../hooks/useFetch';
 export default function MyProfile() {
     const [username, setUsername] = useState('');
     const [userId,setUserId] =useState('')
+    let ownedFighters = []
 
     useEffect(() => {
         async function fetchUserInfo() {
@@ -21,7 +22,7 @@ export default function MyProfile() {
     }, []);
 
     const fighters = useFetch('http://localhost:3030/data/fighters',[])
-    let ownedFighters = []
+    
     fighters.map((fighter)=>{
         if(fighter._ownerId == userId){
             ownedFighters.push(fighter)

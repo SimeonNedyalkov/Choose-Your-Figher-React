@@ -1,0 +1,16 @@
+.arenaBackground{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../images/home-image/5692516.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: calc(100vh + 144px);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
