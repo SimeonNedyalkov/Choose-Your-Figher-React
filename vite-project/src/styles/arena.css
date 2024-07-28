@@ -14,3 +14,37 @@
     padding: 0;
     overflow: hidden;
 }
+.chooseFighter {
+    font-size: 24px;
+    font-weight: bold; 
+    margin-bottom: 20px; 
+}
+
+.fightersContainer {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.fighterCard {
+    background-color: #ffffff; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    padding: 10px; 
+    width: 150px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+
+.fighterImage {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+.fighterName {
+    margin-top: 10px;
+    font-size: 18px; 
+    font-weight: bold; 
+}
