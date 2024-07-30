@@ -1,28 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import userAPI from "../../sevices/usersAPI";
 import useFetch from '../../hooks/useFetch';
+import { useAuthContext } from '../../contexts/UserContext';
+import { useGetUserInfo } from '../../hooks/useAuth';
 
 export default function MyProfile() {
-    const [username, setUsername] = useState('');
-    const [userId,setUserId] =useState('')
+    const [username,setUsername,userId,setUserId] = useGetUserInfo()
     let ownedFighters = []
 
-    useEffect(() => {
-        async function fetchUserInfo() {
-            try {
-                const { username,_id } = await userAPI.getUserInfo();
-                setUserId(_id)
-                setUsername(username);
-            } catch (error) {
-                console.error('Error fetching user info:', error);
-            }
-        }
+    // useEffect(() => {
+    //     async function fetchUserInfo() {
+    //         try {
+    //             const { username,_id } = await userAPI.getUserInfo();
+    //             setUserId(_id)
+    //             setUsername(username);
+    //         } catch (error) {
+    //             console.error('Error fetching user info:', error);
+    //         }
+    //     }
 
-        fetchUserInfo();
-    }, []);
+    //     fetchUserInfo();
+    // }, []);
 
     const fighters = useFetch('http://localhost:3030/data/fighters',[])
-    
+    console.log(username)
     fighters.map((fighter)=>{
         if(fighter._ownerId == userId){
             ownedFighters.push(fighter)

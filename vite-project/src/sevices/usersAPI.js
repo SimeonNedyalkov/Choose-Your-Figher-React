@@ -14,11 +14,15 @@ async function getUserInfo(){
     const authData = await requesterAPI.get(`${BASE_URL}/me`)
     return authData
 }
+async function logout(){
+    return await requesterAPI.get(`${BASE_URL}/logout`)
+}
 
 const userAPI = {
     login,
     register,
-    getUserInfo
+    getUserInfo,
+    logout
 }
 
 export default userAPI

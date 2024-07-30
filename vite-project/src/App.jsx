@@ -41,10 +41,11 @@ function App(props) {
   
   const changeAuthState = (state) =>{
     // Fix this, bc its bullshit, by implementing persistant auth state
-    localStorage.setItem('accessToken',state.accessToken)
+    localStorage.setItem('user',JSON.stringify(state))
     setAuthstate(state)
   }
   const contextData = {
+    userId:authState.userId,
     email:authState.email,
     accessToken:authState.accessToken,
     isAuthenticated:!!authState.email,

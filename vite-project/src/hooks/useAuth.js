@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 import userAPI from "../sevices/usersAPI"
 import UserContext from "../contexts/UserContext"
 
@@ -29,4 +29,23 @@ export function useLogout(){
         sessionLogout()
     }
     return logoutHandler
+}
+
+export function useGetUserInfo(){
+    const [username, setUsername] = useState('');
+    const [userId,setUserId] =useState('')
+    useEffect(() => {
+        async function fetchUserInfo() {
+            try {
+                const { username,_id } = await userAPI.getUserInfo();
+                setUserId(_id)
+                setUsername(username);
+            } catch (error) {
+                console.error('Error fetching user info:', error);
+            }
+        }
+
+        fetchUserInfo();
+    }, []);
+    return [username,setUsername,userId,setUserId]
 }
