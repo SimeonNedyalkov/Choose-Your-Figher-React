@@ -8,20 +8,6 @@ export default function MyProfile() {
     const [username,setUsername,userId,setUserId] = useGetUserInfo()
     let ownedFighters = []
 
-    // useEffect(() => {
-    //     async function fetchUserInfo() {
-    //         try {
-    //             const { username,_id } = await userAPI.getUserInfo();
-    //             setUserId(_id)
-    //             setUsername(username);
-    //         } catch (error) {
-    //             console.error('Error fetching user info:', error);
-    //         }
-    //     }
-
-    //     fetchUserInfo();
-    // }, []);
-
     const fighters = useFetch('http://localhost:3030/data/fighters',[])
     console.log(username)
     fighters.map((fighter)=>{

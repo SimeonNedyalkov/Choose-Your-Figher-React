@@ -6,12 +6,13 @@ const UserContext = createContext({
     accessToken:'',
     isAuthenticated:false,
     changeAuthState: (changeAuthState = {}) => null,
-    logout: () => null,
+    sessionLogout: () => null,
 })
 
 export function useAuthContext(){
     const data = useContext(UserContext)
     return data
 }
+
 
 export default UserContext

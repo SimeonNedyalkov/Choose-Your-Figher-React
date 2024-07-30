@@ -22,7 +22,7 @@ export function useRegister(){
 }
 
 export function useLogout(){
-    const {logout:sessionLogout} = useContext()
+    const {sessionLogout} = useContext(UserContext)
 
     async function logoutHandler(){
         await userAPI.logout()

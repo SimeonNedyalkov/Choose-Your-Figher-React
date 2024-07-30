@@ -1,7 +1,15 @@
+import { useLogout } from "../../hooks/useAuth"
+import {useNavigate} from 'react-router-dom'
 export default function Logout({
     goBackHome,
 }){
-  
+    const logout = useLogout()
+    const navigation = useNavigate()
+    function logoutHandler(){
+      logout()
+      navigation('/')
+    }
+    
     return(
       <div className="loginAndRegisterBackground">
       <div className="overlay">
@@ -17,7 +25,7 @@ export default function Logout({
             <div className="actions">
               <div id="form-actions">
                 <div className="buttonsForLogout">
-                <button id="action-save" className="btn" type="submit">Logout</button>
+                <button id="action-save" onClick={logoutHandler} className="btn" type="submit">Logout</button>
                 <button id="action-cancel" onClick={goBackHome} className="btn" type="button">Cancel</button>
                 </div>
               </div>
