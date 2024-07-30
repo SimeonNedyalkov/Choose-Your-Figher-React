@@ -21,3 +21,12 @@ export function useRegister(){
     return registerHandler
 }
 
+export function useLogout(){
+    const {logout:sessionLogout} = useContext()
+
+    async function logoutHandler(){
+        await userAPI.logout()
+        sessionLogout()
+    }
+    return logoutHandler
+}
