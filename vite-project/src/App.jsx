@@ -37,24 +37,7 @@ import BattleGround from './components/Arena/BattleGround';
 
 function App(props) {
   const navigation = useNavigate()
-  // const [authState,setAuthstate] = useState({})
-  // function sessionLogout(){
-  //   setAuthstate(null)
-  // }
-  // const changeAuthState = (state) =>{
-  //   localStorage.setItem('user',JSON.stringify(state))
-  //   setAuthstate(state)
-  // }
-  // const contextData = {
-  //   userId:authState?.userId,
-  //   email:authState?.email,
-  //   accessToken:authState?.accessToken,
-  //   isAuthenticated:!!authState?.email,
-  //   changeAuthState,
-  //   sessionLogout
-  // }
 
-  
   function goBackHome(){
     navigation('/')
     }

@@ -1,0 +1,86 @@
+.backgroundImageUsers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../../images/users-me/OIGP.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 99vw;
+    height: calc(100vh + 144px);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.user-greeting {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.user-fighters-section {
+    margin-top: 20px;
+}
+
+.user-fighters-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.user-fighters-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.user-fighter-card {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-fighter-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.user-fighter-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.user-fighter-img-wrapper {
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.user-fighter-img {
+    width: 100%;
+    height: auto;
+}
+.user-fighter-buttons {
+    margin-top: 10px;
+}
+
+.user-fighter-button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-fighter-button:hover {
+    background-color: #0056b3;
+}
