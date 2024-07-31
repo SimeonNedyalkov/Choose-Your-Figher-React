@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import userAPI from "../../sevices/usersAPI";
 import useFetch from '../../hooks/useFetch';
-import { useAuthContext } from '../../contexts/UserContext';
 import { useGetUserInfo } from '../../hooks/useAuth';
 
 export default function MyProfile() {

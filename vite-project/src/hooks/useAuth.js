@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react"
 import userAPI from "../sevices/usersAPI"
-import UserContext from "../contexts/UserContext"
+import { useAuthContext } from "../contexts/UserContext"
 
 export function useLogin(){
-    const {changeAuthState} = useContext(UserContext)
+    const {changeAuthState} = useAuthContext()
     async function loginHandler(email,password){
         const {password:_ , ...result} = await userAPI.login(email,password)
         changeAuthState(result)
@@ -12,7 +12,7 @@ export function useLogin(){
     return loginHandler
 }
 export function useRegister(){
-    const {changeAuthState} = useContext(UserContext)
+    const {changeAuthState} = useAuthContext()
     async function registerHandler(email,username,password){
         const {password:_ , ...result} = await userAPI.register(email,username,password)
         changeAuthState(result)
@@ -22,7 +22,7 @@ export function useRegister(){
 }
 
 export function useLogout(){
-    const {sessionLogout} = useContext(UserContext)
+    const {logout:sessionLogout} = useAuthContext()
 
     async function logoutHandler(){
         await userAPI.logout()

@@ -2,7 +2,7 @@
 import useFetch from './hooks/useFetch';
 import {useNavigate} from 'react-router-dom'
 
-import UserContext from './contexts/UserContext';
+import AuthContextProvider from './contexts/UserContext';
 
 import Navigation from "../src/components/Navigation";
 import Footer from './components/Footer';
@@ -37,22 +37,22 @@ import BattleGround from './components/Arena/BattleGround';
 
 function App(props) {
   const navigation = useNavigate()
-  const [authState,setAuthstate] = useState({})
-  function sessionLogout(){
-    setAuthstate(null)
-  }
-  const changeAuthState = (state) =>{
-    localStorage.setItem('user',JSON.stringify(state))
-    setAuthstate(state)
-  }
-  const contextData = {
-    userId:authState?.userId,
-    email:authState?.email,
-    accessToken:authState?.accessToken,
-    isAuthenticated:!!authState?.email,
-    changeAuthState,
-    sessionLogout
-  }
+  // const [authState,setAuthstate] = useState({})
+  // function sessionLogout(){
+  //   setAuthstate(null)
+  // }
+  // const changeAuthState = (state) =>{
+  //   localStorage.setItem('user',JSON.stringify(state))
+  //   setAuthstate(state)
+  // }
+  // const contextData = {
+  //   userId:authState?.userId,
+  //   email:authState?.email,
+  //   accessToken:authState?.accessToken,
+  //   isAuthenticated:!!authState?.email,
+  //   changeAuthState,
+  //   sessionLogout
+  // }
 
   
   function goBackHome(){
@@ -60,7 +60,7 @@ function App(props) {
     }
   
   return (
-    <UserContext.Provider value={contextData}>
+    <AuthContextProvider>
     <div className="min-h-screen flex flex-col">
       <div className='flex-grow'>
         <Navigation/>
@@ -88,7 +88,7 @@ function App(props) {
       </div>
       <Footer/>
     </div>
-    </UserContext.Provider>
+    </AuthContextProvider>
   )
 }
 

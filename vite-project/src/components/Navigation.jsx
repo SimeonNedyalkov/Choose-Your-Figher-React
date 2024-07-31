@@ -2,14 +2,18 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import UserContext from '../contexts/UserContext';
+import { useAuthContext } from '../contexts/UserContext';
 
-const navigation = [
+const initialNavigation = [
   { name: 'Dashboard', href: '/', current: false },
   { name: 'About', href: '/about', current: false },
   { name: 'Events', href: '/events', current: false },
   { name: 'Armory', href: '#', current: false },
-  // { name: 'Create Champion', href: '/createChampion', current: false },
+];
+
+const authNavigation = [
+  { name: 'Create Champion', href: '/createChampion', current: false },
+  { name: 'Arena', href: '/arena', current: false },
 ];
 
 function classNames(...classes) {
@@ -17,37 +21,32 @@ function classNames(...classes) {
 }
 
 export default function Navigation() {
-  const [newNavigation, setNewNavigation] = useState(navigation);
-  const {isAuthenticated} = useContext(UserContext)
+  const { isAuthenticated } = useAuthContext();
+  const [newNavigation, setNewNavigation] = useState(() => {
+    return isAuthenticated ? [...initialNavigation, ...authNavigation] : initialNavigation;
+  });
 
   const handleNavClick = (clickedItem) => {
     setNewNavigation((prevNavigation) =>
       prevNavigation.map((item) =>
-        item.name === clickedItem.name
-          ? { ...item, current: true }
-          : { ...item, current: false }
+        item.name === clickedItem.name ? { ...item, current: true } : { ...item, current: false }
       )
     );
   };
 
-  useEffect(()=>{
-    if(isAuthenticated){
-      setNewNavigation((prevNavigation)=>[
-        ...prevNavigation,
-        { name: 'Create Champion', href: '/createChampion', current: false },
-        { name: 'Arena', href: '/arena', current: false }
-      ])
-    }else{
-      setNewNavigation(navigation)
+  useEffect(() => {
+    if (isAuthenticated) {
+      setNewNavigation([...initialNavigation, ...authNavigation]);
+    } else {
+      setNewNavigation(initialNavigation);
     }
-  },[isAuthenticated])
+  }, [isAuthenticated]);
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            {/* Mobile menu button */}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
@@ -57,11 +56,7 @@ export default function Navigation() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <img
-                alt="Your Company"
-                src="./images/18plus.png"
-                className="h-8 w-auto"
-              />
+              <img alt="Your Company" src="./images/18plus.png" className="h-8 w-auto" />
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
@@ -74,26 +69,24 @@ export default function Navigation() {
                             Armory
                           </MenuButton>
                         </div>
-                        <MenuItems
-                          className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none"
-                        >
+                        <MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none">
                           <MenuItem>
-                            <NavLink onClick={() => handleNavClick(item)} style={({isActive})=>isActive?{color:'white',background:'#1f2937'}:{}} to="/armory/champions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <NavLink onClick={() => handleNavClick(item)} style={({ isActive }) => isActive ? { color: 'white', background: '#1f2937' } : {}} to="/armory/champions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Champions
                             </NavLink>
                           </MenuItem>
                           <MenuItem>
-                            <NavLink onClick={() => handleNavClick(item)} style={({isActive})=>isActive?{color:'white',background:'#1f2937'}:{}} to="/armory/armors" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <NavLink onClick={() => handleNavClick(item)} style={({ isActive }) => isActive ? { color: 'white', background: '#1f2937' } : {}} to="/armory/armors" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Armors
                             </NavLink>
                           </MenuItem>
                           <MenuItem>
-                            <NavLink onClick={() => handleNavClick(item)} style={({isActive})=>isActive?{color:'white',background:'#1f2937'}:{}} to="/armory/weapons" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <NavLink onClick={() => handleNavClick(item)} style={({ isActive }) => isActive ? { color: 'white', background: '#1f2937' } : {}} to="/armory/weapons" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Weapons
                             </NavLink>
                           </MenuItem>
                           <MenuItem>
-                            <NavLink to="/armory/checkFighter" style={({isActive})=>isActive?{color:'white',background:'#1f2937'}:{}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <NavLink to="/armory/checkFighter" style={({ isActive }) => isActive ? { color: 'white', background: '#1f2937' } : {}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Check Fighter
                             </NavLink>
                           </MenuItem>
@@ -136,17 +129,10 @@ export default function Navigation() {
                   <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">Open user menu</span>
-                    <img
-                      alt=""
-                      src="../../images/neutral-user/random_person.jpg"
-                      className="h-8 w-8 rounded-full"
-                    />
+                    <img alt="" src="../../images/neutral-user/random_person.jpg" className="h-8 w-8 rounded-full" />
                   </MenuButton>
                 </div>
-                <MenuItems
-                  transition
-                  className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none"
-                >
+                <MenuItems transition className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none">
                   <MenuItem>
                     <Link to="/my-profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Your Profile
@@ -164,23 +150,16 @@ export default function Navigation() {
                   </MenuItem>
                 </MenuItems>
               </Menu>
-            ):(
+            ) : (
               <Menu as="div" className="relative ml-3">
                 <div>
                   <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">Open user menu</span>
-                    <img
-                      alt=""
-                      src="../../images/neutral-user/1206832.jpg"
-                      className="h-8 w-8 rounded-full"
-                    />
+                    <img alt="" src="../../images/neutral-user/1206832.jpg" className="h-8 w-8 rounded-full" />
                   </MenuButton>
                 </div>
-                <MenuItems
-                  transition
-                  className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none"
-                >
+                <MenuItems transition className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none">
                   <MenuItem>
                     <Link to="/login" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Login
@@ -200,7 +179,7 @@ export default function Navigation() {
 
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
-          {navigation.map((item) => (
+          {newNavigation.map((item) => (
             <DisclosureButton
               key={item.name}
               as="a"
