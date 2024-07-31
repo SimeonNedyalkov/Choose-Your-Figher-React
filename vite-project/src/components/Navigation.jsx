@@ -12,7 +12,6 @@ const initialNavigation = [
 ];
 
 const authNavigation = [
-  { name: 'Create Champion', href: '/createChampion', current: false },
   { name: 'Arena', href: '/arena', current: false },
 ];
 
@@ -138,11 +137,11 @@ export default function Navigation() {
                       Your Profile
                     </Link>
                   </MenuItem>
-                  <MenuItem>
-                    <Link to="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Settings
+                  {isAuthenticated && (<MenuItem>
+                    <Link to="/createChampion" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Create Champion
                     </Link>
-                  </MenuItem>
+                  </MenuItem>)}
                   <MenuItem>
                     <Link to="/logout" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Sign out
