@@ -16,8 +16,28 @@
 }
 
 .user-greeting {
-    font-size: 24px;
+    font-size: 36px;
+    font-family: 'Cinzel', serif; /* A more gothic or ominous font */
+    color: #ff0000; /* Blood red color */
+    text-shadow: 2px 2px 8px #000000; /* Black shadow for depth */
     margin-bottom: 20px;
+    text-align: center;
+    animation: flicker 1.5s infinite alternate; /* Flickering effect */
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+        text-shadow: 2px 2px 8px #000000;
+    }
+    50% {
+        opacity: 0.8;
+        text-shadow: 2px 2px 12px #ff0000;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 2px 2px 8px #000000;
+    }
 }
 
 .user-fighters-section {
@@ -26,7 +46,7 @@
 
 .user-fighters-title {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .user-fighters-list {
@@ -40,7 +60,7 @@
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     padding: 15px;
-    width: 200px;
+   
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;

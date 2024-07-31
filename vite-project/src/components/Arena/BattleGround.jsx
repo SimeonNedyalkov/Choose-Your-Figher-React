@@ -7,7 +7,7 @@ export default function BattleGround(){
     const pickedFighter = useFetch(`http://localhost:3030/data/fighters/${fighterId}`,[])
     console.log(pickedFighter)
     return (
-        <div>
+        <div className="battleGroundImage">
             <div>Welcome to the Battleground</div>
             <div>{pickedFighter.name}</div>
         </div>
