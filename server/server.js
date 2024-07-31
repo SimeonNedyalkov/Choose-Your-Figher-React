@@ -1439,58 +1439,59 @@
     }
 },
     	"weapons": {
-            "1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6": {
-                "name": "Hydroblade",
-                "type": "Sword",
-                "element": "Water",
-                "img": "/images/Weapons/hydrobladeNoBackground.png",
-                "stats":{
-                "attack": 15,
-                "defense": 5,
-                "speed": 5,
-                "intelligence": 5,
-                },
-                "description": "The Hydroblade, forged from pure deep-sea waters, slices through foes with wave-like grace. It enhances the wielder’s attack power with oceanic strength and offers balanced boosts to defense, speed, and intelligence, making them formidable in combat."
-            },
-            "7p6o5n4m-3l2k-1j0i-h9g8-f7e6d5c4b3a2": {
-                "name": "Lava Splitter",
-                "type": "Axe",
-                "element": "Fire",
-                "img": "/images/Weapons/lavaSplitterNoBackground.png",
-                "stats":{
-                    "attack": 10,
-                    "speed": 10,
-                    "defense": 5,
-                    "intelligence": 5,
-                },
-                "description": "The Lava Splitter is an axe imbued with the blazing essence of fire. It enhances the wielder's attack and speed, allowing for swift and devastating strikes that burn through the enemy. Additionally, the axe provides a balanced boost to defense and intelligence, ensuring the wielder is powerful, quick, and smart in battle."
-            },
-            "7p6o5n4m-3l2k-1j0i-h9g8-f7e6d5sad3a2": {
-                "name": "Windwaker scythe",
-                "type": "Scythe",
-                "element": "Wind",
-                "img": "/images/Weapons/windwakerNoBackground.png",
-                "stats":{
-                    "attack": 5,
-                    "speed": 10,
-                    "defense": 5,
-                    "intelligence": 10,
-                },
-                "description": "The Windwaker is a scythe infused with the essence of the wind. It enhances the wielder's attack and speed, allowing for swift and deadly strikes that cut through the air. Additionally, the scythe provides a balanced boost to defense and intelligence, ensuring the wielder is powerful, quick, and smart in battle."
-        },"6q5p4o3n-2m1l-0k9j-8h7g-6f5e4d3sad2b1": {
-                "name": "Earthbreaker",
-                "type": "Hammer",
-                "element": "Earth",
-                "img": "/images/Weapons/earthbreakerNoBackground.png",
-                "stats":{
-                    "attack": 15,
-                    "speed": 3,
-                    "defense": 10,
-                    "intelligence": 2,
-                },
-                "description": "The Earthbreaker is a hammer imbued with the power of the earth. It grants the wielder immense attack strength and a significant boost to defense, making them a formidable force on the battlefield. While the hammer slightly enhances speed and intelligence, its true strength lies in its ability to deliver crushing blows and withstand heavy hits."
-        }
+    "1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6": {
+        "name": "Hydroblade",
+        "type": "Sword",
+        "element": "Water",
+        "img": "/images/Weapons/hydrobladeNoBackground.png",
+        "stats": {
+            "attack": 15,
+            "defense": 5,
+            "speed": 10,
+            "intelligence": 20
         },
+        "description": "The Hydroblade, forged from pure deep-sea waters, slices through foes with wave-like grace. It enhances the wielder’s attack power with oceanic strength and offers balanced boosts to defense, speed, and intelligence, making them formidable in combat."
+    },
+    "7p6o5n4m-3l2k-1j0i-h9g8-f7e6d5c4b3a2": {
+        "name": "Lava Splitter",
+        "type": "Axe",
+        "element": "Fire",
+        "img": "/images/Weapons/lavaSplitterNoBackground.png",
+        "stats": {
+            "attack": 15,
+            "speed": 15,
+            "defense": 10,
+            "intelligence": 10
+        },
+        "description": "The Lava Splitter is an axe imbued with the blazing essence of fire. It enhances the wielder's attack and speed, allowing for swift and devastating strikes that burn through the enemy. Additionally, the axe provides a balanced boost to defense and intelligence, ensuring the wielder is powerful, quick, and smart in battle."
+    },
+    "7p6o5n4m-3l2k-1j0i-h9g8-f7e6d5sad3a2": {
+        "name": "Windwaker Scythe",
+        "type": "Scythe",
+        "element": "Wind",
+        "img": "/images/Weapons/windwakerNoBackground.png",
+        "stats": {
+            "attack": 10,
+            "speed": 15,
+            "defense": 10,
+            "intelligence": 15
+        },
+        "description": "The Windwaker is a scythe infused with the essence of the wind. It enhances the wielder's attack and speed, allowing for swift and deadly strikes that cut through the air. Additionally, the scythe provides a balanced boost to defense and intelligence, ensuring the wielder is powerful, quick, and smart in battle."
+    },
+    "6q5p4o3n-2m1l-0k9j-8h7g-6f5e4d3sad2b1": {
+        "name": "Earthbreaker",
+        "type": "Hammer",
+        "element": "Earth",
+        "img": "/images/Weapons/earthbreakerNoBackground.png",
+        "stats": {
+            "attack": 20,
+            "speed": 10,
+            "defense": 15,
+            "intelligence": 5
+        },
+        "description": "The Earthbreaker is a hammer imbued with the power of the earth. It grants the wielder immense attack strength and a significant boost to defense, making them a formidable force on the battlefield. While the hammer slightly enhances speed and intelligence, its true strength lies in its ability to deliver crushing blows and withstand heavy hits."
+    }
+},
     	"armors": {
     "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6": {
         "name": "Tidal Guard",
