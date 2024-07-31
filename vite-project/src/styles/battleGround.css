@@ -14,3 +14,21 @@
     padding: 0;
     overflow: hidden;
 }
+.battleground-welcome{
+    position: absolute;
+    top: 150px;
+}
+.battleground-fighter1-image{
+    max-width: 30%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+}
+.battleground-fighter2-image{
+    max-width: 30%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -70px;
+    right: 0;
+}
