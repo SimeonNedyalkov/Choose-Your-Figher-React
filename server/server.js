@@ -1491,18 +1491,17 @@
         },
         "description": "The Earthbreaker is a hammer imbued with the power of the earth. It grants the wielder immense attack strength and a significant boost to defense, making them a formidable force on the battlefield. While the hammer slightly enhances speed and intelligence, its true strength lies in its ability to deliver crushing blows and withstand heavy hits."
     }
-},
-    	"armors": {
+},"armors": {
     "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6": {
         "name": "Tidal Guard",
         "element": "Water",
         "type": "Armor",
         "img": "/images/Armors/tidalGuard6NoBackground.png",
         "stats": {
-            "defense": 20,
-            "health": 15,
-            "speed": 5,
-            "intelligence": 10
+            "defense": 30,
+            "health": 25,
+            "speed": 10,
+            "intelligence": 15
         },
         "description": "Tidal Guard is crafted from enchanted sea creature shells and scales. It offers strong protection and resilience, with magical properties that boost health and intelligence. The sleek design ensures mobility, making it ideal for water element fighters."
     },
@@ -1512,10 +1511,10 @@
         "type": "Armor",
         "img": "/images/Armors/infernoPlate3NoBackground.png",
         "stats": {
-            "defense": 15,
-            "health": 10,
-            "intelligence": 10,
-            "speed": 10
+            "defense": 25,
+            "health": 15,
+            "intelligence": 20,
+            "speed": 20
         },
         "description": "Inferno Plate is forged in a volcano and imbued with fire essence. It provides robust defense and enhances attack capabilities. Its fiery aura boosts speed and health, perfect for fire element fighters."
     },
@@ -1525,10 +1524,10 @@
         "type": "Armor",
         "img": "/images/Armors/galeMantleNoBackground.png",
         "stats": {
-            "defense": 10,
-            "speed": 20,
-            "intelligence": 15,
-            "health": 5
+            "defense": 15,
+            "speed": 25,
+            "intelligence": 25,
+            "health": 15
         },
         "description": "Aeris Shroud is a lightweight armor imbued with wind power. It offers unparalleled speed and agility, enhancing intelligence for clarity in battle. Its design ensures maximum mobility, perfect for wind element fighters."
     },
@@ -1538,15 +1537,14 @@
         "type": "Armor",
         "img": "/images/Armors/stoneBulwark4NoBackground.png",
         "stats": {
-            "defense": 25,
-            "health": 20,
-            "speed": 5,
-            "intelligence": 5
+            "defense": 30,
+            "health": 30,
+            "speed": 10,
+            "intelligence": 10
         },
         "description": "Stone Bulwark is hewn from the hardest rocks, providing exceptional defense and health. Its solid construction withstands heavy blows, embodying the strength of the earth, perfect for resilient earth element fighters."
     }
-
-    },
+},
     	catches: {
     		"07f260f4-466c-4607-9a33-f7273b24f1b4": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

@@ -16,13 +16,20 @@ export default function BattleGround(){
     const pickedFighterWithRandomWeaponAndArmor = rng.generateWeaponAndArmor(pickedFighter,weapons,armors)
     
     const handleFight = () => {
-        const result = rng.statsCalculator(pickedFighterWithRandomWeaponAndArmor,randomEnemyFighter)
+        const resultFighter1 = rng.statsCalculator(pickedFighterWithRandomWeaponAndArmor)
+        const resultFighter2 = rng.statsCalculator(randomEnemyFighter)
+        console.log(resultFighter1)
+        console.log(resultFighter2)
     };
     return (
         <div className="battleGroundImage">
             <div className="battleground-welcome">Welcome to the Battleground</div>
+            <div className="yourFighter">
             <div className="battleground-fighter1-image"><img src={pickedFighterWithRandomWeaponAndArmor.fighter?.img} alt="" /></div>
+            </div>
+            <div className="enemyFighter">
             <div className="battleground-fighter2-image"><img src={randomEnemyFighter.fighter?.img} alt="" /></div>
+            </div>
             <button onClick={handleFight}>Fight!</button>
         </div>
     )
