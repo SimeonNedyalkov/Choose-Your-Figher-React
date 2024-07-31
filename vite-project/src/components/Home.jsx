@@ -3,11 +3,14 @@ import { useState, useEffect } from 'react';
 
 import rng from '../customFunctions/rng';
 import useAudio from '../hooks/useAudio';
-
+import { useAuthContext } from '../contexts/UserContext';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export default function Home() { 
     const [currentQuote, setCurrentQuote] = useState(null);
     const {isPlaying,toggleAudio} = useAudio()
+    const {isAuthenticated} = useAuthContext()
+    const navigation = useNavigate()
     useEffect(() => {
         // Set the quote once when the component mounts
         setCurrentQuote(rng.generateRandomFighterOrItem(quotes));
@@ -43,9 +46,16 @@ export default function Home() {
                             {`${currentQuote.quote} - ${currentQuote.author}`}
                         </animated.h4>
                     )}
-                    <div className="buttonContainer">
-                        <button onClick={() => console.log('Game started')} className="startButton">Start Game</button>
+                    {isAuthenticated ?(
+                        <div className="buttonContainer">
+                        <button onClick={() => navigation('/arena')} className="startButton">Start Game</button>
                     </div>
+                    ):(
+                        <div className="buttonContainer">
+                            <button onClick={() => navigation('/login')} className="startButton">Start Game</button>
+                        </div>
+                    )}
+                    
                 </div>
             </div>
             <div className={isPlaying ? 'audioButton soundOn' : 'audioButton soundOff'}>
