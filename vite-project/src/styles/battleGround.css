@@ -1,4 +1,4 @@
-.battleGroundImage{
+.battleGroundImage {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,22 +13,132 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: relative;
 }
-.battleground-welcome{
+
+.battleground-welcome {
     position: absolute;
-    top: 150px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.battleground-fighter1-image{
-    max-width: 30%;
+
+.battleground-fighterContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.battleground-yourFighter, .battleground-enemyFighter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: -150px;
+}
+
+.battleground-fighter-name {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.battleground-fighter-image {
+    max-width: 300px;
     border-radius: 50%;
-    position: absolute;
-    bottom: -70px;
-    left: 0;
 }
-.battleground-fighter2-image{
-    max-width: 30%;
-    border-radius: 50%;
+
+.battleground-equipment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.battleground-equipment-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.battleground-weapon-armor {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.equipment-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.battleground-weapon-armor img {
+    max-width: 25%;
+    border-radius: 10%;
+}
+
+.equipment-name {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.battleground-vs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    bottom: -70px;
-    right: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.0);
+    border-radius: 50%;
+}
+
+.battleground-vs img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fight-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.fight-button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+.fight-button:hover {
+    background: rgba(0, 0, 0, 0.9);
 }

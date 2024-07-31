@@ -28,7 +28,7 @@ function statsCalculator(ofjectOf3){
     }
     
     const totalStatsOfArmor = Number(ofjectOf3.armor.stats.health) + Number(ofjectOf3.armor.stats.defense) + Number(ofjectOf3.armor.stats.speed) + Number(ofjectOf3.armor.stats.intelligence) 
-    if(ofjectOf3.fighter.element == ofjectOf3.weapon.element){
+    if(ofjectOf3.fighter.element == ofjectOf3.armor.element){
         total+=totalStatsOfArmor * 1.2
     }else{
         total+=totalStatsOfArmor
