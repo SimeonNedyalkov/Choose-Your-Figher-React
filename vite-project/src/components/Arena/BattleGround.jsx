@@ -1,16 +1,21 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import rng from "../../customFunctions/rng";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import useLoader from "../../hooks/useLoader";
+import WarriorsLoading from "../../loaders/WarriorsLoading";
+import PacmanLoader from 'react-spinners/PacmanLoader'
 export default function BattleGround() {
     const [fightResult, setFightResult] = useState(null);
     const { fighterId } = useParams();
-
+    const [isLoading,setisLoading] = useLoader()
+    
     const pickedFighter = useFetch(`http://localhost:3030/data/fighters/${fighterId}`, []);
     const fighters = useFetch('http://localhost:3030/data/fighters', []);
     const weapons = useFetch('http://localhost:3030/data/weapons', []);
     const armors = useFetch('http://localhost:3030/data/armors', []);
+    
+    
 
     const randomEnemyFighter = rng.generateAll(fighters, weapons, armors);
     const pickedFighterWithRandomWeaponAndArmor = rng.generateWeaponAndArmor(pickedFighter, weapons, armors);
@@ -24,6 +29,8 @@ export default function BattleGround() {
 
     return (
         <div className="battleGroundImage">
+        {isLoading ? (<WarriorsLoading/>) : ( 
+            <>
             <div className="battleground-welcome">Welcome to the Battleground</div>
             <div className="battleground-fighterContainer">
                 <div className="battleground-yourFighter">
@@ -71,6 +78,9 @@ export default function BattleGround() {
             <div className="fight-button-container">
                 <button onClick={handleFight} className="fight-button">Fight!</button>
             </div>
+            </>
+        )}
         </div>
+        
     );
 }

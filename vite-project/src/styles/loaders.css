@@ -1,0 +1,16 @@
+.loaderBackground{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../../images/Logo\ maker\ project.png');
+    background-size: cover;
+    background-position: center;
+    width: 30vh;
+    height: 30vh;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
