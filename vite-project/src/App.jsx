@@ -34,6 +34,7 @@ import { useState } from 'react';
 import MyProfile from './components/userComponents/MyProfile';
 import Arena from './components/Arena/Arena';
 import BattleGround from './components/Arena/BattleGround';
+import Win from './components/afterBattle/Win';
 
 function App(props) {
   const navigation = useNavigate()
@@ -66,6 +67,7 @@ function App(props) {
           <Route path='/armory/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay/>}/>
           <Route path='/arena' element={<Arena/>}/>
           <Route path='/battleground/:fighterId' element={<BattleGround/>}/>
+          <Route path='/win' element={<Win/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>

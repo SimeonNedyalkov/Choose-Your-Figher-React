@@ -1,14 +1,16 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import rng from "../../customFunctions/rng";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useLoader from "../../hooks/useLoader";
 import WarriorsLoading from "../../loaders/WarriorsLoading";
-import PacmanLoader from 'react-spinners/PacmanLoader'
+import { useNavigate } from "react-router-dom";
+
 export default function BattleGround() {
-    const [fightResult, setFightResult] = useState(null);
+    const [fightResult, setFightResult] = useState('');
     const { fighterId } = useParams();
     const [isLoading,setisLoading] = useLoader()
+    const navigation = useNavigate()
     
     const pickedFighter = useFetch(`http://localhost:3030/data/fighters/${fighterId}`, []);
     const fighters = useFetch('http://localhost:3030/data/fighters', []);
@@ -23,10 +25,25 @@ export default function BattleGround() {
     const handleFight = () => {
         const resultFighter1 = rng.statsCalculator(pickedFighterWithRandomWeaponAndArmor);
         const resultFighter2 = rng.statsCalculator(randomEnemyFighter);
-        console.log(resultFighter1);
-        console.log(resultFighter2);
+        if(resultFighter1>resultFighter2){
+            setFightResult('win')
+        }else if(resultFighter1<resultFighter2){
+            setFightResult('lose')
+        }else if(resultFighter1==resultFighter2){
+            setFightResult('draw')
+        }
     };
-
+    function navigateWhenFightIsOver(){
+        if(fightResult == 'win'){
+            navigation('/Win')
+        }else if(fightResult == 'lose'){
+            navigation('/Lose')
+        }else if(fightResult == 'draw'){
+            navigation('/Draw')
+        }
+        return
+    }
+    navigateWhenFightIsOver()
     return (
         <div className="battleGroundImage">
         {isLoading ? (<WarriorsLoading/>) : ( 

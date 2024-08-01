@@ -21,7 +21,9 @@ const FighterDisplay = () => {
             });
             Object.entries(weapon.stats).forEach(([stat, value]) => {
                 if (combinedStats[stat]) {
-                    combinedStats[stat] += value;
+                    
+                        combinedStats[stat] += value;
+                    
                 } else {
                     combinedStats[stat] = value;
                 }
@@ -37,6 +39,7 @@ const FighterDisplay = () => {
         return combinedStats;
     };
     const combinedStats = calculateCombinedStats()
+    
     return (
         <div className='fighterDisplayImage'>
         <div className="fighter-display">
