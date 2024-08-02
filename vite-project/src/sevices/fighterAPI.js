@@ -20,12 +20,17 @@ async function updateFighter(fighterId,data) {
     const result =  await requesterAPI.put(`${BASE_URL}/${fighterId}`,data)
     return result
 }
+async function deleteFighter(fighterId) {
+    const result =  await requesterAPI.del(`${BASE_URL}/${fighterId}`)
+    return result
+}
 
 const fighterData = {
     getAllFighters,
     getOneFighter,
     createFighter,
-    updateFighter
+    updateFighter,
+    deleteFighter
 }
 
 export default fighterData

@@ -3,6 +3,7 @@ import useFetch from '../../hooks/useFetch';
 import { useGetUserInfo } from '../../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import getElementEmoji from '../../customFunctions/elements';
+import fighterData from '../../sevices/fighterAPI';
 
 
 export default function MyProfile() {
@@ -11,6 +12,7 @@ export default function MyProfile() {
     const ownedFighters = fighters.filter(fighter => fighter._ownerId === userId);
     const [showFullDescription, setShowFullDescription] = useState(false);
     const navigation = useNavigate()
+    
 
     const handleUpdate = (fighterId) => {
         navigation(`/editChampion/${fighterId}`) 
@@ -20,9 +22,17 @@ export default function MyProfile() {
         navigation(`/armory/champions/${fighterId}`)
     };
 
-    const handleDelete = (fighterId) => {
-        // Handle delete logic here
-        console.log(`Delete fighter with id: ${fighterId}`);
+    const handleDelete = async (fighterId) => {
+        const isConfirmed = confirm(`Are you sure you want to delete your fighter`)
+        if(!isConfirmed){
+            return
+        }
+        try {
+            await fighterData.deleteFighter(fighterId)
+            navigation('/')
+        } catch (error) {
+            console.log(error.message)
+        }
     };
     function toggleDescription() {
         setShowFullDescription(!showFullDescription);
