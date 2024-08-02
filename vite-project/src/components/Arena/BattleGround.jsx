@@ -50,7 +50,7 @@ export default function BattleGround() {
             <>
             <div className="battleground-welcome">Welcome to the Battleground</div>
             <div className="battleground-fighterContainer">
-                <div className="battleground-yourFighter">
+                <div className="battleground-yourFighter ml-4">
                     <div className="battleground-fighter-name">{pickedFighterWithRandomWeaponAndArmor.fighter?.name}</div>
                     <div className="battleground-fighter-image">
                         <img src={pickedFighterWithRandomWeaponAndArmor.fighter?.img} alt="Your Fighter" />
@@ -72,7 +72,7 @@ export default function BattleGround() {
                 <div className="battleground-vs">
                     <img src="../../images/justInCase/vs-versus-battle-icon-sign-symbol-black-red-design-transparent-background-free-png.png" alt="VS" />
                 </div>
-                <div className="battleground-enemyFighter">
+                <div className="battleground-enemyFighter mr-4">
                     <div className="battleground-fighter-name">{randomEnemyFighter.fighter?.name}</div>
                     <div className="battleground-fighter-image">
                         <img src={randomEnemyFighter.fighter?.img} alt="Enemy Fighter" />

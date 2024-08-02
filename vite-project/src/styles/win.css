@@ -87,3 +87,35 @@
     transform: scale(0.9);
   }
   
+  .drawBackGround{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../../images/battleResults/224927-mist-nature-landscape-clouds-dead_trees-sunrise-fire-burning-forest-spooky.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 99vw;
+    height: calc(100vh + 144px);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .loseBackGround{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../../images/battleResults/635c412e0ac99f16f7fb998439ba5552.png');
+    background-size: cover;
+    background-position: center;
+    width: 99vw;
+    height: calc(100vh + 144px);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }

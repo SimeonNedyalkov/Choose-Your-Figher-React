@@ -35,6 +35,8 @@ import BattleGround from './components/Arena/BattleGround';
 import Win from './components/afterBattle/Win';
 import AuthGuard from './guards/AuthGuard';
 import EditChampion from './components/champions/EditChampion';
+import Draw from './components/afterBattle/Draw';
+import Lose from './components/afterBattle/Lose';
 
 function App(props) {
   const navigation = useNavigate()
@@ -65,6 +67,8 @@ function App(props) {
           <Route path='/armory/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay/>}/>
 
           <Route path='/win' element={<Win/>}/>
+          <Route path='/draw' element={<Draw/>}/>
+          <Route path='/lose' element={<Lose/>}/>
 
           <Route element={<AuthGuard/>}>
           <Route path='/arena' element={<Arena/>}/>

@@ -91,7 +91,7 @@
 }
 
 .battleground-weapon-armor img {
-    max-width: 25%;
+    width: 70px;
     border-radius: 10%;
 }
 

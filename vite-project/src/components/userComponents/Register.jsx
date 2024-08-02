@@ -3,7 +3,12 @@ import {useNavigate} from 'react-router-dom'
 
 import useForm from "../../hooks/useForm"
 import { useRegister } from "../../hooks/useAuth"
-
+const initialValues = {
+  email:'',
+  username:'',
+  password:'',
+  rePass:''
+}
 export default function Register({
     goBackHome,
 }){
@@ -25,12 +30,7 @@ export default function Register({
             console.log(error.message)
         }
     }
-    const {values,changeHandler,submitHandler} = useForm({
-        email:'',
-        username:'',
-        password:'',
-        rePass:''
-    },registerHandler)
+    const {values,changeHandler,submitHandler} = useForm(initialValues,registerHandler)
   
   return (
     <>
