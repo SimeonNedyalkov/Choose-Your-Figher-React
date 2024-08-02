@@ -35,6 +35,7 @@ import MyProfile from './components/userComponents/MyProfile';
 import Arena from './components/Arena/Arena';
 import BattleGround from './components/Arena/BattleGround';
 import Win from './components/afterBattle/Win';
+import AuthGuard from './guards/AuthGuard';
 
 function App(props) {
   const navigation = useNavigate()
@@ -52,22 +53,28 @@ function App(props) {
           <Route path='/' element={<Home/>}/>
           <Route path='/register' element={<Register goBackHome={goBackHome}/>}/>
           <Route path='/login' element={<Login goBackHome={goBackHome}/>}/>
-          <Route path='/logout' element={<Logout goBackHome={goBackHome}/>}/>
-          <Route path='/my-profile' element={<MyProfile goBackHome={goBackHome}/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/events' element={<Events/>}/>
+
           <Route path='/armory/champions' element={<Champions/>}/>
           <Route path='/armory/champions/:id' element={<ChampionsDetails/>}/>
-          <Route path='createChampion' element={<CreateChampion goBackHome={goBackHome}/>}/>
           <Route path='/armory/weapons' element={<Weapons/>}/>
           <Route path='/armory/weapons/:id' element={<WeaponDetails/>}/>
           <Route path='/armory/armors' element={<Armors/>}/>
           <Route path='/armory/armors/:id' element={<ArmorDetails/>}/>
           <Route path='/armory/checkFighter' element={<CheckFighter/>}/>
           <Route path='/armory/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay/>}/>
+          
+          <Route path='/win' element={<Win/>}/>
+
+          <Route element={<AuthGuard/>}>
           <Route path='/arena' element={<Arena/>}/>
           <Route path='/battleground/:fighterId' element={<BattleGround/>}/>
-          <Route path='/win' element={<Win/>}/>
+          <Route path='createChampion' element={<CreateChampion goBackHome={goBackHome}/>}/>
+          <Route path='/my-profile' element={<MyProfile goBackHome={goBackHome}/>}/>
+          <Route path='/logout' element={<Logout goBackHome={goBackHome}/>}/>
+          </Route>
+
           <Route path='*' element={<Error/>}/>
         </Routes>
       </div>
