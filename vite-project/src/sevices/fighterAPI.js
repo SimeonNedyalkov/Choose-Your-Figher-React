@@ -16,11 +16,16 @@ async function createFighter(data) {
     const result =  await requesterAPI.post(`${BASE_URL}`,{...data})
     return result
 }
+async function updateFighter(fighterId,data) {
+    const result =  await requesterAPI.put(`${BASE_URL}/${fighterId}`,data)
+    return result
+}
 
 const fighterData = {
     getAllFighters,
     getOneFighter,
-    createFighter
+    createFighter,
+    updateFighter
 }
 
 export default fighterData

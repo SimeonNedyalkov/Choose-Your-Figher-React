@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function useForm(initialValue,submitCallBack){
     const [values,setValues] = useState(initialValue)
+
+    useEffect(()=>{
+      setValues(initialValue)
+    },[initialValue])
 
     const changeHandler = (event) => {
         const { name, value } = event.target;

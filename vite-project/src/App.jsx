@@ -22,8 +22,6 @@ import CheckFighter from './components/CheckFighter';
 import Armors from './components/armors/Armors';
 import ArmorDetails from './components/armors/ArmorDetails';
 
-import WarriorsLoading from './loaders/WarriorsLoading'
-
 // css
 import './styles/base.css'
 
@@ -36,6 +34,7 @@ import Arena from './components/Arena/Arena';
 import BattleGround from './components/Arena/BattleGround';
 import Win from './components/afterBattle/Win';
 import AuthGuard from './guards/AuthGuard';
+import EditChampion from './components/champions/EditChampion';
 
 function App(props) {
   const navigation = useNavigate()
@@ -64,14 +63,15 @@ function App(props) {
           <Route path='/armory/armors/:id' element={<ArmorDetails/>}/>
           <Route path='/armory/checkFighter' element={<CheckFighter/>}/>
           <Route path='/armory/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay/>}/>
-          
+
           <Route path='/win' element={<Win/>}/>
 
           <Route element={<AuthGuard/>}>
           <Route path='/arena' element={<Arena/>}/>
           <Route path='/battleground/:fighterId' element={<BattleGround/>}/>
-          <Route path='createChampion' element={<CreateChampion goBackHome={goBackHome}/>}/>
+          <Route path='/createChampion' element={<CreateChampion goBackHome={goBackHome}/>}/>
           <Route path='/my-profile' element={<MyProfile goBackHome={goBackHome}/>}/>
+          <Route path='/editChampion/:fighterId' element={<EditChampion goBackHome={goBackHome}/>}/>
           <Route path='/logout' element={<Logout goBackHome={goBackHome}/>}/>
           </Route>
 

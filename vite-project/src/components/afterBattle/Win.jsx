@@ -29,7 +29,7 @@ const WinAnimation = () => {
         <div className="win-animation-container">
             <animated.h1 style={props} className="battleResultsh1">You won!</animated.h1>
             <br/>
-            <animated.button style={buttonProps} className="go-back-button" onClick={onGoBack}>Go Back</animated.button>
+            <animated.button style={buttonProps} className="win-go-back-button" onClick={onGoBack}>Go Back</animated.button>
         </div>
     </div>
     

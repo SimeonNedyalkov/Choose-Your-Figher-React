@@ -13,8 +13,7 @@ export default function MyProfile() {
     const navigation = useNavigate()
 
     const handleUpdate = (fighterId) => {
-        // Handle update logic here
-        console.log(`Update fighter with id: ${fighterId}`);
+        navigation(`/editChampion/${fighterId}`) 
     };
 
     const handleDetails = (fighterId) => {
