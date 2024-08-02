@@ -1,7 +1,6 @@
 import {useNavigate} from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 import fighterData from '../../sevices/fighterAPI';
-import { useMemo } from 'react';
 
 const initialValues = {
   name: '',
@@ -21,11 +20,25 @@ const initialValues = {
 export default function CreateChampion({goBackHome}) {
   const navigation = useNavigate();
   
-  
-  
   async function createHandler(values) {
+    const { stats } = values;
+
+    const updatedStats = {
+      attack: Number(stats.attack),
+      defense: Number(stats.defense),
+      health: Number(stats.health),
+      intelligence: Number(stats.intelligence),
+      speed: Number(stats.speed),
+    };
+
+    const updatedValues = {
+      ...values,
+      stats: updatedStats,
+    };
+
     try {
-      const {_id: fighterId} = await fighterData.createFighter(values);
+      console.log(values)
+      const {_id: fighterId} = await fighterData.createFighter(updatedValues);
       navigation(`/armory/champions/${fighterId}`);
     } catch (error) {
       console.log(error.message);
