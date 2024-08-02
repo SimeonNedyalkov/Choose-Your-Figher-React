@@ -8,7 +8,9 @@ import fighterData from '../../sevices/fighterAPI';
 
 export default function MyProfile() {
     const [username, setUsername, userId, setUserId] = useGetUserInfo();
+
     const fighters = useFetch('http://localhost:3030/data/fighters', []);
+    
     const ownedFighters = fighters.filter(fighter => fighter._ownerId === userId);
     const [showFullDescription, setShowFullDescription] = useState(false);
     const navigation = useNavigate()

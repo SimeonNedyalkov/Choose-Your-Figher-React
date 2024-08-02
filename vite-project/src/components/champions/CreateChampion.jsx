@@ -1,24 +1,27 @@
 import {useNavigate} from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 import fighterData from '../../sevices/fighterAPI';
+import { useMemo } from 'react';
+
+const initialValues = {
+  name: '',
+  img: '',
+  type: '',
+  element: 'fire',
+  stats: {
+    attack: '',
+    defense: '',
+    speed: '',
+    intelligence: '',
+    health: ''
+  },
+  description:'',
+};
 
 export default function CreateChampion({goBackHome}) {
   const navigation = useNavigate();
   
-  const initialValues = {
-    name: '',
-    img: '',
-    type: '',
-    element: 'fire',
-    stats: {
-      attack: '',
-      defense: '',
-      speed: '',
-      intelligence: '',
-      health: ''
-    },
-    description:'',
-  };
+  
   
   async function createHandler(values) {
     try {
@@ -28,7 +31,6 @@ export default function CreateChampion({goBackHome}) {
       console.log(error.message);
     }
   }
-  
   const {values, changeHandler, submitHandler} = useForm(initialValues, createHandler);
 
   const fileChangeHandler = (event) => {
