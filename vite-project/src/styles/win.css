@@ -1,0 +1,89 @@
+.winBackGround{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../../images/battleResults/pixelcut-export.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 99vw;
+    height: calc(100vh + 144px);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* WinAnimation.css */
+/* WinAnimation.css */
+
+.win-animation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: To darken the background */
+  }
+  
+  .battleResultsh1 {
+    font-size: 4rem;
+    color: #fff;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive; /* Adds a retro game-like font */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: linear-gradient(45deg, #ff0040, #ff8a00, #f8ff00, #00ff00, #00c0ff, #0022ff, #8a00ff);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite, bounceAndExplode 2s ease-out forwards;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes bounceAndExplode {
+    0% { transform: scale(0) translateX(-1000px); opacity: 0; }
+    30% { transform: scale(1.5) translateX(0px); opacity: 1; }
+    50% { transform: scale(1) translateX(0px); }
+    70% { transform: scale(1.2) translateX(-30px); }
+    100% { transform: scale(1) translateX(30px); }
+  }
+  
+  /* Button Styling */
+  .go-back-button {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive; 
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #fae34c;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: gradientAnimation 5s ease infinite;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .go-back-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .go-back-button:active {
+    transform: scale(0.9);
+  }
+  
