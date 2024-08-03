@@ -25,6 +25,8 @@ export default function BattleGround() {
     const handleFight = () => {
         const resultFighter1 = rng.statsCalculator(pickedFighterWithRandomWeaponAndArmor);
         const resultFighter2 = rng.statsCalculator(randomEnemyFighter);
+        console.log(resultFighter1)
+        console.log(resultFighter2)
         if(resultFighter1>resultFighter2){
             setFightResult('win')
         }else if(resultFighter1<resultFighter2){
