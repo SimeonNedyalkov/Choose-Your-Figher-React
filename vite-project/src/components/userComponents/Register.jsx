@@ -23,7 +23,6 @@ export default function Register({
             return
         }
         try {
-          console.log(`Email: ${email},Password: ${password},Username: ${username}`)
             await register(email,username,password)
             navigate('/')
         } catch (error) {
@@ -34,7 +33,7 @@ export default function Register({
   
   return (
     <>
-        <div className="loginAndRegisterBackground">
+      <div className="loginAndRegisterBackground">
         <div className="overlay">
           <div className="backdrop" onClick={goBackHome}></div>
           <div className="modal2">
@@ -94,6 +93,8 @@ export default function Register({
           </div>
         </div>
         </div>
+    
+        
             </>
   )
 }

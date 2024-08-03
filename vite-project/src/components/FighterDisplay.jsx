@@ -15,15 +15,19 @@ const FighterDisplay = () => {
 
     const calculateCombinedStats = () => {
         let combinedStats = {};
+        let elementMultiplier = 1
+        if(fighter.element == weapon.element && fighter.element == armor.element){
+            elementMultiplier = 1.4
+        }else if(fighter.element == weapon.element || fighter.element == armor.element){
+            elementMultiplier = 1.2
+        }
         if (fighter.stats && weapon.stats && armor.stats) {
             Object.entries(fighter.stats).forEach(([stat, value]) => {
                 combinedStats[stat] = value;
             });
             Object.entries(weapon.stats).forEach(([stat, value]) => {
                 if (combinedStats[stat]) {
-                    
                         combinedStats[stat] += value;
-                    
                 } else {
                     combinedStats[stat] = value;
                 }
@@ -35,6 +39,10 @@ const FighterDisplay = () => {
                     combinedStats[stat] = value;
                 }
             });
+            Object.keys(combinedStats).forEach(stat => {
+                combinedStats[stat] = Math.round(combinedStats[stat] * elementMultiplier);
+            });
+        
         }
         return combinedStats;
     };
