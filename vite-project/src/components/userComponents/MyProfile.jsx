@@ -67,7 +67,7 @@ export default function MyProfile() {
                                 <div className='user-fighter-name'>Name: {ownedFighters[currentFighterIndex].name}</div>
                                 <div className='user-fighter-name'>Type: {ownedFighters[currentFighterIndex].type}</div>
                                 <div className='user-fighter-name'>Element: {ownedFighters[currentFighterIndex].element}{getElementEmoji(ownedFighters[currentFighterIndex].element)}</div>
-                                <div className='imageAndStats'>
+                                <div className='imageAndStats userImageAndStats'>
                                     <div className='fighter-description fighter-stats'>
                                         {ownedFighters[currentFighterIndex].description && (
                                             <p className='text-white'>

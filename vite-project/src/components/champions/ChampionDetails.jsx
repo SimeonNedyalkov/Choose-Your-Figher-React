@@ -38,7 +38,7 @@ export default function ChampionsDetails() {
                                         {showFullDescription ? fighter.description : fighter.description.slice(0, 140)}
                                     </p>
                                 )}
-                                {fighter.description && fighter.description.length > 140 && (
+                                {fighter.description && fighter.description.length > 20 && (
                                     <button className='read-more-button' onClick={toggleDescription}>
                                         {showFullDescription ? 'Read Less' : 'Read More'}
                                     </button>
