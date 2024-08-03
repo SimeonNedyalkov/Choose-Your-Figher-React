@@ -37,6 +37,7 @@ import AuthGuard from './guards/AuthGuard';
 import EditChampion from './components/champions/EditChampion';
 import Draw from './components/afterBattle/Draw';
 import Lose from './components/afterBattle/Lose';
+import Events2 from './components/Events2';
 
 function App(props) {
   const navigation = useNavigate()
@@ -55,7 +56,7 @@ function App(props) {
           <Route path='/register' element={<Register goBackHome={goBackHome}/>}/>
           <Route path='/login' element={<Login goBackHome={goBackHome}/>}/>
           <Route path='/about' element={<About/>}/>
-          <Route path='/events' element={<Events/>}/>
+          <Route path='/events' element={<Events2/>}/>
 
           <Route path='/armory/champions' element={<Champions/>}/>
           <Route path='/armory/champions/:id' element={<ChampionsDetails/>}/>

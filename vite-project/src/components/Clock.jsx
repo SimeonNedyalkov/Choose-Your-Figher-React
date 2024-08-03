@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
-const Clock = () => {
+const Clock = ({
+  events
+}) => {
   const [time, setTime] = useState(getCurrentTime());
-
+  const dateOfEvent = events[0].details.date.split(' ')[1].slice(0,2)
+  const monthOfEvent = events[0].details.date.split(' ')[0]
+  const yearOfEvent = events[0].details.date.split(' ')[2]
+  console.log(monthOfEvent)
+  function getDaysInMonth(year, month) {
+    return new Date(year, month + 1, 0).getDate();
+  }
+  const howManyDaysInMonthOfEvent = getDaysInMonth(yearOfEvent,monthOfEvent)
+  console.log(howManyDaysInMonthOfEvent)
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(getCurrentTime());

@@ -36,7 +36,7 @@ export default function Events() {
 
     return (
         <div className='calendarImage'>
-            <Clock />
+            <Clock events={events}/>
             <div className='wrapperForEvents'>
                 {events.map((event, index) => {
                     const [props, api] = useSpring(() => ({
