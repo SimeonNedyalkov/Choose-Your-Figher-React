@@ -22,14 +22,14 @@ function statsCalculator(ofjectOf3){
 
     const totalStatsOfWeapon = Number(ofjectOf3.weapon.stats.attack) + Number(ofjectOf3.weapon.stats.defense) + Number(ofjectOf3.weapon.stats.speed) + Number(ofjectOf3.weapon.stats.intelligence) 
     if(ofjectOf3.fighter.element == ofjectOf3.weapon.element){
-        total+=totalStatsOfWeapon * 1.2
+        total+=Math.round(totalStatsOfWeapon * 1.2)
     }else{
         total+=totalStatsOfWeapon
     }
     
     const totalStatsOfArmor = Number(ofjectOf3.armor.stats.health) + Number(ofjectOf3.armor.stats.defense) + Number(ofjectOf3.armor.stats.speed) + Number(ofjectOf3.armor.stats.intelligence) 
     if(ofjectOf3.fighter.element == ofjectOf3.armor.element){
-        total+=totalStatsOfArmor * 1.2
+        total+=Math.round(totalStatsOfArmor * 1.2)
     }else{
         total+=totalStatsOfArmor
     }
