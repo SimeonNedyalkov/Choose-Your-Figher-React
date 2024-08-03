@@ -6,7 +6,7 @@ const initialValues = {
   name: '',
   img: '',
   type: '',
-  element: 'fire',
+  element: 'Fire',
   stats: {
     attack: '',
     defense: '',
@@ -152,10 +152,10 @@ export default function CreateChampion({goBackHome}) {
                         onChange={changeHandler}
                         value={values.element}
                       >
-                        <option className="options" value="fire">Fire</option>
-                        <option className="options" value="earth">Earth</option>
-                        <option className="options" value="water">Water</option>
-                        <option className="options" value="wind">Wind</option>
+                        <option className="options" value="Fire">Fire</option>
+                        <option className="options" value="Earth">Earth</option>
+                        <option className="options" value="Water">Water</option>
+                        <option className="options" value="Wind">Wind</option>
                       </select>
                     </label>
                   </div>

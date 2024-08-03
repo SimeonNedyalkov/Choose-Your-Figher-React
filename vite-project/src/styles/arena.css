@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    background-image: url('../../images/arena/magic-forest-with-round-stone-altar-night_107791-12862upscaled.jpg');
+    background-image: url('../../images/arena/craiyon_195306_dark_arena_with_a_circle_in_the_middle_the_walls_of_the_arena_are_surrounded_with_tre.png');
     background-size: cover;
     background-position: center;
     width: 100vw;
@@ -16,25 +16,49 @@
 }
 
 .chooseFighter {
-    font-size: 32px;
+    font-size: 40px; 
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+    font-family: 'Press Start 2P', cursive; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0 0 10px rgba(255, 255, 255, 0.5); 
+    background: linear-gradient(45deg, #ff0000, #ff1100, #ff2200, #ff3300);
+    -webkit-background-clip: text; 
+    color: transparent; 
+    animation: gradientShift 3s infinite;
+    text-align: center; 
+    margin-bottom: 30px; 
 }
 
-.fightersContainer {
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.fighterCardContainer {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 20px;
 }
 
+.pointer {
+    font-size: 48px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    color: rgba(202, 202, 202, 0.9);;
+}
+
+.pointer:hover {
+    transform: scale(1.2);
+}
+
 .fighterCard {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(202, 202, 202, 0.9);
     border: 2px solid #ddd;
     border-radius: 15px;
     padding: 20px;
-    width: 170px;
+    width: 250px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
     color: #333;
