@@ -1,134 +1,121 @@
-.event h1 {
-  position: relative;
-  font-size: 3rem;
-  color: #6f48eb; 
-  text-align: center;
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-.eventDescription {
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.4); 
-  border-radius: 8px;
-  max-width: 600px; 
-  margin-top: 20px;
-  margin-left: 20px;
-}
-.eventDescription2 {
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5); 
-  border-radius: 8px;
-  max-width: 600px; 
-  margin-top: 20px;
-  margin-left: 20px;
-}
-.wrapperForEvents{
-  position: absolute;
-  top: 70px;
-  left: 0;
-  margin: 20px;
+/* Events Layers */
+.events-layers {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
 }
 
-.event-description h2 {
-  font-family: 'Roboto Slab', serif;
-  color: #fff; 
-  text-align: center; 
-  border-bottom: 2px solid #fff; 
-  padding-bottom: 10px; 
+/* Events Box */
+.events-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
 }
-.event-details {
-  margin-bottom: 20px;
+.events-title {
+    font-family: wfont_df5052_ad6ecf6b2136441483e378919b9b861f, wf_ad6ecf6b2136441483e378919, orig_teko_semibold;
+    font-size: 2.5rem;
+    font-weight: bold; 
+    color: rgb(255, 255, 255); 
+    margin-bottom: 1rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
 }
-.how-it-works {
-  margin-bottom: 20px;
+.events-presented{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: rgb(255, 255, 255); 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
 }
+
+/* Events Text */
+.events-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.events-text .logo {
+    max-width: 180px; 
+    margin-bottom: 1rem;
+}
+
+.eventDateAndTime {
+    color: rgb(196, 156, 68);
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.events-text p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Events Image */
+.events-image {
+    flex: 1;
+    background-image: url('../../images/events/a19a56_536230a4991d4adfbefb20d068181875~mv2.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Prizes Section */
 .prizes {
-  margin-bottom: 20px;
-}
-.prizes h2 {
-  font-family: 'Poppins', Arial, sans-serif; 
-  color: #6f48eb; 
-  text-align: center;
-  border-bottom: 2px solid #6f48eb; 
-  padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgb(13, 13, 13);
+    margin: 0;
 }
 
-.event-description h2,.event-details h2,.how-it-works h2{
-  font-family: 'Poppins', Arial, sans-serif;
-  color: #6f48eb; 
-  text-align: center;
-  border-bottom: 2px solid #6f48eb; 
-  padding-bottom: 10px;
+/* Prize Item */
+.prize-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.read-more-button {
-  background-color: rgba(14, 14, 14, 0.9);
-  border-bottom-color: rgb(49, 176, 213);
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  border-bottom-style: none;
-  border-bottom-width: 0px;
-  border-image-outset: 0;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-color: rgb(49, 176, 213);
-  border-left-style: none;
-  border-left-width: 0px;
-  border-right-color: rgb(49, 176, 213);
-  border-right-style: none;
-  border-right-width: 0px;
-  border-top-color: rgb(49, 176, 213);
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  border-top-style: none;
-  border-top-width: 0px;
-  border: 2px solid rgb(49, 176, 213);
-  box-sizing: border-box;
-  color: rgb(91, 192, 222);
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Marcellus SC", serif;
-  font-size: 14.4px;
-  font-weight: 600;
-  height: 41.275px;
-  line-height: 17.28px;
-  overflow-wrap: break-word;
-  padding-bottom: 12px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 12px;
-  position: relative;
-  text-align: center;
-  text-decoration-color: rgb(91, 192, 222);
-  text-decoration-line: none;
-  text-decoration-style: solid;
-  text-decoration-thickness: auto;
-  text-size-adjust: 100%;
-  text-wrap: nowrap;
-  transition-behavior: normal;
-  transition-delay: 0s;
-  transition-duration: 0.2s;
-  transition-property: box-shadow, background-color, color, transform;
-  transition-timing-function: ease;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: 132.475px;
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+/* Prize Image */
+.prize-image {
+    width: 150px; 
+    height: 150px; 
+    object-fit: contain; 
+    margin-bottom: 10px;
 }
 
-.read-more-button:hover {
-  background-color: rgb(49, 176, 213);
-  color: #fff;
+/* Prize Description */
+.prize-description {
+    font-size: 1rem;
+    color: rgb(196, 156, 68);
+    margin-top: 0.5rem;
+    max-width: 250px;
 }
 
-.eventDescription, .eventDescription2 {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.eventDescription:hover, .eventDescription2:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.events-span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(196, 156, 68);
+    margin-bottom: 0.5rem;
 }

@@ -5,7 +5,6 @@
 @import url('./footer.css');
 @import url('./error.css');
 @import url('./about.css');
-@import url('./events.css');
 @import url('./calendar.css');
 @import url('./fighters.css');
 @import url('./elements.css');
@@ -18,4 +17,4 @@
 @import url('./battleGround.css');
 @import url('./loaders.css');
 @import url('./win.css');
-@import url('./events2.css');
+@import url('./events.css');

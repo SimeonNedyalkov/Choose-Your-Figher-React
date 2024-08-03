@@ -13,7 +13,6 @@ import Logout from './components/userComponents/Logout'
 import About from './components/About'
 import Error from './components/Error'
 import Champions from './components/champions/Champions'
-import Events from './components/Events';
 import ChampionsDetails from './components/champions/ChampionDetails';
 import Weapons from './components/weapons/Weapons';
 import WeaponDetails from './components/weapons/WeaponDetails';
@@ -37,7 +36,7 @@ import AuthGuard from './guards/AuthGuard';
 import EditChampion from './components/champions/EditChampion';
 import Draw from './components/afterBattle/Draw';
 import Lose from './components/afterBattle/Lose';
-import Events2 from './components/Events2';
+import Events2 from './components/Events';
 
 function App(props) {
   const navigation = useNavigate()

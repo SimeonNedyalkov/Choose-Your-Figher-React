@@ -1,103 +1,34 @@
-import { useState } from 'react';
-import Calendar from 'react-calendar';
-import { useSpring, animated } from 'react-spring';
-import Clock from './Clock';
-
-export default function Events() {
-    const [date, setDate] = useState(new Date());
-    const [showMore, setShowMore] = useState(null);
-
-    const events = [
-        {
-            id: 1,
-            title: 'Choose Your Fighter Battle Royale Challenge',
-            description: 'Join us for an epic showdown in the Choose Your Fighter arena! Pick your favorite fighter and arm them with your chosen weapon. Compete against other players\' customized fighters in a series of intense battles to see who emerges victorious!',
-            details: {
-                date: 'September 17th, 2024',
-                time: '06:00'
-            },
-            prizes: 'Chance to win a legendary weapon or skin for your champions'
-        },
-        {
-            id: 2,
-            title: 'Mystic Quest Adventure',
-            description: 'Embark on a thrilling adventure through the enchanted forest! Solve ancient puzzles, battle mystical creatures, and uncover hidden treasures. This event is perfect for those who love mystery and exploration.',
-            details: {
-                date: 'October 1st, 2024',
-                time: '12:00'
-            },
-            prizes: 'Exclusive mystical artifact and a treasure map for future quests'
-        }
-    ];
-
-    const handleToggle = (id) => {
-        setShowMore((prevShowMore) => (prevShowMore === id ? null : id));
-    };
-
+export default function Events2() {
     return (
-        <div className='calendarImage'>
-            <Clock events={events}/>
-            <div className='wrapperForEvents'>
-                {events.map((event, index) => {
-                    const [props, api] = useSpring(() => ({
-                        opacity: 0,
-                        maxHeight: '0px',
-                        config: { tension: 300, friction: 20 }
-                    }));
-
-                    if (showMore === event.id) {
-                        api.start({
-                            opacity: 1,
-                            maxHeight: '500px' 
-                        });
-                    } else {
-                        api.start({
-                            opacity: 0,
-                            maxHeight: '0px'
-                        });
-                    }
-
-                    return (
-                        <animated.div
-                            key={event.id}
-                            className={index === 0 ? 'eventDescription' : 'eventDescription2'}
-                            style={{ marginBottom: '1rem', boxShadow: '0px 4px 8px rgba(0,0,0,0.2)', borderRadius: '8px' }}
-                        >
-                            <section className='event'>
-                                <h1 className='blood'>{event.title}</h1>
-                            </section>
-                            <section className="event-details text-white">
-                                <h2>Event Details</h2>
-                                <ul>
-                                    <li><strong>Date:</strong> {event.details.date}</li>
-                                    <li><strong>Time:</strong> {event.details.time}</li>
-                                </ul>
-                            </section>
-                            <button className='read-more-button' onClick={() => handleToggle(event.id)}>
-                                {showMore === event.id ? 'Read Less' : 'Read More'}
-                            </button>
-                            <animated.div style={props}>
-                                {showMore === event.id && (
-                                    <>
-                                        <section className="event-description text-white">
-                                            <h2 className='p-2'>Event Description</h2>
-                                            <p className='text-white p-2'>{event.description}</p>
-                                        </section>
-
-                                        <section className="prizes">
-                                            <h2>Prizes</h2>
-                                            <p className='text-white'>{event.prizes}</p>
-                                        </section>
-                                    </>
-                                )}
-                            </animated.div>
-                        </animated.div>
-                    );
-                })}
+        <div>
+            <div className="events-layers">
+                <div className="events-box">
+                    <div className="events-text">
+                        <span className="events-title">Choose Your Fighter <br/>Battle Royale Challenge</span>
+                        <span className="events-presented">Presented by:</span>
+                        <img src="../../images/logoNoBackground.png" alt="Spams Logo" className="logo" />
+                        <span className="eventDateAndTime">Date: September 17th, 2024 | Time: 06:00</span>
+                        <p className="events-description">Join us for an epic showdown in the Choose Your Fighter arena! Select your favorite warrior, arm them with unique weapons, and battle it out in a series of intense, action-packed encounters. Customize your fighter, strategize your moves, and compete against other players to see who will emerge as the ultimate champion!</p>
+                    </div>
+                </div>
+                <div className="events-image">
+                </div>
             </div>
-            <div className='app'>
-                <div className='calendar-container'>
-                    <Calendar onChange={setDate} value={date} />
+            <div className="prizes">
+                <div className="prize-item">
+                    <img src="../../images/events/Blue-Ribbon-First-Place-PNG-Image.png" alt="Prize 1" className="prize-image" />
+                    <span className="events-span">First</span>
+                    <p className="prize-description">A high-end gaming console and exclusive game merchandise.</p>
+                </div>
+                <div className="prize-item">
+                    <img src="../../images/events/Second-Place-Ribbon-PNG-Picture.png" alt="Prize 2" className="prize-image" />
+                    <span className="events-span">Second</span>
+                    <p className="prize-description"> Gift cards and premium gaming accessories.</p>
+                </div>
+                <div className="prize-item">
+                    <img src="../../images/events/free_png_badge_3rd_place_by_ninahagn-d8r7z18.png" alt="Prize 3" className="prize-image" />
+                    <span className="events-span">Third</span>
+                    <p className="prize-description">Third Place: In-game currency and collectible items.</p>
                 </div>
             </div>
         </div>
