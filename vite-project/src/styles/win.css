@@ -28,14 +28,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: To darken the background */
+    background-color: rgba(0, 0, 0, 0.5); 
   }
   
   .battleResultsh1 {
     font-size: 4rem;
     color: #fff;
     margin: 0;
-    font-family: 'Press Start 2P', cursive; /* Adds a retro game-like font */
+    font-family: 'Press Start 2P', cursive; 
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.1em;

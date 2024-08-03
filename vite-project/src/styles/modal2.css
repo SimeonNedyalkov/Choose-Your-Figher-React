@@ -1,28 +1,29 @@
-.modal2{-webkit-text-size-adjust: 100%;
-font-family: sans-serif;
-line-height: 1.3;
-font-size: 11px;
---skin003-color: #ffb142;
---skin004-color: #ffdc5e;
---skin005-color: #ffb142;
-color: #eee;
-box-sizing: border-box;
-text-align: center;
-transition: font-size .1s;
-z-index: 50;
-background-size: contain;
-min-height: 31.8rem!important;
-width: 39.125rem!important;
-display: block;
-background-image: url("../../images/create-champion/substrate_top.png");
-background-position: center top;
-background-repeat: no-repeat;
-inset: 9vw auto auto 50%;
-transform: translate(-48%, 0px);
-position: absolute;
-height: auto;
-padding: 3.9rem 7.3rem 2rem;
-top: 70px;
+.modal2{
+    -webkit-text-size-adjust: 100%;
+    font-family: sans-serif;
+    line-height: 1.3;
+    font-size: 11px;
+    --skin003-color: #ffb142;
+    --skin004-color: #ffdc5e;
+    --skin005-color: #ffb142;
+    color: #eee; 
+    box-sizing: border-box;
+    text-align: center;
+    transition: font-size 0.1s;
+    z-index: 50;
+    background-size: contain !important;
+    min-height: 31.8rem !important;
+    width: 39.125rem !important;
+    display: block;
+    background-image: url("../../images/create-champion/substrate_top.png") !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    inset: 9vw auto auto 50%;
+    transform: translate(-48%, 0px);
+    position: absolute;
+    height: auto;
+    padding: 3.9rem 7.3rem 2rem;
+    top: 70px;
 }
 .overlay {
     position: absolute;
@@ -81,7 +82,8 @@ top: 70px;
   }
 
   /* form */
-  .downPart{    -webkit-text-size-adjust: 100%;
+  .downPart{
+    -webkit-text-size-adjust: 100%;
     font-family: sans-serif;
     line-height: 1.3;
     font-size: 11px;
@@ -96,13 +98,13 @@ top: 70px;
     right: 0;
     top: auto;
     z-index: -5;
-    background-size: contain;
+    background-size: contain !important;
     bottom: -1.4rem;
-    height: 14rem!important;
-    width: 100%!important;
-    background-image: url('../../images/create-champion/substrate_bottom.png');
-    background-position: center top;
-    background-repeat: no-repeat;
+    height: 14rem !important;
+    width: 100% !important;
+    background-image: url('../../images/create-champion/substrate_bottom.png') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
 }
 .dialogue{
     -webkit-text-size-adjust: 100%;
@@ -240,7 +242,7 @@ top: 70px;
     background-repeat: no-repeat;
 }
 .inputClass:focus {
-    outline: none; /* Removes the default outline */
+    outline: none; 
     box-shadow: none
   }
 .stats{
@@ -265,7 +267,7 @@ top: 70px;
     z-index: 100;
 }
 .stats:focus {
-    outline: none; /* Removes the default outline */
+    outline: none; 
     box-shadow: none;
   }
 .wrapperDiv1{

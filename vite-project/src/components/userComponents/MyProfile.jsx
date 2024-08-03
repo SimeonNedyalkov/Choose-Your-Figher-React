@@ -11,7 +11,9 @@ export default function MyProfile() {
     const fighters = useFetch('http://localhost:3030/data/fighters', []);
     const [ownedFighters, setOwnedFighters] = useState([]);
     const [showFullDescription, setShowFullDescription] = useState(false);
+
     const [currentFighterIndex, setCurrentFighterIndex] = useState(0);
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -21,10 +23,6 @@ export default function MyProfile() {
 
     const handleUpdate = (fighterId) => {
         navigate(`/editChampion/${fighterId}`) 
-    };
-
-    const handleDetails = (fighterId) => {
-        navigate(`/armory/champions/${fighterId}`)
     };
 
     const handleDelete = async (fighterId) => {
