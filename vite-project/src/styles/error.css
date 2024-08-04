@@ -10,3 +10,21 @@
     height: calc(100vh + 144px);
     color: white;
   }
+  .wrapperDiv {
+    position: relative;
+    margin-bottom: 24px; /* Add extra space to accommodate error messages */
+  }
+  
+  .error {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    transform: translateY(-50%);
+    white-space: nowrap; /* Prevent text wrapping */
+    margin-top: 20px;
+  }
+  

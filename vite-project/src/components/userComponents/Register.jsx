@@ -13,13 +13,26 @@ export default function Register({
     goBackHome,
 }){
 
-    const [error,setError] = useState('')
+    const [errors,setErrors] = useState({})
     const register = useRegister()
     const navigate = useNavigate()
 
     const registerHandler = async ({email,username,password,rePass})=>{
+      const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/g
+        if(!pattern.test(email)){
+          setErrors({email: 'Warning: Email should contain @ and a valid domain'})
+          return
+        }
+        if(username.length < 4){
+          setErrors({username: 'Warning: Username should be atleast 4 characters long'})
+          return
+        }
+        if(password.length < 4){
+          setErrors({password: 'Warning: Password should be atleast 4 characters long'})
+          return
+        }
         if(password !== rePass){
-            setError('Password missmatch!')
+            setErrors({rePassword: 'Warning: Password and rePassword missmatch!'})
             return
         }
         try {
@@ -30,7 +43,7 @@ export default function Register({
         }
     }
     const {values,changeHandler,submitHandler} = useForm(initialValues,registerHandler)
-  
+    console.log(errors)
   return (
     <>
       <div className="loginAndRegisterBackground">
@@ -78,9 +91,14 @@ export default function Register({
                     <div className='inputImage'></div>
                     <input className="inputClass" type="password" name="rePass" onChange={changeHandler} value={values.rePass} required />
                   </label>
+                  
                 </div>
               <div className='downPart'>
               </div>
+              {errors.email && <p className="error">{errors.email}</p>}
+              {errors.username && <p className="error">{errors.username}</p>}
+              {errors.password && <p className="error">{errors.password}</p>}
+              {errors.rePassword && <p className="error">{errors.rePassword}</p>}
               <button type='submit' className='btnSubmit mt-5'>
                 <div className='btnBackground'></div>
                 <div className='btnBackgroundImage'></div>
