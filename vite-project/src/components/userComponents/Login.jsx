@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { useLogin } from "../../hooks/useAuth"
 import useForm from "../../hooks/useForm"
 import {useNavigate} from 'react-router-dom'
@@ -6,6 +7,7 @@ const initialValues = {email:'',username:'',password:''}
 export default function Login({
   goBackHome,
 }){
+    const [error,setError] = useState('')
     const login = useLogin()
     const navigation = useNavigate()
     const {values,submitHandler,changeHandler} = useForm(
@@ -15,7 +17,7 @@ export default function Login({
                 await login(email,password)
                 navigation('/')
             } catch (error) {
-              console.log(error.message)
+              setError('Warning: Incorrect username or password')
             }}
     )
     
@@ -54,6 +56,7 @@ export default function Login({
                   </div>
                 <div className='downPart'>
                 </div>
+                {error && <p className="error">{error}</p>}
                 <button type='submit' className='btnSubmit mt-5'>
                   <div className='btnBackground'></div>
                   <div className='btnBackgroundImage'></div>
