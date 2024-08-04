@@ -66,9 +66,9 @@ function App(props) {
           <Route path='/armory/checkFighter' element={<CheckFighter/>}/>
           <Route path='/armory/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay/>}/>
 
-          <Route path='/win' element={<Win/>}/>
-          <Route path='/draw' element={<Draw/>}/>
-          <Route path='/lose' element={<Lose/>}/>
+          <Route path='/win/:fighterId' element={<Win/>}/>
+          <Route path='/draw/:fighterId' element={<Draw/>}/>
+          <Route path='/lose/:fighterId' element={<Lose/>}/>
 
           <Route element={<AuthGuard/>}>
           <Route path='/arena' element={<Arena/>}/>
