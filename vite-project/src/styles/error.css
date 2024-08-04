@@ -27,4 +27,16 @@
     white-space: nowrap; /* Prevent text wrapping */
     margin-top: 20px;
   }
+  .error2 {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    transform: translateY(-50%);
+    white-space: nowrap; /* Prevent text wrapping */
+    margin-top: 50px;
+  }
   

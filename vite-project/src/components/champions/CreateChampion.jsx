@@ -1,6 +1,7 @@
 import {useNavigate} from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 import fighterData from '../../sevices/fighterAPI';
+import { useState } from 'react';
 
 const initialValues = {
   name: '',
@@ -19,7 +20,8 @@ const initialValues = {
 
 export default function CreateChampion({goBackHome}) {
   const navigation = useNavigate();
-  
+  const [errors,setErrors] = useState({})
+
   async function createHandler(values) {
     const { stats } = values;
 
@@ -38,6 +40,23 @@ export default function CreateChampion({goBackHome}) {
 
     try {
       console.log(values)
+      if(updatedValues.name.length < 3){
+        setErrors({name: 'Warning: Name should be atleast 3 characters long'})
+        return
+      }
+      if(updatedValues.type.length < 3){
+        setErrors({type: 'Warning: Type should be atleast 3 characters long'})
+        return
+      }
+      if(updatedValues.description.length < 200){
+          setErrors({description: 'Warning: Description should be atleast 200 characters long'})
+          return
+      }
+      const combinedStats = updatedStats.attack + updatedStats.defense + updatedStats.health + updatedStats.intelligence + updatedStats.speed
+      if(combinedStats > 350){
+        setErrors({combinedStats: 'Warning: The total value of stats should be equal to 350 or lower!'})
+        return
+    }
       const {_id: fighterId} = await fighterData.createFighter(updatedValues);
       navigation(`/armory/champions/${fighterId}`);
     } catch (error) {
@@ -168,6 +187,10 @@ export default function CreateChampion({goBackHome}) {
                 <div className="btnText">
                   <span className="btnSpan">Create</span>
                 </div>
+                {errors.name && <p className="error2">{errors.name}</p>}
+                {errors.type && <p className="error2">{errors.type}</p>}
+                {errors.description && <p className="error2">{errors.description}</p>}
+                {errors.combinedStats && <p className="error2">{errors.combinedStats}</p>}
               </button>
             </form>
           </div>
