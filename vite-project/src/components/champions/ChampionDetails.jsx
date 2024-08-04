@@ -27,10 +27,17 @@ export default function ChampionsDetails() {
             <div className='fighter-details'>
                 <div className='fighter-sep'>
                     <div className='nameAndType'>
-                        <h2><strong>{fighter.name}</strong></h2>
-                        <p className='fighter-type'>Type: {fighter.type}</p>
-                        <p className='fighter-type'>Element: {fighter.element} {getElementEmoji(fighter.element)}</p>
+                        <div>
+                            <h2><strong>{fighter.name}</strong></h2>
+                            <p className='fighter-type'><strong>Type: {fighter.type}</strong></p>
+                            <p className='fighter-type'><strong>Element: {fighter.element} {getElementEmoji(fighter.element)}</strong></p>
+                        </div>
+                        <div className='winsAndLosses'>
+                            <p><strong>Wins: {fighter.wins}</strong></p>
+                            <p><strong>Losses: {fighter.losses}</strong></p>
+                        </div>
                     </div>
+                    
                     <div className='imageAndStats'>
                         <div className='fighter-description fighter-stats'>
                                 {fighter.description && (

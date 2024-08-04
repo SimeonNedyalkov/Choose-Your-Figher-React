@@ -103,8 +103,19 @@
     font-size: 2em;
     margin: 0 0 10px;
   }
+  .nameAndType{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
   .nameAndType h2{
     font-size: 30px;
+    padding-bottom: 8px;
+  }
+  .winsAndLosses{
+    right: 0;
+    transform: translateX(220px);
   }
   .fighter-type {
     color: #666;

@@ -1354,6 +1354,8 @@
             "health": 45
         },
         "description": "Inkspire, the elusive Octopus of the deep, wields the power of Water with grace and agility. Its tentacles move like liquid shadows, wrapping foes in a watery embrace before delivering a precise strike. Inkspire's intelligence guides its every move, making it a formidable opponent both in and out of the depths.",
+        "wins":93,
+        "losses":71,
         "_createdOn": 1613551279012
     },
     "35c62d76-8152-4626-8712-eeb96381bea8": {
@@ -1370,6 +1372,8 @@
             "health": 35
         },
         "description": "Thunderclaw, the noble Eagle of Wind, soars through the skies with unmatched speed and precision. Its lightning-fast strikes are complemented by a keen intelligence that allows it to strategize and adapt swiftly in battle. With feathers that shimmer like storm clouds, Thunderclaw embodies the untamed power of the air.",
+        "wins":56,
+        "losses":78,
         "_createdOn": 1613551279012
     },
     "f4a2b6c7-d3e5-4e9f-8b9c-03f56ad5421d": {
@@ -1386,6 +1390,8 @@
             "health": 35
         },
         "description": "Fireflash, the fiery Firefly, burns with the intensity of a blazing inferno. Swift and agile, Fireflash dazzles opponents with its speed and cunning. Its glowing wings leave trails of flames in the air, making it a fearsome sight in any battle. Fireflash's fiery spirit matches its fiery element, leaving adversaries scorched and defeated.",
+        "wins":105,
+        "losses":32,
         "_createdOn": 1613551279012
     },
     "b3a1f7a3-e24f-4d8b-9e1c-02e41ad5421b": {
@@ -1402,6 +1408,8 @@
             "health": 45
         },
         "description": "Tidebreaker, the mighty Shark of the seas, rules the waters with formidable strength and resilience. With jaws that can crush stone and scales that shimmer like ocean waves, it instills fear in challengers. Its keen intelligence lets it navigate treacherous waters, mastering its element with ease.",
+        "wins":15,
+        "losses":12,
         "_createdOn": 1613551279012
     },
     "8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
@@ -1418,6 +1426,8 @@
             "health": 40
         },
         "description": "Grizblaze, the steadfast Bear of Earth, traverses rugged landscapes with power and endurance. Its massive frame and thick fur offer strong defense, and its strength can easily uproot trees. With intelligence and determination, Grizblaze embodies the earth’s resilience and might in any battle.",
+        "wins":49,
+        "losses":22,
         "_createdOn": 1613551344360
     },
     "985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
@@ -1434,7 +1444,8 @@
             "health": 25
         },
         "description": "Stripefang, the fierce Tiger of Earth, prowls the jungle with lethal precision. Its striped coat blends with the shadows, enabling stealthy ambushes. Combining speed, agility, and intelligence, Stripefang strikes fear into anyone who crosses its path.",
-        "weapons": [],
+        "wins":77,
+        "losses":77,
         "_createdOn": 1613551388703
     }
 },

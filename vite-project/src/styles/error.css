@@ -12,7 +12,7 @@
   }
   .wrapperDiv {
     position: relative;
-    margin-bottom: 24px; /* Add extra space to accommodate error messages */
+    margin-bottom: 24px;
   }
   
   .error {
@@ -24,7 +24,7 @@
     font-size: 14px;
     position: absolute;
     transform: translateY(-50%);
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap; 
     margin-top: 20px;
   }
   .error2 {
@@ -36,7 +36,8 @@
     font-size: 14px;
     position: absolute;
     transform: translateY(-50%);
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap; 
     margin-top: 50px;
+    left: 0px;
   }
   
