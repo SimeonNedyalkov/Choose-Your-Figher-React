@@ -1544,7 +1544,104 @@
         "description": "Stone Bulwark is hewn from the hardest rocks, providing exceptional defense and health. Its solid construction withstands heavy blows, embodying the strength of the earth, perfect for resilient earth element fighters."
     }
 },fightRecords:{
-
+    "abbb1aef-7677-422a-ba16-a91f080513f3":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "3987279d-0ad4-4afb-8ca9-5b256ae3b298",
+        "loserId": "3987279d-0ad4-4afb-8ca9-5b256ae3b298",
+        "_createdOn": 1722851982011,
+        "_id": "abbb1aef-7677-422a-ba16-a91f080513f3"
+    },
+    "aa9aae60-1a2c-4ad8-b15c-0a62fc6d4bfe":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "b3a1f7a3-e24f-4d8b-9e1c-02e41ad5421b",
+        "loserId": "3987279d-0ad4-4afb-8ca9-5b256ae3b298",
+        "_createdOn": 1722852179257,
+        "_id": "aa9aae60-1a2c-4ad8-b15c-0a62fc6d4bfe"
+    },
+    "121973a0-cec0-4772-8003-ab4e2046c066":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "f4a2b6c7-d3e5-4e9f-8b9c-03f56ad5421d",
+        "loserId": "3987279d-0ad4-4afb-8ca9-5b256ae3b298",
+        "_createdOn": 1722853504730,
+        "_id": "121973a0-cec0-4772-8003-ab4e2046c066"
+    },
+    "c2dafcc4-4588-41f0-9b60-dac64bac2f0a":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "f4a2b6c7-d3e5-4e9f-8b9c-03f56ad5421d",
+        "loserId": "3987279d-0ad4-4afb-8ca9-5b256ae3b298",
+        "_createdOn": 1722853891848,
+        "_id": "c2dafcc4-4588-41f0-9b60-dac64bac2f0a"
+    },
+    "a889b2bb-203b-40a4-9a51-a7d9d3e05730":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "b3a1f7a3-e24f-4d8b-9e1c-02e41ad5421b",
+        "loserId": "3987279d-0ad4-4afb-8ca9-5b256ae3b298",
+        "_createdOn": 1722853906622,
+        "_id": "a889b2bb-203b-40a4-9a51-a7d9d3e05730"
+    },
+    "20233ab1-8239-49ac-80b8-4108d9b67f61":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "loserId": "b3a1f7a3-e24f-4d8b-9e1c-02e41ad5421b",
+        "_createdOn": 1722854293792,
+        "_id": "20233ab1-8239-49ac-80b8-4108d9b67f61"
+    },
+    "dbd9846d-e66b-4310-b1c0-55a7e503d134":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
+        "loserId": "f4a2b6c7-d3e5-4e9f-8b9c-03f56ad5421d",
+        "_createdOn": 1722854305596,
+        "_id": "dbd9846d-e66b-4310-b1c0-55a7e503d134"
+    },
+    "a771dd0d-c2ec-4c93-aa7d-e74f67100976":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
+        "loserId": "985d9eab-ad2e-4622-a5c8-116261fb1fd2",
+        "_createdOn": 1722854324701,
+        "_id": "a771dd0d-c2ec-4c93-aa7d-e74f67100976"
+    },
+    "ca9cec7a-b010-4a75-82a0-d80a0f4b057b":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "3987279d-0ad4-4afb-8ca9-5b256ae3b298",
+        "loserId": "985d9eab-ad2e-4622-a5c8-116261fb1fd2",
+        "_createdOn": 1722854332760,
+        "_id": "ca9cec7a-b010-4a75-82a0-d80a0f4b057b"
+    },
+    "e1401844-5655-4796-8f48-fd7ed62458d0":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "985d9eab-ad2e-4622-a5c8-116261fb1fd2",
+        "loserId": "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
+        "_createdOn": 1722854341798,
+        "_id": "e1401844-5655-4796-8f48-fd7ed62458d0"
+    },
+    "860d60e8-af73-4c96-b39d-ae494628773c":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "b3a1f7a3-e24f-4d8b-9e1c-02e41ad5421b",
+        "loserId": "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
+        "_createdOn": 1722854357913,
+        "_id": "860d60e8-af73-4c96-b39d-ae494628773c"
+    },
+    "5c3cf012-0c49-4086-aa3b-3fe04e6108fd":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "loserId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "_createdOn": 1722854399905,
+        "_id": "5c3cf012-0c49-4086-aa3b-3fe04e6108fd"
+    },
+    "df040a31-f6f0-4b42-b218-3573024495f6":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "b3a1f7a3-e24f-4d8b-9e1c-02e41ad5421b",
+        "loserId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "_createdOn": 1722854421440,
+        "_id": "df040a31-f6f0-4b42-b218-3573024495f6"
+    },
+    "66c4b1db-ed26-48b4-8ff3-b4bc612920a2":{
+        "_ownerId": "955a975f-c635-47dc-8e97-f9af0b4c564a",
+        "winnerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "loserId": "b3a1f7a3-e24f-4d8b-9e1c-02e41ad5421b",
+        "_createdOn": 1722854434089,
+        "_id": "66c4b1db-ed26-48b4-8ff3-b4bc612920a2"
+    }
 }
     };
     var rules$1 = {

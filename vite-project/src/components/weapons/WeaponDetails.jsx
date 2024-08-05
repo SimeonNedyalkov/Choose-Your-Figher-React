@@ -26,7 +26,7 @@ export default function WeaponDetails() {
         <div className={cardClassName}>
             <div className='fighter-details'>
                 <div className='fighter-sep'>
-                    <div className='nameAndType'>
+                    <div className='nameAndType2'>
                         <h2><strong>{weapon.name}</strong></h2>
                         <p className='fighter-type'>Type: {weapon.type}</p>
                         <p className='fighter-type'>Element: {weapon.element} {getElementEmoji(weapon.element)}</p>

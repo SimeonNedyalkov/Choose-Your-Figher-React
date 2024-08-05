@@ -26,7 +26,7 @@ export default function ArmorDetails() {
         <div className={cardClassName}>
             <div className='fighter-details'>
                 <div className='fighter-sep'>
-                    <div className='nameAndType'>
+                    <div className='nameAndType2'>
                         <h2><strong>{armor.name}</strong></h2>
                         <p className='fighter-type'>Type: {armor.type}</p>
                         <p className='fighter-type'>Element: {armor.element} {getElementEmoji(armor.element)}</p>

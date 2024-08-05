@@ -113,6 +113,10 @@
     font-size: 30px;
     padding-bottom: 8px;
   }
+  .nameAndType2 h2{
+    font-size: 30px;
+    padding-bottom: 8px;
+  }
   .winsAndLosses{
     right: 0;
     transform: translateX(220px);
