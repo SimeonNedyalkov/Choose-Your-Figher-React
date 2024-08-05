@@ -9,8 +9,8 @@
     width: 100%;
     z-index: 1000;
     display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically */
+    justify-content: center; 
+    align-items: center; 
 }
 .navbar-brand{
     background-image: url('../images/Logo\ maker\ project.png');
@@ -21,12 +21,12 @@
 }
 .navbar-nav {
     display: flex;
-    justify-content: center; /* Centers the nav items horizontally */
-    width: 100%; /* Ensures the nav items take the full width */
+    justify-content: center; 
+    width: 100%; 
 }
 
 .nav-item {
-    margin: 0 10px; /* Adds some space between nav items */
+    margin: 0 10px;
 }
 .title{
     padding-bottom: 20px;
