@@ -16,19 +16,28 @@ export default function Events2() {
             </div>
             <div className="prizes">
                 <div className="prize-item">
-                    <img src="../../images/events/Blue-Ribbon-First-Place-PNG-Image.png" alt="Prize 1" className="prize-image" />
+                    <img src="../../images/events/firstPlace.png" alt="Prize 1" className="prize-image" />
                     <span className="events-span">First</span>
                     <p className="prize-description">A high-end gaming console and exclusive game merchandise.</p>
                 </div>
                 <div className="prize-item">
-                    <img src="../../images/events/Second-Place-Ribbon-PNG-Picture.png" alt="Prize 2" className="prize-image" />
+                    <img src="../../images/events/secondPlace.png" alt="Prize 2" className="prize-image" />
                     <span className="events-span">Second</span>
                     <p className="prize-description"> Gift cards and premium gaming accessories.</p>
                 </div>
                 <div className="prize-item">
-                    <img src="../../images/events/free_png_badge_3rd_place_by_ninahagn-d8r7z18.png" alt="Prize 3" className="prize-image" />
+                    <img src="../../images/events/thirdPlace.png" alt="Prize 3" className="prize-image" />
                     <span className="events-span">Third</span>
                     <p className="prize-description">Third Place: In-game currency and collectible items.</p>
+                </div>
+            </div>
+            <div className="events-layers2">
+            <div className="events-box2">
+                    <div className="events-text">
+                        <span className="events-title">PAST WINNERS</span>
+                    </div>
+                </div>
+                <div className="events-image2">
                 </div>
             </div>
         </div>
