@@ -1,9 +1,11 @@
 import React from 'react';
 import { useSpring, animated } from '@react-spring/web';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom'
+import fightRecordsAPI from '../../sevices/fightRecordsAPI';
 
 const Lose = () => {
     const navigation = useNavigate()
+    const {fighterId,enemyId} = useParams()
 
     const props = useSpring({
         from: { transform: 'scale(0) translateX(-1000px)', opacity: 0 },
@@ -27,7 +29,7 @@ const Lose = () => {
   function onGoBack(){
     navigation('/arena')
   }
-
+  fightRecordsAPI.createFightRecord(enemyId,fighterId)
   return (
     <div className='loseBackGround'>
         <div className="win-animation-container">

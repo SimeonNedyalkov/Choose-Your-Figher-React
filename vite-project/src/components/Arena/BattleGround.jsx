@@ -21,12 +21,13 @@ export default function BattleGround() {
     const handleFight = () => {
         const resultFighter1 = rng.statsCalculator(pickedFighterWithRandomWeaponAndArmor);
         const resultFighter2 = rng.statsCalculator(randomEnemyFighter);
+        const enemyId = randomEnemyFighter.fighter._id
         if(resultFighter1>resultFighter2){
-            navigation(`/win/${fighterId}`)
+            navigation(`/win/${fighterId}/${enemyId}`)
         }else if(resultFighter1<resultFighter2){
-            navigation(`/lose/${fighterId}`)
+            navigation(`/lose/${fighterId}/${enemyId}`)
         }else if(resultFighter1==resultFighter2){
-            navigation(`/draw/${fighterId}`)
+            navigation(`/draw/${fighterId}/${enemyId}`)
         }
     };
     

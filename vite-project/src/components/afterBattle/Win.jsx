@@ -1,12 +1,12 @@
 import React from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import {useNavigate, useParams} from 'react-router-dom'
-import useFighter, { useUpdateWinsOfFighter } from '../../hooks/useFighter';
 import useFetch from '../../hooks/useFetch';
+import fightRecordsAPI from '../../sevices/fightRecordsAPI';
 
 const WinAnimation = () => {
     const navigation = useNavigate()
-    const {fighterId} = useParams()
+    const {fighterId,enemyId} = useParams()
     const fighter = useFetch(fighterId)
   const props = useSpring({
     from: { transform: 'scale(0) translateX(-1000px)', opacity: 0 },
@@ -28,7 +28,7 @@ const WinAnimation = () => {
   function onGoBack(){
     navigation('/arena')
   }
-  useFighter.useUpdateWinsOfFighter(fighterId,fighter)
+  fightRecordsAPI.createFightRecord(fighterId,enemyId)
   return (
     <div className='winBackGround'>
         <div className="win-animation-container">
