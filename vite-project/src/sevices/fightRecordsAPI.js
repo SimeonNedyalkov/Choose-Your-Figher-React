@@ -6,10 +6,16 @@ async function createFightRecord(winnerId,loserId){
     const response = await requesterAPI.post(`${BASE_URL}`,{winnerId,loserId})
     return response
 }
-async function getAllWinsAndLosses(fighterId){
+async function getAllWins(fighterId){
     const params = new URLSearchParams({
-        where: `fighterId="${fighterId}"`,
-        load: `author=_ownerId:_id`
+        where: `winnerId="${fighterId}"`,
+    })
+    const response = await requesterAPI.get(`${BASE_URL}?${params.toString()}`)
+    return response
+}
+async function getAllLosses(fighterId){
+    const params = new URLSearchParams({
+        where: `loserId="${fighterId}"`,
     })
     const response = await requesterAPI.get(`${BASE_URL}?${params.toString()}`)
     return response
@@ -17,7 +23,8 @@ async function getAllWinsAndLosses(fighterId){
 
 const fightRecordsAPI = {
     createFightRecord,
-    getAllWinsAndLosses
+    getAllWins,
+    getAllLosses
 }
 
 export default fightRecordsAPI

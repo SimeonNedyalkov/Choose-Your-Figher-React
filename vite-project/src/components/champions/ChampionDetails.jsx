@@ -1,14 +1,26 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useFetch from '../../hooks/useFetch';
 import getElementEmoji from '../../customFunctions/elements';
+import fightRecordsAPI from '../../sevices/fightRecordsAPI';
 
 export default function ChampionsDetails() {
     const { id } = useParams();
     const [showFullDescription, setShowFullDescription] = useState(false);
+    const [fighterWins,setFighterWins] = useState([])
+    const [fighterLosses,setfighterLosses] = useState([])
     const navigation = useNavigate();
 
     const fighter = useFetch(`http://localhost:3030/data/fighters/${id}`,[])
+
+    useEffect(()=>{
+        (async()=>{
+            const fw = await fightRecordsAPI.getAllWins(id)
+            const fl = await fightRecordsAPI.getAllLosses(id)
+            setFighterWins(fw)
+            setfighterLosses(fl)
+        })()
+    },[])
 
     function handleGoBack() {
         navigation('/armory/champions');
@@ -22,6 +34,7 @@ export default function ChampionsDetails() {
 
     let cardClassName = `detailsCard ${fighter.element?.toLowerCase()}`;
 
+    console.log(fighterWins)
     return (
         <div className={cardClassName}>
             <div className='fighter-details'>
@@ -33,8 +46,8 @@ export default function ChampionsDetails() {
                             <p className='fighter-type'><strong>Element: {fighter.element} {getElementEmoji(fighter.element)}</strong></p>
                         </div>
                         <div className='winsAndLosses'>
-                            <p><strong>Wins: {fighter.wins}</strong></p>
-                            <p><strong>Losses: {fighter.losses}</strong></p>
+                            <p><strong>Wins: {fighterWins.length}</strong></p>
+                            <p><strong>Losses: {fighterLosses.length}</strong></p>
                         </div>
                     </div>
                     
