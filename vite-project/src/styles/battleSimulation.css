@@ -1,0 +1,68 @@
+.battleSimulationContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../../images/arena/battleGroundps2.png');
+    background-size: cover;
+    background-position: center;
+    width: 99vw;
+    height: 100vh;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.battleSimulationFighter {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.battleSimulationFighter img {
+    width: 100%;
+    height: auto;
+}
+
+.battleSimulationVS {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.battleSimulationVS img {
+    width: 150px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.clashEffect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.2) 70%, rgba(255,255,255,0) 100%);
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    z-index: 2;
+    animation: clashAnimation 1s ease-out forwards;
+}
+
+@keyframes clashAnimation {
+    from {
+        opacity: 0.9;
+        transform: scale(0.5) translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.5) translate(-50%, -50%);
+    }
+}

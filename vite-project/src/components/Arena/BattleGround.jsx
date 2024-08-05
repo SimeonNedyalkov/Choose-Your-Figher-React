@@ -18,18 +18,28 @@ export default function BattleGround() {
     const randomEnemyFighter = rng.generateAll(fighters, weapons, armors);
     const pickedFighterWithRandomWeaponAndArmor = rng.generateWeaponAndArmor(pickedFighter, weapons, armors);
 
-    const handleFight = () => {
-        const resultFighter1 = rng.statsCalculator(pickedFighterWithRandomWeaponAndArmor);
-        const resultFighter2 = rng.statsCalculator(randomEnemyFighter);
+    // const handleFight = () => {
+    //     const resultFighter1 = rng.statsCalculator(pickedFighterWithRandomWeaponAndArmor);
+    //     const resultFighter2 = rng.statsCalculator(randomEnemyFighter);
+    //     const enemyId = randomEnemyFighter.fighter._id
+    //     if(resultFighter1>resultFighter2){
+    //         navigation(`/win/${fighterId}/${enemyId}`)
+    //     }else if(resultFighter1<resultFighter2){
+    //         navigation(`/lose/${fighterId}/${enemyId}`)
+    //     }else if(resultFighter1==resultFighter2){
+    //         navigation(`/draw/${fighterId}/${enemyId}`)
+    //     }
+    // };
+
+    const handleFight = () =>{
         const enemyId = randomEnemyFighter.fighter._id
-        if(resultFighter1>resultFighter2){
-            navigation(`/win/${fighterId}/${enemyId}`)
-        }else if(resultFighter1<resultFighter2){
-            navigation(`/lose/${fighterId}/${enemyId}`)
-        }else if(resultFighter1==resultFighter2){
-            navigation(`/draw/${fighterId}/${enemyId}`)
-        }
-    };
+        navigation(`/battleground/battle-simulation/${fighterId}/${enemyId}`,{
+            state:{
+                pickedFighter:pickedFighterWithRandomWeaponAndArmor,
+                enemyFighter:randomEnemyFighter
+            }
+        })
+    }
     
     return (
         <div className="battleGroundImage">

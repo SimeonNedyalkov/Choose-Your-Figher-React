@@ -1,9 +1,10 @@
 // hooks
-import useFetch from './hooks/useFetch';
 import {useNavigate} from 'react-router-dom'
 
+// context
 import AuthContextProvider from './contexts/UserContext';
 
+// components
 import Navigation from "../src/components/Navigation";
 import Footer from './components/Footer';
 import Home from './components/Home'
@@ -20,14 +21,7 @@ import FighterDisplay from './components/FighterDisplay';
 import CheckFighter from './components/CheckFighter';
 import Armors from './components/armors/Armors';
 import ArmorDetails from './components/armors/ArmorDetails';
-
-// css
-import './styles/base.css'
-
-// routes
-import {Routes,Route,} from 'react-router-dom';
 import CreateChampion from './components/champions/CreateChampion';
-import { useState } from 'react';
 import MyProfile from './components/userComponents/MyProfile';
 import Arena from './components/Arena/Arena';
 import BattleGround from './components/Arena/BattleGround';
@@ -37,6 +31,13 @@ import EditChampion from './components/champions/EditChampion';
 import Draw from './components/afterBattle/Draw';
 import Lose from './components/afterBattle/Lose';
 import Events2 from './components/Events';
+import BattleSimulation from './components/Arena/BattleSimulation';
+
+// css
+import './styles/base.css'
+
+// routes
+import {Routes,Route,} from 'react-router-dom';
 
 function App(props) {
   const navigation = useNavigate()
@@ -73,6 +74,7 @@ function App(props) {
           <Route element={<AuthGuard/>}>
           <Route path='/arena' element={<Arena/>}/>
           <Route path='/battleground/:fighterId' element={<BattleGround/>}/>
+          <Route path='/battleground/battle-simulation/:fighterId/:enemyId' element={<BattleSimulation/>}/>
           <Route path='/createChampion' element={<CreateChampion goBackHome={goBackHome}/>}/>
           <Route path='/my-profile' element={<MyProfile goBackHome={goBackHome}/>}/>
           <Route path='/editChampion/:fighterId' element={<EditChampion goBackHome={goBackHome}/>}/>
