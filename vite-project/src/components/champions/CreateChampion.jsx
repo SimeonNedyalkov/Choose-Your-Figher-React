@@ -41,7 +41,6 @@ export default function CreateChampion({goBackHome}) {
     };
 
     try {
-      console.log(values)
       if(updatedValues.name.length < 3){
         setErrors({name: 'Warning: Name should be atleast 3 characters long'})
         return
@@ -69,7 +68,6 @@ export default function CreateChampion({goBackHome}) {
 
   const fileChangeHandler = (event) => {
     const file = event.target.files[0];
-    console.log(file.name)
     changeHandler({target: {name: 'img', value: `/images/fighters-images/${file.name}`}});
   };
 

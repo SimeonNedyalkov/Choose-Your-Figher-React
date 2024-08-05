@@ -50,7 +50,6 @@ function calculateFighterWithCombinedStats(fighter,weapon,armor){
     }
     if (fighter.stats && weapon.stats && armor.stats) {
         Object.entries(weapon?.stats).forEach(([stat,value])=>{
-            console.log(`Stat:${stat} with Value:${value}`)
             if(fighter.element == weapon.element && fighter.element == armor.element){
                 combinedStats[stat] += Math.round(value * 1.4)
             }else if (fighter.element == weapon.element){
@@ -61,7 +60,6 @@ function calculateFighterWithCombinedStats(fighter,weapon,armor){
             
         })
         Object.entries(armor?.stats).forEach(([stat,value])=>{
-            console.log(`Stat:${stat} with Value:${value}`)
             if(fighter.element == weapon.element && fighter.element == armor.element){
                 combinedStats[stat] += Math.round(value * 1.4)
             }else if (fighter.element == armor.element){

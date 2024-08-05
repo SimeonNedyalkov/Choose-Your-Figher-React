@@ -7,7 +7,6 @@ export function useUpdateWinsOfFighter(fighterId,fighter) {
             ...fighter,
             wins: fighter?.wins + 1
         }
-        console.log(updatedFighter)
         return updatedFighter
     });
 

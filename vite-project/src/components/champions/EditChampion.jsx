@@ -38,7 +38,6 @@ export default function EditChampion({goBackHome}) {
 
   const fileChangeHandler = (event) => {
     const file = event.target.files[0];
-    console.log(file.name)
     changeHandler({target: {name: 'img', value: `/images/fighters-images/${file.name}`}});
   };
 

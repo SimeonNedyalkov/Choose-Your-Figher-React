@@ -7,7 +7,6 @@ import fightRecordsAPI from '../../sevices/fightRecordsAPI';
 const WinAnimation = () => {
     const navigation = useNavigate()
     const {fighterId,enemyId} = useParams()
-    const fighter = useFetch(fighterId)
   const props = useSpring({
     from: { transform: 'scale(0) translateX(-1000px)', opacity: 0 },
     to: [
@@ -22,7 +21,7 @@ const WinAnimation = () => {
   const buttonProps = useSpring({
     from: { transform: 'scale(0)', opacity: 0 },
     to: { transform: 'scale(1)', opacity: 1 },
-    delay: 2000, // Delay to ensure it appears after the h1 animation
+    delay: 2000,
     config: { tension: 280, friction: 60 }
   });
   function onGoBack(){

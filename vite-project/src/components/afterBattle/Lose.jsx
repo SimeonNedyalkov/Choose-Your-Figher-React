@@ -22,7 +22,7 @@ const Lose = () => {
   const buttonProps = useSpring({
     from: { transform: 'scale(0)', opacity: 0 },
     to: { transform: 'scale(1)', opacity: 1 },
-    delay: 2000, // Delay to ensure it appears after the h1 animation
+    delay: 2000,
     config: { tension: 280, friction: 60 }
   });
 

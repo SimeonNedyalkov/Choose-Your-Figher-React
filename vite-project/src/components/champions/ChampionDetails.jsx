@@ -33,8 +33,6 @@ export default function ChampionsDetails() {
     }
 
     let cardClassName = `detailsCard ${fighter.element?.toLowerCase()}`;
-
-    console.log(fighterWins)
     return (
         <div className={cardClassName}>
             <div className='fighter-details'>
