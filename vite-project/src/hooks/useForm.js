@@ -9,7 +9,6 @@ export default function useForm(initialValue,submitCallBack){
 
     const changeHandler = (event) => {
         const { name, value } = event.target;
-        console.log(value)
         setValues((prevValues) => {
           const keys = name.split('.');
           if (keys.length > 1) {

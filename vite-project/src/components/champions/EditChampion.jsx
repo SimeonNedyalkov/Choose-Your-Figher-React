@@ -42,6 +42,7 @@ export default function EditChampion({goBackHome}) {
       ...values,
       stats: updatedStats,
     };
+    console.log(updatedValues)
     if(isConfirmed){
         try {
           if(updatedValues.name.length < 3){
@@ -61,7 +62,7 @@ export default function EditChampion({goBackHome}) {
             setErrors({combinedStats: 'Warning: The total value of stats should be equal to 350 or lower!'})
             return
         }
-            await fighterData.updateFighter(fighterId,values);
+            await fighterData.updateFighter(fighterId,updatedValues);
             navigation(`/armory/champions/${fighterId}`);
           } catch (error) {
             console.log(error.message);

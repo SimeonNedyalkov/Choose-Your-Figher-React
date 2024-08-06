@@ -38,6 +38,7 @@ import './styles/base.css'
 
 // routes
 import {Routes,Route,} from 'react-router-dom';
+import BattleGuard from './guards/BattleGuard';
 
 function App(props) {
   const navigation = useNavigate()
@@ -57,7 +58,7 @@ function App(props) {
           <Route path='/login' element={<Login goBackHome={goBackHome}/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/events' element={<Events2/>}/>
-
+          <Route path='/error' element={<Error/>}/>
           <Route path='/armory/champions' element={<Champions/>}/>
           <Route path='/armory/champions/:id' element={<ChampionsDetails/>}/>
           <Route path='/armory/weapons' element={<Weapons/>}/>
@@ -67,10 +68,6 @@ function App(props) {
           <Route path='/armory/checkFighter' element={<CheckFighter/>}/>
           <Route path='/armory/fighterDisplay/:fighterId/:weaponId/:armorId' element={<FighterDisplay/>}/>
 
-          <Route path='/win/:fighterId/:enemyId' element={<Win/>}/>
-          <Route path='/draw/:fighterId/:enemyId' element={<Draw/>}/>
-          <Route path='/lose/:fighterId/:enemyId' element={<Lose/>}/>
-
           <Route element={<AuthGuard/>}>
           <Route path='/arena' element={<Arena/>}/>
           <Route path='/battleground/:fighterId' element={<BattleGround/>}/>
@@ -79,6 +76,12 @@ function App(props) {
           <Route path='/my-profile' element={<MyProfile goBackHome={goBackHome}/>}/>
           <Route path='/editChampion/:fighterId' element={<EditChampion goBackHome={goBackHome}/>}/>
           <Route path='/logout' element={<Logout goBackHome={goBackHome}/>}/>
+          </Route>
+
+          <Route element={<BattleGuard />}>
+            <Route path='/win/:fighterId/:enemyId' element={<Win/>}/>
+            <Route path='/draw/:fighterId/:enemyId' element={<Draw/>}/>
+            <Route path='/lose/:fighterId/:enemyId' element={<Lose/>}/>
           </Route>
 
           <Route path='*' element={<Error/>}/>

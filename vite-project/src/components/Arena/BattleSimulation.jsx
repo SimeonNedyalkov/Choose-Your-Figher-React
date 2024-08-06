@@ -34,11 +34,26 @@ export default function BattleSimulation() {
                 setClash(true);
                 setTimeout(() => {
                     if (resultFighter1 > resultFighter2) {
-                        navigate(`/win/${fighterId}/${enemyId}`);
+                        navigate(`/win/${fighterId}/${enemyId}`,{
+                            state:{
+                                pickedFighter,
+                                enemyFighter
+                            }
+                        });
                     } else if (resultFighter1 < resultFighter2) {
-                        navigate(`/lose/${fighterId}/${enemyId}`);
+                        navigate(`/lose/${fighterId}/${enemyId}`,{
+                            state:{
+                                pickedFighter,
+                                enemyFighter
+                            }
+                        });
                     } else {
-                        navigate(`/draw/${fighterId}/${enemyId}`);
+                        navigate(`/draw/${fighterId}/${enemyId}`,{
+                            state:{
+                                pickedFighter,
+                                enemyFighter
+                            }
+                        });
                     }
                 }, 2000);
             }, 1000);
