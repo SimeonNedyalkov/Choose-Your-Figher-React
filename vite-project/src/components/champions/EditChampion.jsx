@@ -1,32 +1,66 @@
 import {useNavigate, useParams} from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 import fighterData from '../../sevices/fighterAPI';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import useFetch from '../../hooks/useFetch';
-
+const initialValues = {
+  name: '',
+  img: '',
+  type: '',
+  element: 'fire',
+  stats: {
+    attack: '',
+    defense: '',
+    speed: '',
+    intelligence: '',
+    health: ''
+  },
+  description:'',
+};
 export default function EditChampion({goBackHome}) {
   const navigation = useNavigate();
   const {fighterId} = useParams()
   const fighter = useFetch(`http://localhost:3030/data/fighters/${fighterId}`,[])
-  const initialValues = {
-    name: '',
-    img: '',
-    type: '',
-    element: 'fire',
-    stats: {
-      attack: '',
-      defense: '',
-      speed: '',
-      intelligence: '',
-      health: ''
-    },
-    description:'',
-  };
+  const [errors,setErrors] = useState({})
+  
   const initialFormValues = useMemo(()=>Object.assign({},initialValues,fighter),[fighter])
+
   async function editHandler(values) {
+    
     const isConfirmed = confirm(`Are you sure you want to update ${fighter.name}`)
+    const { stats } = values;
+
+    const updatedStats = {
+      attack: Number(stats.attack),
+      defense: Number(stats.defense),
+      health: Number(stats.health),
+      intelligence: Number(stats.intelligence),
+      speed: Number(stats.speed),
+    };
+
+    const updatedValues = {
+      ...values,
+      stats: updatedStats,
+    };
     if(isConfirmed){
         try {
+          if(updatedValues.name.length < 3){
+            setErrors({name: 'Warning: Name should be atleast 3 characters long'})
+            return
+          }
+          if(updatedValues.type.length < 3){
+            setErrors({type: 'Warning: Type should be atleast 3 characters long'})
+            return
+          }
+          if(updatedValues.description.length < 200){
+              setErrors({description: 'Warning: Description should be atleast 200 characters long'})
+              return
+          }
+          const combinedStats = updatedStats.attack + updatedStats.defense + updatedStats.health + updatedStats.intelligence + updatedStats.speed
+          if(combinedStats > 350){
+            setErrors({combinedStats: 'Warning: The total value of stats should be equal to 350 or lower!'})
+            return
+        }
             await fighterData.updateFighter(fighterId,values);
             navigation(`/armory/champions/${fighterId}`);
           } catch (error) {
@@ -157,6 +191,10 @@ export default function EditChampion({goBackHome}) {
                 <div className="btnText">
                   <span className="btnSpan">Update</span>
                 </div>
+                {errors.name && <p className="error2">{errors.name}</p>}
+                {errors.type && <p className="error2">{errors.type}</p>}
+                {errors.description && <p className="error2">{errors.description}</p>}
+                {errors.combinedStats && <p className="error2">{errors.combinedStats}</p>}
               </button>
             </form>
           </div>

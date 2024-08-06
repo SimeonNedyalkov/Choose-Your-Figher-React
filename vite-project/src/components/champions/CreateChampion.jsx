@@ -16,8 +16,6 @@ const initialValues = {
     health: ''
   },
   description:'',
-  wins:0,
-  losses:0
 };
 
 export default function CreateChampion({goBackHome}) {
