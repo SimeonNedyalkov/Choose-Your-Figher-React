@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
-    "heroku-postbuild": "cd vite-project && npm install && npm run build"
+    "heroku-postbuild": "npm install --prefix vite-project && npm run build --prefix vite-project"
   },
   "engines": {
     "node": "20.x"
