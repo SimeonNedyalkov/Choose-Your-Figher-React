@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd server && node server.js"
+    "start": "npm run build-client && cd server && node server.js",
+    "build-client": "cd vite-project && npm install && npm run build",
+    "heroku-postbuild": "npm run build-client"
   },
   "engines": {
     "node": "20.x"
