@@ -5,12 +5,37 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build-client && (cd server && node server.js)",
-    "build-client": "cd vite-project && npm install && npm run build",
-    "heroku-postbuild":"cd vite-project && npm install && npm run build && npm run start-client"
+    "server": "cd server && node server.js",
+    "client":"cd vite-project && npm start",
+    "heroku-postbuild":"npm i && cd vite-project && npm install && npm run build"
   },
   "engines": {
     "node": "20.x"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
+    "@tailwindcss/forms": "^0.5.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.1",
+    "react-scripts": "^5.0.1",
+    "react-spinners": "^0.14.1",
+    "react-spring": "^9.7.4",
+    "serve":"^14.2.1",
+    "vite": "^5.3.1"
+  },"devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.3.1"
   },
   "keywords": [],
   "author": "",
