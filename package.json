@@ -1,0 +1,13 @@
+{
+  "name": "choose-your-figher-react",
+  "version": "1.0.0",
+  "description": "cd vite-project <br/>\r npm install <br/>\r npm run dev <br/>\r # TO RUN SERVER IN TERMINAL\r cd server <br/>\r node server <br/>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd server && node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
