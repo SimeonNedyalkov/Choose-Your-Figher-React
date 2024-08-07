@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build-client && (cd server && node server.js)",
     "build-client": "cd vite-project && npm install && npm run build",
-    "heroku-postbuild": "npm run build-client"
+    "heroku-postbuild":"cd vite-project && npm install && npm run build && npm run start-client"
   },
   "engines": {
     "node": "20.x"
