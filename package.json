@@ -8,6 +8,9 @@
     "start": "cd server && node server.js",
     "heroku-postbuild": "npm install --prefix server && npm install --prefix vite-project && npm run build --prefix vite-project"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
