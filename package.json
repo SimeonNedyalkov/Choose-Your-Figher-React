@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd server && node server.js"
+    "start": "cd server && node server.js",
+    "heroku-postbuild": "npm install --prefix server && npm install --prefix vite-project && npm run build --prefix vite-project"
   },
   "keywords": [],
   "author": "",
