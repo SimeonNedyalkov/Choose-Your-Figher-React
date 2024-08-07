@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && (cd ..server && npm install)",
+    "start-client":"npm run dev",
+    "build": "vite build && (cd ..vite-project && npm install)",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
