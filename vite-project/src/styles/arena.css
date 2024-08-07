@@ -84,9 +84,10 @@
 }
 
 .fighterImage {
-    width: 100%;
+    width: 200px;
     height: auto;
     border-radius: 5px;
+    height: 200px;
 }
 
 .fighterName {
