@@ -1,1 +1,0 @@
-I am making a React site which is called Choose Your Fighter. In it you can pick between bear, octopus, tiger, shark and etc then you choose a weapon it calculates the stats makes the app pick another fighter and then you fight.
